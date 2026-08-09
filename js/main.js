@@ -1,16 +1,23 @@
 /* ==========================================================================
-   HUERTALIA LIOFILIZADOS - FINAL QA & BILINGUAL ENGINE
+   HUERTALIA LIOFILIZADOS - FINAL QA & BILINGUAL SYSTEM ENGINE
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
   // ==========================================================================
-  // 1. i18n DICTIONARY SYSTEM (100% PURE ESPAÑOL / 100% PURE ENGLISH)
+  // 1. COMPLETE i18n DICTIONARY SYSTEM (100% PURE ESPAÑOL / 100% PURE ENGLISH)
   // ==========================================================================
   const translations = {
     es: {
       seo_title: 'HUERTALIA | Fruta Liofilizada del Corazón del Bajío (León, GTO)',
       seo_meta: 'Huertalia: Fruta real liofilizada nacida en León, Guanajuato en 2022. Conservada mediante sublimación en frío. 100% fruta real, imposiblemente crujiente.',
       
+      // Accessibility ARIA labels
+      aria_logo_home: 'HUERTALIA Liofilizados Inicio',
+      aria_mobile_menu: 'Abrir menú de navegación',
+      aria_lang_es: 'Cambiar idioma a Español',
+      aria_lang_en: 'Cambiar idioma a Inglés',
+      aria_close_modal: 'Cerrar modal',
+
       // Nav
       nav_home: 'INICIO',
       nav_history: 'NUESTRA HISTORIA',
@@ -68,6 +75,14 @@ document.addEventListener('DOMContentLoaded', () => {
       filter_chamoy: 'LÍNEA CHAMOY',
       btn_details: 'VER DETALLES',
 
+      // Modal Details
+      modal_chamoy_badge: '🌶️ EDICIÓN CHAMOY',
+      modal_pure_badge: '🌿 100% FRUTA PURA',
+      modal_equals: 'Equivale a ',
+      modal_cal_label: 'Calorías / Sobre',
+      modal_weight_label: 'Contenido Neto',
+      modal_b2b_btn: 'SOLICITAR COTIZACIÓN B2B',
+
       // Lifestyle
       lifestyle_badge: 'ESTILO DE VIDA CONSCIENTE',
       lifestyle_title: 'LLEVA HUERTALIA <span class="text-italic-accent">CONTIGO.</span>',
@@ -92,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Calculator
       calc_badge: 'COMPARATIVA NUTRICIONAL',
       calc_title: 'Compara tu Snack',
-      calc_subhead: 'Descubre cómo cambia el aporte calórico de tu snack habitual al elegir fruta liofilizada.',
+      calc_subhead: 'Descubre cómo cambia el aporte calórico de tu snack habitual (referencia: botana procesada ~280 kcal) al elegir fruta liofilizada Huertalia.',
       calc_label_select: 'SELECCIONA TU FRUTA:',
       calc_label_qty: 'FRECUENCIA DE CONSUMO SEMANAL:',
       calc_unit_min: '1 porción',
@@ -126,6 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
       contact_direct_title: 'Canales Directos',
       contact_direct_sub: 'Nuestro centro operativo y logístico se ubica en el corazón del Bajío en León, Guanajuato, México.',
       contact_lbl_address: 'Dirección Matriz:',
+      contact_address_val: 'Colonia Balcones del Campestre<br>León, Guanajuato, México. C.P. 37138',
       contact_lbl_email: 'Correo Electrónico:',
       contact_lbl_email_sub: 'Respuesta prioritaria en menos de 24 horas.',
       contact_lbl_phone: 'Teléfono & WhatsApp B2B:',
@@ -156,6 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
       footer_item_platano: 'Plátano Liofilizado',
       footer_item_mango: 'Mango Liofilizado',
       footer_item_chamoy: 'Línea Chamoy Salvaje',
+      footer_address: 'Balcones del Campestre<br>León, Guanajuato, México (C.P. 37138)',
       footer_rights: '&copy; 2026 HUERTALIA. Todos los derechos reservados.',
       footer_location: 'León, Guanajuato, México · Desde 2022'
     },
@@ -164,6 +181,13 @@ document.addEventListener('DOMContentLoaded', () => {
       seo_title: 'HUERTALIA | Freeze-Dried Fruit from El Bajío (León, GTO)',
       seo_meta: 'Huertalia: 100% real freeze-dried fruit born in León, Guanajuato in 2022. Preserved through cold vacuum sublimation. Unforgettably crunchy.',
       
+      // Accessibility ARIA labels
+      aria_logo_home: 'HUERTALIA Freeze-Dried Home',
+      aria_mobile_menu: 'Open navigation menu',
+      aria_lang_es: 'Switch language to Spanish',
+      aria_lang_en: 'Switch language to English',
+      aria_close_modal: 'Close modal',
+
       // Nav
       nav_home: 'HOME',
       nav_history: 'OUR STORY',
@@ -221,6 +245,14 @@ document.addEventListener('DOMContentLoaded', () => {
       filter_chamoy: 'CHAMOY LINE',
       btn_details: 'VIEW DETAILS',
 
+      // Modal Details
+      modal_chamoy_badge: '🌶️ CHAMOY COLLECTION',
+      modal_pure_badge: '🌿 100% PURE FRUIT',
+      modal_equals: 'Equals ',
+      modal_cal_label: 'Calories / Pack',
+      modal_weight_label: 'Net Weight',
+      modal_b2b_btn: 'REQUEST B2B QUOTE',
+
       // Lifestyle
       lifestyle_badge: 'CONSCIOUS LIFESTYLE',
       lifestyle_title: 'TAKE HUERTALIA <span class="text-italic-accent">WITH YOU.</span>',
@@ -245,7 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Calculator
       calc_badge: 'NUTRITIONAL COMPARISON',
       calc_title: 'Compare Your Snack',
-      calc_subhead: 'See how the caloric intake of your usual snack changes when choosing freeze-dried fruit.',
+      calc_subhead: 'See how the caloric intake of your usual snack (benchmark: processed snack ~280 kcal) changes when choosing Huertalia freeze-dried fruit.',
       calc_label_select: 'SELECT YOUR FRUIT:',
       calc_label_qty: 'WEEKLY CONSUMPTION:',
       calc_unit_min: '1 serving',
@@ -279,6 +311,7 @@ document.addEventListener('DOMContentLoaded', () => {
       contact_direct_title: 'Direct Channels',
       contact_direct_sub: 'Our central logistics hub is located in the heart of El Bajío in León, Guanajuato, Mexico.',
       contact_lbl_address: 'Headquarters:',
+      contact_address_val: 'Balcones del Campestre Neighborhood<br>León, Guanajuato, Mexico. ZIP 37138',
       contact_lbl_email: 'Sales Email:',
       contact_lbl_email_sub: 'Priority response under 24 hours.',
       contact_lbl_phone: 'Phone & WhatsApp B2B:',
@@ -309,6 +342,7 @@ document.addEventListener('DOMContentLoaded', () => {
       footer_item_platano: 'Freeze-Dried Banana',
       footer_item_mango: 'Freeze-Dried Mango',
       footer_item_chamoy: 'Wild Chamoy Collection',
+      footer_address: 'Balcones del Campestre<br>León, Guanajuato, Mexico (ZIP 37138)',
       footer_rights: '&copy; 2026 HUERTALIA. All rights reserved.',
       footer_location: 'León, Guanajuato, Mexico · Since 2022'
     }
@@ -506,20 +540,32 @@ document.addEventListener('DOMContentLoaded', () => {
     currentLang = lang;
     localStorage.setItem('huertalia_lang', lang);
 
-    // Update document HTML lang attribute dynamically
+    // 1. Update HTML lang metadata
     document.documentElement.lang = lang;
 
-    // Update SEO Meta title and description
-    if (translations[lang].seo_title) document.title = translations[lang].seo_title;
+    // 2. Update SEO Meta title & descriptions
+    if (translations[lang].seo_title) {
+      document.title = translations[lang].seo_title;
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) ogTitle.content = translations[lang].seo_title;
+      const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+      if (twitterTitle) twitterTitle.content = translations[lang].seo_title;
+    }
     const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc && translations[lang].seo_meta) metaDesc.content = translations[lang].seo_meta;
+    if (metaDesc && translations[lang].seo_meta) {
+      metaDesc.content = translations[lang].seo_meta;
+      const ogDesc = document.querySelector('meta[property="og:description"]');
+      if (ogDesc) ogDesc.content = translations[lang].seo_meta;
+      const twitterDesc = document.querySelector('meta[name="twitter:description"]');
+      if (twitterDesc) twitterDesc.content = translations[lang].seo_meta;
+    }
 
-    // Update Language Pill Selector
+    // 3. Update Language Pill Buttons Active State
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
     });
 
-    // Translate all elements with data-i18n
+    // 4. Translate all elements with data-i18n
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
       if (translations[lang] && translations[lang][key]) {
@@ -527,7 +573,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Benefits Counter Prefix Update (HASTA / UP TO)
+    // 5. Translate ARIA labels
+    document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+      const key = el.getAttribute('data-i18n-aria');
+      if (translations[lang] && translations[lang][key]) {
+        el.setAttribute('aria-label', translations[lang][key]);
+      }
+    });
+
+    // 6. Benefits Counter Prefix Update (HASTA / UP TO)
     const retentionCounter = document.querySelector('.claim-item-large .count-number');
     if (retentionCounter) {
       retentionCounter.setAttribute('data-prefix', lang === 'en' ? 'UP TO ' : 'HASTA ');
@@ -536,7 +590,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // Dynamic Form Placeholders
+    // 7. Dynamic Form Placeholders
     document.querySelectorAll('input[placeholder*="Ana"], input[placeholder*="Jane"]').forEach(input => {
       input.placeholder = lang === 'en' ? 'e.g. Jane Doe' : 'Ej. Ana María Torres';
     });
@@ -547,7 +601,7 @@ document.addEventListener('DOMContentLoaded', () => {
       input.placeholder = lang === 'en' ? 'Estimated volumes, target markets or specific product lines...' : 'Volúmenes estimados, mercados de interés o líneas de productos específicas...';
     });
 
-    // Filter Buttons Re-render
+    // 8. Filter Buttons Re-render
     const filterAll = document.querySelector('[data-filter="all"]');
     const filterPure = document.querySelector('[data-filter="natural"]');
     const filterChamoy = document.querySelector('[data-filter="chamoy"]');
@@ -555,10 +609,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (filterPure) filterPure.textContent = translations[lang].filter_pure;
     if (filterChamoy) filterChamoy.textContent = translations[lang].filter_chamoy;
 
-    // Calculator Select Options Re-render
+    // 9. Calculator Select Options Re-render
     const calcSelect = document.getElementById('calc-fruit');
     if (calcSelect) {
-      const currentSelectedVal = calcSelect.value;
+      const currentSelectedVal = calcSelect.value || 'fresas-natural';
       calcSelect.innerHTML = '';
       const rawList = productsData[lang] || productsData.es;
       rawList.forEach(p => {
@@ -570,7 +624,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // Image Alt Text Update across page
+    // 10. Image Alt Text Update across page
     const processImgs = document.querySelectorAll('.process-card-imgbox img');
     const processAltTexts = {
       es: [
@@ -615,7 +669,7 @@ document.addEventListener('DOMContentLoaded', () => {
         : 'Distribución Global Huertalia';
     }
 
-    // Re-render Products in Active Language
+    // 11. Re-render Products & Calculator in Active Language
     renderProducts(currentFilter);
     updateCalculator();
   }
@@ -813,25 +867,25 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <div class="modal-details-area">
           <span class="wild-badge" style="margin-bottom: 0.8rem; width: fit-content;">
-            ${product.category === 'chamoy' ? (currentLang === 'en' ? '🌶️ CHAMOY LINE' : '🌶️ EDICIÓN CHAMOY') : (currentLang === 'en' ? '🌿 100% PURE FRUIT' : '🌿 100% FRUTA PURA')}
+            ${product.category === 'chamoy' ? translations[currentLang].modal_chamoy_badge : translations[currentLang].modal_pure_badge}
           </span>
           <h2 style="font-family: var(--font-serif); font-size: 2.4rem; margin-bottom: 0.4rem; color: var(--color-primary);">${product.name}</h2>
-          <p style="color: var(--color-primary-muted); font-weight: 700; margin-bottom: 1.2rem;">${currentLang === 'en' ? 'Equals ' : 'Equivale a '}${product.equivalence}</p>
+          <p style="color: var(--color-primary-muted); font-weight: 700; margin-bottom: 1.2rem;">${translations[currentLang].modal_equals}${product.equivalence}</p>
           <p style="color: var(--color-text-muted); font-size: 0.98rem; margin-bottom: 1.8rem; line-height: 1.6;">${product.desc}</p>
 
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; background: var(--bg-alt); padding: 1rem; border-radius: var(--radius-sm); margin-bottom: 1.8rem;">
             <div>
               <span style="font-family: var(--font-serif); font-weight: 800; font-size: 1.3rem; color: var(--color-accent-red);">${product.calories} kcal</span>
-              <span style="display: block; font-size: 0.7rem; text-transform: uppercase; font-weight: 700; color: var(--color-text-muted);">${currentLang === 'en' ? 'Calories / Pack' : 'Calorías / Sobre'}</span>
+              <span style="display: block; font-size: 0.7rem; text-transform: uppercase; font-weight: 700; color: var(--color-text-muted);">${translations[currentLang].modal_cal_label}</span>
             </div>
             <div>
               <span style="font-family: var(--font-serif); font-weight: 800; font-size: 1.3rem; color: var(--color-primary);">${product.weight}</span>
-              <span style="display: block; font-size: 0.7rem; text-transform: uppercase; font-weight: 700; color: var(--color-text-muted);">${currentLang === 'en' ? 'Net Weight' : 'Contenido Neto'}</span>
+              <span style="display: block; font-size: 0.7rem; text-transform: uppercase; font-weight: 700; color: var(--color-text-muted);">${translations[currentLang].modal_weight_label}</span>
             </div>
           </div>
 
           <a href="contacto.html" class="btn btn-luxury-dark" style="width: 100%;">
-            ${currentLang === 'en' ? 'REQUEST B2B QUOTE' : 'SOLICITAR COTIZACIÓN B2B'} <i class="ri-mail-send-line"></i>
+            ${translations[currentLang].modal_b2b_btn} <i class="ri-mail-send-line"></i>
           </a>
         </div>
       </div>
@@ -914,61 +968,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Apply initial language & renderer
+  // Apply initial language & renderer IMMEDIATELY
   applyLanguage(currentLang);
-
-  // ==========================================================================
-  // 6. INTERACTIVE MAP (LEAFLET.JS)
-  // ==========================================================================
-  const mapContainer = document.getElementById('map-container');
-  if (mapContainer && typeof L !== 'undefined') {
-    const leonCoords = [21.1683, -101.6912];
-    
-    const map = L.map('map-container', {
-      center: leonCoords,
-      zoom: 15,
-      zoomControl: true,
-      scrollWheelZoom: false
-    });
-
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-      attribution: '&copy; CARTO &copy; OpenStreetMap',
-      subdomains: 'abcd',
-      maxZoom: 19
-    }).addTo(map);
-
-    const customIcon = L.divIcon({
-      className: 'custom-map-pin',
-      html: `
-        <div style="
-          width: 48px;
-          height: 48px;
-          background-color: #122317;
-          border-radius: 50% 50% 50% 0;
-          transform: rotate(-45deg);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-          border: 3px solid #FAF6F0;
-        ">
-          <span style="transform: rotate(45deg); color: white; font-weight: bold; font-size: 1.2rem;">🌿</span>
-        </div>
-      `,
-      iconSize: [48, 48],
-      iconAnchor: [24, 48],
-      popupAnchor: [0, -48]
-    });
-
-    L.marker(leonCoords, { icon: customIcon })
-      .addTo(map)
-      .bindPopup(`
-        <div style="font-family: 'Plus Jakarta Sans', sans-serif; padding: 5px; text-align: center;">
-          <h4 style="color: #122317; margin-bottom: 4px; font-weight: 800; font-family: 'Fraunces', serif;">Huertalia Liofilizados</h4>
-          <p style="font-size: 0.85rem; color: #6B756E; margin: 0;">Colonia Balcones del Campestre</p>
-          <p style="font-size: 0.8rem; font-weight: bold; color: #122317; margin-top: 4px;">León, Guanajuato, México 🇲🇽</p>
-        </div>
-      `)
-      .openPopup();
-  }
 });
