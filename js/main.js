@@ -1,12 +1,5 @@
 /* ==========================================================================
-   HUERTALIA LIOFILIZADOS - V5.6 FINAL QA & POLISHING ENGINE (ES / EN)
-   Audited for:
-   - 100% pure ES / 100% pure EN consistency
-   - Dynamic document.documentElement.lang attribute
-   - Approved nutrient retention claim ("HASTA UN 98% DE RETENCIÓN DE NUTRIENTES")
-   - Removal of "nutrientes vivos" and obsolete regulatory references
-   - Factual & safe lifestyle claims
-   - Refined Calculator ("Compara tu Snack")
+   HUERTALIA LIOFILIZADOS - V5.7 COMPREHENSIVE BILINGUAL & QA ENGINE
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -15,6 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================================================
   const translations = {
     es: {
+      seo_title: 'HUERTALIA | Fruta Liofilizada del Corazón del Bajío (León, GTO)',
+      seo_meta: 'Huertalia: Fruta real liofilizada nacida en León, Guanajuato en 2022. Conservada mediante sublimación en frío. 100% fruta real, imposiblemente crujiente.',
+      
       // Nav
       nav_home: 'INICIO',
       nav_history: 'NUESTRA HISTORIA',
@@ -72,10 +68,10 @@ document.addEventListener('DOMContentLoaded', () => {
       filter_chamoy: 'LÍNEA CHAMOY',
       btn_details: 'VER DETALLES',
 
-      // Lifestyle (Refined Factual & Safe Copy)
+      // Lifestyle
       lifestyle_badge: 'ESTILO DE VIDA CONSCIENTE',
       lifestyle_title: 'LLEVA HUERTALIA <span class="text-italic-accent">CONTIGO.</span>',
-      lifestyle_subhead: 'Nutrición pura diseñada para integrarse naturally en cada momento de tu día.', // Will be audited to naturalmente
+      lifestyle_subhead: 'Nutrición pura diseñada para integrarse naturalmente en cada momento de tu día.',
       time1_label: 'ENTRENAR',
       time1_desc: 'Fruta ligera y crujiente para acompañar tu rutina.',
       time2_label: 'TRABAJO',
@@ -85,15 +81,15 @@ document.addEventListener('DOMContentLoaded', () => {
       time4_label: 'AVENTURA',
       time4_desc: 'Fruta ligera y fácil de llevar allá donde vayas.',
 
-      // Why Huertalia (Exact Approved Claim)
+      // Why Huertalia
       why_badge: 'BENEFICIOS COMPROBADOS',
       why_title: 'NADA AÑADIDO.<br><span class="text-italic-accent">TODO CONSERVADO.</span>',
       why_claim1: 'HASTA UN 98% DE RETENCIÓN DE NUTRIENTES',
       why_claim2: 'FRUTA REAL',
-      why_claim3: 'AZÚCAR AÑADIDA O ACEITES',
-      why_claim4: 'VEGANO Y SIN GLUTEN',
+      why_claim3: 'AZÚCAR AÑADIDA',
+      why_claim4: 'ACEITES AÑADIDOS',
 
-      // Calculator (Renamed: COMPARA TU SNACK)
+      // Calculator
       calc_badge: 'COMPARATIVA NUTRICIONAL',
       calc_title: 'Compara tu Snack',
       calc_subhead: 'Descubre cómo cambia el aporte calórico de tu snack habitual al elegir fruta liofilizada.',
@@ -104,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
       calc_bar_huertalia: 'Con Huertalia',
       calc_equiv_label: 'Equiv. a:',
 
-      // Business (Regulatory Compliance Fix)
+      // Business
       b2b_badge: 'MAYOREO Y DISTRIBUCIÓN',
       b2b_title: 'HUERTALIA PARA<br><span class="text-italic-accent" style="color: var(--color-accent-mango);">NEGOCIOS.</span>',
       b2b_subhead: 'Suministramos a cadenas retail premium, supermercados gourmet, clubes de salud y distribuidores internacionales en América del Norte y Europa.',
@@ -123,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
       final_cta1: 'DESCUBRE HUERTALIA',
       final_cta2: 'COTIZAR MAYOREO',
 
-      // Contact Page Specific
+      // Contact Page
       contact_hero_title: 'HABLA CON<br><span class="text-italic-accent" style="color: var(--color-sand);">HUERTALIA.</span>',
       contact_direct_title: 'Canales Directos',
       contact_direct_sub: 'Nuestro centro operativo y logístico se ubica en el corazón del Bajío en León, Guanajuato, México.',
@@ -150,11 +146,19 @@ document.addEventListener('DOMContentLoaded', () => {
       footer_col_title: 'COLECCIÓN',
       footer_offices_title: 'OFICINAS MATRIZ',
       footer_contact_link: 'Contacto',
+      footer_item_fresas: 'Fresas Liofilizadas',
+      footer_item_manzana: 'Manzana Liofilizada',
+      footer_item_platano: 'Plátano Liofilizado',
+      footer_item_mango: 'Mango Liofilizado',
+      footer_item_chamoy: 'Línea Chamoy Salvaje',
       footer_rights: '&copy; 2026 HUERTALIA. Todos los derechos reservados.',
       footer_location: 'León, Guanajuato, México · Desde 2022'
     },
 
     en: {
+      seo_title: 'HUERTALIA | Freeze-Dried Fruit from El Bajío (León, GTO)',
+      seo_meta: 'Huertalia: 100% real freeze-dried fruit born in León, Guanajuato in 2022. Preserved through cold vacuum sublimation. Unforgettably crunchy.',
+      
       // Nav
       nav_home: 'HOME',
       nav_history: 'OUR STORY',
@@ -225,15 +229,15 @@ document.addEventListener('DOMContentLoaded', () => {
       time4_label: 'ADVENTURE',
       time4_desc: 'Lightweight fruit, easy to take wherever you go.',
 
-      // Why Huertalia (Exact Approved Claim)
+      // Why Huertalia
       why_badge: 'PROVEN BENEFITS',
       why_title: 'NOTHING ADDED.<br><span class="text-italic-accent">EVERYTHING PRESERVED.</span>',
       why_claim1: 'UP TO 98% NUTRIENT RETENTION',
       why_claim2: 'REAL FRUIT',
-      why_claim3: 'ADDED SUGARS OR OILS',
-      why_claim4: 'VEGAN & GLUTEN FREE',
+      why_claim3: 'ADDED SUGAR',
+      why_claim4: 'ADDED OILS',
 
-      // Calculator (Renamed: COMPARE YOUR SNACK)
+      // Calculator
       calc_badge: 'NUTRITIONAL COMPARISON',
       calc_title: 'Compare Your Snack',
       calc_subhead: 'See how the caloric intake of your usual snack changes when choosing freeze-dried fruit.',
@@ -244,7 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
       calc_bar_huertalia: 'With Huertalia',
       calc_equiv_label: 'Equiv. to:',
 
-      // Business (Regulatory Compliance Fix)
+      // Business
       b2b_badge: 'WHOLESALE & DISTRIBUTION',
       b2b_title: 'HUERTALIA FOR<br><span class="text-italic-accent" style="color: var(--color-accent-mango);">BUSINESS.</span>',
       b2b_subhead: 'Supplying premium retail chains, gourmet supermarkets, fitness clubs and international distributors across North America and Europe.',
@@ -263,7 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
       final_cta1: 'DISCOVER HUERTALIA',
       final_cta2: 'WHOLESALE QUOTE',
 
-      // Contact Page Specific
+      // Contact Page
       contact_hero_title: 'TALK TO<br><span class="text-italic-accent" style="color: var(--color-sand);">HUERTALIA.</span>',
       contact_direct_title: 'Direct Channels',
       contact_direct_sub: 'Our central logistics hub is located in the heart of El Bajío in León, Guanajuato, Mexico.',
@@ -290,80 +294,259 @@ document.addEventListener('DOMContentLoaded', () => {
       footer_col_title: 'COLLECTION',
       footer_offices_title: 'HEADQUARTERS',
       footer_contact_link: 'Contact',
+      footer_item_fresas: 'Freeze-Dried Strawberries',
+      footer_item_manzana: 'Freeze-Dried Apple',
+      footer_item_platano: 'Freeze-Dried Banana',
+      footer_item_mango: 'Freeze-Dried Mango',
+      footer_item_chamoy: 'Wild Chamoy Collection',
       footer_rights: '&copy; 2026 HUERTALIA. All rights reserved.',
       footer_location: 'León, Guanajuato, Mexico · Since 2022'
     }
   };
 
-  // Ensure Spanish text has no typo
-  translations.es.lifestyle_subhead = 'Nutrición pura diseñada para integrarse naturalmente en cada momento de tu día.';
+  // Products Data Store (ES & EN)
+  const productsData = {
+    es: [
+      {
+        id: 'fresas-natural',
+        name: 'Fresas Liofilizadas',
+        category: 'natural',
+        sub: 'Dulce. Intensa. Crujiente.',
+        calories: 46,
+        weight: '15 g',
+        equivalence: '10 Fresas Frescas (1 Taza)',
+        desc: 'Fresas seleccionadas en su punto óptimo de madurez, liofilizadas mediante sublimación en frío. Cada bocado crujiente conserva la intensidad de sabor natural y hasta un 98% de los nutrientes intactos.',
+        benefits: ['Solo fresa. Nada más.', 'Sin azúcar añadida', 'Sin conservadores ni colorantes', '46 kcal por empaque completo'],
+        image: 'assets/images/products/packshot_fresas.jpg'
+      },
+      {
+        id: 'manzana-natural',
+        name: 'Manzana Liofilizada',
+        category: 'natural',
+        sub: 'Crujiente. Limpia. Pura.',
+        calories: 67,
+        weight: '20 g',
+        equivalence: '1 Manzana Entera (3/4 Taza)',
+        desc: 'Láminas crujientes de manzana natural sin cáscara ni ceras añadidas. Una fuente pura de fibra dietética ideal para mantener tus niveles de energía estables durante el día.',
+        benefits: ['100% Manzana seleccionada', 'Súper ligera y crujiente', 'Rica en fibra soluble', 'Excelente snack diario'],
+        image: 'assets/images/products/packshot_manzana.jpg'
+      },
+      {
+        id: 'platano-natural',
+        name: 'Plátano Liofilizado',
+        category: 'natural',
+        sub: 'Rico. Dorado. Natural.',
+        calories: 98,
+        weight: '28 g',
+        equivalence: '1 Plátano Entero',
+        desc: 'Rodajas de plátano dulce sin aceites ni azúcares añadidos. A diferencia de las fichas de plátano frito tradicional, nuestro proceso mantiene cero grasas y 100% del potasio.',
+        benefits: ['Sin aceites ni fritos', 'Energía limpia y portátil', 'Rico en potasio y vitamina B6', '98 kcal de nutrición pura'],
+        image: 'assets/images/products/packshot_platano.jpg'
+      },
+      {
+        id: 'mango-natural',
+        name: 'Mango Liofilizado',
+        category: 'natural',
+        sub: 'Tropical. Vibrante. Exótico.',
+        calories: 80,
+        weight: '24 g',
+        equivalence: '1 Mango de la Huerta (1 Taza)',
+        desc: 'Lajas del más jugoso mango tropical transformadas en un snack super crujiente. Retiene beta-carotenos y todo el sabor vibrante sin una sola gota de almíbar.',
+        benefits: ['Solo mango. Nada más.', 'Alto en Vitamina A y C', 'Textura crujiente irresistible', 'Empaque listo para llevar'],
+        image: 'assets/images/products/packshot_mango.jpg'
+      },
+      {
+        id: 'mango-chamoy',
+        name: 'Mango Chamoy',
+        category: 'chamoy',
+        sub: 'Audaz. Picosito. Salvaje.',
+        calories: 76,
+        weight: '24 g',
+        equivalence: '1 Mango entero con Toque Picosito',
+        desc: 'La combinación perfecta entre la dulzura tropical del mango liofilizado y una receta artesanal de chamoy sin colorantes ni saborizantes artificiales. Picor suave y adictivo.',
+        benefits: ['Chamoy sin azúcar refinada', 'Sabor mexicano auténtico', 'Solo 76 kcal por paquete', '100% Vegano y libre de gluten'],
+        image: 'assets/images/products/packshot_mango_chamoy.jpg'
+      },
+      {
+        id: 'manzana-chamoy',
+        name: 'Manzana Chamoy',
+        category: 'chamoy',
+        sub: 'Agridulce. Crujiente. Adictiva.',
+        calories: 60,
+        weight: '20 g',
+        equivalence: '1 Manzana crujiente picosita',
+        desc: 'Crujientes trozos de manzana natural cubiertos con una sazón ligera de chile en polvo y chamoy natural. La alternativa saludable perfecta para tus antojos.',
+        benefits: ['Bajo en calorías (solo 60 kcal)', 'Crujido intenso agridulce', 'Sin conservadores químicos', 'Perfecto snack portátil'],
+        image: 'assets/images/products/packshot_manzana_chamoy.jpg'
+      },
+      {
+        id: 'pina-chamoy',
+        name: 'Piña Chamoy',
+        category: 'chamoy',
+        sub: 'Refrescante. Tropical. Intenso.',
+        calories: 93,
+        weight: '22 g',
+        equivalence: '1 Taza de Piña Tropical Picosita',
+        desc: 'Bocado tropical agridulce con el nivel exacto de piña natural liofilizada y sazón chamoy. Aporta fibra natural para una digestión ágil.',
+        benefits: ['Piña natural seleccionada', 'Sabor agridulce explosivo', 'Libre de glutamato monosódico', 'Equivale a 1 taza completa de fruta'],
+        image: 'assets/images/products/packshot_pina_chamoy.jpg'
+      }
+    ],
+    en: [
+      {
+        id: 'fresas-natural',
+        name: 'Freeze-Dried Strawberries',
+        category: 'natural',
+        sub: 'Sweet. Intense. Crunchy.',
+        calories: 46,
+        weight: '15 g',
+        equivalence: '10 Fresh Strawberries (1 Cup)',
+        desc: 'Selected strawberries picked at peak ripeness, freeze-dried through cold sublimation. Each crunchy bite preserves intense natural flavor and up to 98% of intact nutrients.',
+        benefits: ['Just strawberry. Nothing else.', 'No added sugar', 'No preservatives or dyes', '46 kcal per full pack'],
+        image: 'assets/images/products/packshot_fresas.jpg'
+      },
+      {
+        id: 'manzana-natural',
+        name: 'Freeze-Dried Apple',
+        category: 'natural',
+        sub: 'Crispy. Clean. Pure.',
+        calories: 67,
+        weight: '20 g',
+        equivalence: '1 Whole Apple (3/4 Cup)',
+        desc: 'Crispy slices of unpeeled natural apple with zero added waxes. A pure source of dietary fiber ideal for keeping your energy levels steady throughout your day.',
+        benefits: ['100% Selected apple', 'Super light and crispy', 'Rich in soluble fiber', 'Great daily snack'],
+        image: 'assets/images/products/packshot_manzana.jpg'
+      },
+      {
+        id: 'platano-natural',
+        name: 'Freeze-Dried Banana',
+        category: 'natural',
+        sub: 'Rich. Golden. Natural.',
+        calories: 98,
+        weight: '28 g',
+        equivalence: '1 Whole Banana',
+        desc: 'Sweet banana slices with no added oils or sugars. Unlike traditional fried banana chips, our process retains zero fat and 100% of potassium.',
+        benefits: ['No oils or frying', 'Clean portable energy', 'Rich in potassium & Vitamin B6', '98 kcal of pure nutrition'],
+        image: 'assets/images/products/packshot_platano.jpg'
+      },
+      {
+        id: 'mango-natural',
+        name: 'Freeze-Dried Mango',
+        category: 'natural',
+        sub: 'Tropical. Vibrant. Exotic.',
+        calories: 80,
+        weight: '24 g',
+        equivalence: '1 Orchard Mango (1 Cup)',
+        desc: 'Juicy tropical mango slices turned into a super crispy snack. Retains beta-carotenes and full vibrant flavor without a single drop of syrup.',
+        benefits: ['Just mango. Nothing else.', 'High in Vitamin A & C', 'Irresistible crunchy texture', 'Ready-to-go pouch'],
+        image: 'assets/images/products/packshot_mango.jpg'
+      },
+      {
+        id: 'mango-chamoy',
+        name: 'Mango Chamoy',
+        category: 'chamoy',
+        sub: 'Bold. Tangy. Wild.',
+        calories: 76,
+        weight: '24 g',
+        equivalence: '1 Whole Mango with Tangy Twist',
+        desc: 'The perfect match between freeze-dried mango sweetness and an artisanal chamoy blend with zero artificial colors or flavorings. Smooth addicting kick.',
+        benefits: ['Refined sugar-free chamoy', 'Authentic Mexican flavor', 'Only 76 kcal per pouch', '100% Vegan & Gluten-free'],
+        image: 'assets/images/products/packshot_mango_chamoy.jpg'
+      },
+      {
+        id: 'manzana-chamoy',
+        name: 'Apple Chamoy',
+        category: 'chamoy',
+        sub: 'Sweet & Sour. Crunchy. Addictive.',
+        calories: 60,
+        weight: '20 g',
+        equivalence: '1 Tangy Crispy Apple',
+        desc: 'Crispy natural apple bites coated with a light blend of chili powder and natural chamoy. The ultimate healthy swap for your cravings.',
+        benefits: ['Low calorie (only 60 kcal)', 'Intense sweet & sour crunch', 'No chemical preservatives', 'Perfect portable snack'],
+        image: 'assets/images/products/packshot_manzana_chamoy.jpg'
+      },
+      {
+        id: 'pina-chamoy',
+        name: 'Pineapple Chamoy',
+        category: 'chamoy',
+        sub: 'Refreshing. Tropical. Bold.',
+        calories: 93,
+        weight: '22 g',
+        equivalence: '1 Cup of Tangy Tropical Pineapple',
+        desc: 'Sweet & sour tropical bite with the exact level of natural freeze-dried pineapple and chamoy seasoning. Provides natural fiber for agile digestion.',
+        benefits: ['Selected natural pineapple', 'Explosive sweet-and-sour punch', 'MSG free', 'Equals 1 full cup of fruit'],
+        image: 'assets/images/products/packshot_pina_chamoy.jpg'
+      }
+    ]
+  };
 
-  // Determine initial language: Saved preference OR auto-detect from browser locale
+  // Determine initial language
   function detectLanguage() {
     const savedLang = localStorage.getItem('huertalia_lang');
     if (savedLang && (savedLang === 'es' || savedLang === 'en')) {
       return savedLang;
     }
     const userLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-    if (userLang.startsWith('en')) {
-      return 'en';
-    }
-    return 'es'; // Default to Spanish
+    return userLang.startsWith('en') ? 'en' : 'es';
   }
 
   let currentLang = detectLanguage();
+  let currentFilter = 'all';
 
   function applyLanguage(lang) {
     currentLang = lang;
     localStorage.setItem('huertalia_lang', lang);
 
-    // Update document HTML lang attribute dynamically for accessibility & SEO
+    // Update document HTML lang attribute dynamically
     document.documentElement.lang = lang;
 
-    // Update Language Pill Selector active state
+    // Update SEO Meta title and description
+    if (translations[lang].seo_title) document.title = translations[lang].seo_title;
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc && translations[lang].seo_meta) metaDesc.content = translations[lang].seo_meta;
+
+    // Update Language Pill Selector
     document.querySelectorAll('.lang-btn').forEach(btn => {
-      if (btn.getAttribute('data-lang') === lang) {
-        btn.classList.add('active');
-      } else {
-        btn.classList.remove('active');
-      }
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
     });
 
     // Translate all elements with data-i18n
-    const elements = document.querySelectorAll('[data-i18n]');
-    elements.forEach(el => {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
       if (translations[lang] && translations[lang][key]) {
         el.innerHTML = translations[lang][key];
       }
     });
 
-    // Handle Form Placeholders dynamically
-    const nameInputs = document.querySelectorAll('input[placeholder*="Ana"], input[placeholder*="Jane"]');
-    nameInputs.forEach(input => {
+    // Benefits Counter Prefix Update (HASTA / UP TO)
+    const retentionCounter = document.querySelector('.claim-item-large .count-number');
+    if (retentionCounter) {
+      retentionCounter.setAttribute('data-prefix', lang === 'en' ? 'UP TO ' : 'HASTA ');
+      if (retentionCounter.classList.contains('counted')) {
+        retentionCounter.textContent = (lang === 'en' ? 'UP TO ' : 'HASTA ') + '98%';
+      }
+    }
+
+    // Dynamic Form Placeholders
+    document.querySelectorAll('input[placeholder*="Ana"], input[placeholder*="Jane"]').forEach(input => {
       input.placeholder = lang === 'en' ? 'e.g. Jane Doe' : 'Ej. Ana María Torres';
     });
-
-    const emailInputs = document.querySelectorAll('input[placeholder*="tuempresa"], input[placeholder*="company"]');
-    emailInputs.forEach(input => {
+    document.querySelectorAll('input[placeholder*="tuempresa"], input[placeholder*="company"]').forEach(input => {
       input.placeholder = lang === 'en' ? 'contact@company.com' : 'contacto@tuempresa.com';
     });
-
-    const msgInputs = document.querySelectorAll('textarea.form-control');
-    msgInputs.forEach(input => {
+    document.querySelectorAll('textarea.form-control').forEach(input => {
       input.placeholder = lang === 'en' ? 'Estimated volumes, target markets or specific product lines...' : 'Volúmenes estimados, mercados de interés o líneas de productos específicas...';
     });
 
-    // Re-render Product Filter Buttons
+    // Filter Buttons Re-render
     const filterAll = document.querySelector('[data-filter="all"]');
     const filterPure = document.querySelector('[data-filter="natural"]');
     const filterChamoy = document.querySelector('[data-filter="chamoy"]');
-
     if (filterAll) filterAll.textContent = translations[lang].filter_all;
     if (filterPure) filterPure.textContent = translations[lang].filter_pure;
     if (filterChamoy) filterChamoy.textContent = translations[lang].filter_chamoy;
 
-    // Process image alt text update according to language
+    // Process image alt text update
     const processImgs = document.querySelectorAll('.process-card-imgbox img');
     const processAltTexts = {
       es: [
@@ -386,6 +569,10 @@ document.addEventListener('DOMContentLoaded', () => {
         img.alt = processAltTexts[lang][idx];
       }
     });
+
+    // Re-render Products in Active Language
+    renderProducts(currentFilter);
+    updateCalculator();
   }
 
   // Attach click listeners to language toggle buttons
@@ -395,9 +582,6 @@ document.addEventListener('DOMContentLoaded', () => {
       applyLanguage(lang);
     });
   });
-
-  // Apply initial language
-  applyLanguage(currentLang);
 
   // ==========================================================================
   // 2. NAVIGATION & ACTIVE LINK TRACKER ON SCROLL
@@ -513,125 +697,28 @@ document.addEventListener('DOMContentLoaded', () => {
   revealElements.forEach(el => revealObserver.observe(el));
   countElements.forEach(el => revealObserver.observe(el));
 
-  // Parallax Scroll Effect on Floating Fruits
-  const floatingFruits = document.querySelectorAll('.floating-fruit');
-  if (floatingFruits.length > 0) {
-    window.addEventListener('scroll', () => {
-      const scrolled = window.scrollY;
-      floatingFruits.forEach((fruit, idx) => {
-        const factor = (idx % 2 === 0 ? 1 : -1) * (0.035 + (idx * 0.015));
-        fruit.style.transform = `translateY(${scrolled * factor}px) rotate(${scrolled * 0.02}deg)`;
-      });
-    });
-  }
-
   // ==========================================================================
-  // 4. PRODUCTS DATA & RENDERER
+  // 4. PRODUCTS RENDERER (BILINGUAL STORE)
   // ==========================================================================
-  const productsData = [
-    {
-      id: 'fresas-natural',
-      name: 'Fresas Liofilizadas',
-      category: 'natural',
-      sub: 'Dulce. Intensa. Crujiente.',
-      calories: 46,
-      weight: '15 g',
-      equivalence: '10 Fresas Frescas (1 Taza)',
-      desc: 'Fresas seleccionadas en su punto óptimo de madurez, liofilizadas mediante sublimación en frío. Cada bocado crujiente conserva la intensidad de sabor natural y hasta un 98% de los nutrientes intactos.',
-      benefits: ['Solo fresa. Nada más.', 'Sin azúcar añadida', 'Sin conservadores ni colorantes', '46 kcal por empaque completo'],
-      image: 'assets/images/products/packshot_fresas.jpg'
-    },
-    {
-      id: 'manzana-natural',
-      name: 'Manzana Liofilizada',
-      category: 'natural',
-      sub: 'Crujiente. Limpia. Pura.',
-      calories: 67,
-      weight: '20 g',
-      equivalence: '1 Manzana Entera (3/4 Taza)',
-      desc: 'Láminas crujientes de manzana natural sin cáscara ni ceras añadidas. Una fuente pura de fibra dietética ideal para mantener tus niveles de energía estables durante el día.',
-      benefits: ['100% Manzana seleccionada', 'Súper ligera y crujiente', 'Rica en fibra soluble', 'Excelente snack diario'],
-      image: 'assets/images/products/packshot_manzana.jpg'
-    },
-    {
-      id: 'platano-natural',
-      name: 'Plátano Liofilizado',
-      category: 'natural',
-      sub: 'Rico. Dorado. Natural.',
-      calories: 98,
-      weight: '28 g',
-      equivalence: '1 Plátano Entero',
-      desc: 'Rodajas de plátano dulce sin aceites ni azúcares añadidos. A diferencia de las fichas de plátano frito tradicional, nuestro proceso mantiene cero grasas y 100% del potasio.',
-      benefits: ['Sin aceites ni fritos', 'Energía limpia y portátil', 'Rico en potasio y vitamina B6', '98 kcal de nutrición pura'],
-      image: 'assets/images/products/packshot_platano.jpg'
-    },
-    {
-      id: 'mango-natural',
-      name: 'Mango Liofilizado',
-      category: 'natural',
-      sub: 'Tropical. Vibrante. Exótico.',
-      calories: 80,
-      weight: '24 g',
-      equivalence: '1 Mango de la Huerta (1 Taza)',
-      desc: 'Lajas del más jugoso mango tropical transformadas en un snack super crujiente. Retiene beta-carotenos y todo el sabor vibrante sin una sola gota de almíbar.',
-      benefits: ['Solo mango. Nada más.', 'Alto en Vitamina A y C', 'Textura crujiente irresistible', 'Empaque listo para llevar'],
-      image: 'assets/images/products/packshot_mango.jpg'
-    },
-    {
-      id: 'mango-chamoy',
-      name: 'Mango Chamoy',
-      category: 'chamoy',
-      sub: 'Audaz. Picosito. Salvaje.',
-      calories: 76,
-      weight: '24 g',
-      equivalence: '1 Mango entero con Toque Picosito',
-      desc: 'La combinación perfecta entre la dulzura tropical del mango liofilizado y una receta artesanal de chamoy sin colorantes ni saborizantes artificiales. Picor suave y adictivo.',
-      benefits: ['Chamoy sin azúcar refinada', 'Sabor mexicano auténtico', 'Solo 76 kcal por paquete', '100% Vegano y libre de gluten'],
-      image: 'assets/images/products/packshot_mango_chamoy.jpg'
-    },
-    {
-      id: 'manzana-chamoy',
-      name: 'Manzana Chamoy',
-      category: 'chamoy',
-      sub: 'Agridulce. Crujiente. Adictiva.',
-      calories: 60,
-      weight: '20 g',
-      equivalence: '1 Manzana crujiente picosita',
-      desc: 'Crujientes trozos de manzana natural cubiertos con una sazón ligera de chile en polvo y chamoy natural. La alternativa saludable perfecta para tus antojos.',
-      benefits: ['Bajo en calorías (solo 60 kcal)', 'Crujido intenso agridulce', 'Sin conservadores químicos', 'Perfecto snack portátil'],
-      image: 'assets/images/products/packshot_manzana_chamoy.jpg'
-    },
-    {
-      id: 'pina-chamoy',
-      name: 'Piña Chamoy',
-      category: 'chamoy',
-      sub: 'Refrescante. Tropical. Intenso.',
-      calories: 93,
-      weight: '22 g',
-      equivalence: '1 Taza de Piña Tropical Picosita',
-      desc: 'Bocado tropical agridulce con el nivel exacto de piña natural liofilizada y sazón chamoy. Aporta fibra natural para una digestión ágil.',
-      benefits: ['Piña natural seleccionada', 'Sabor agridulce explosivo', 'Libre de glutamato monosódico', 'Equivale a 1 taza completa de fruta'],
-      image: 'assets/images/products/packshot_pina_chamoy.jpg'
-    }
-  ];
-
   const productsGrid = document.getElementById('products-grid');
   const filterBtns = document.querySelectorAll('.filter-btn');
 
   function renderProducts(filter = 'all') {
+    currentFilter = filter;
     if (!productsGrid) return;
     productsGrid.innerHTML = '';
     
+    const rawList = productsData[currentLang] || productsData.es;
     const filtered = filter === 'all' 
-      ? productsData 
-      : productsData.filter(p => p.category === filter);
+      ? rawList 
+      : rawList.filter(p => p.category === filter);
       
     filtered.forEach(product => {
       const card = document.createElement('div');
       card.className = 'editorial-product-card reveal-scale active';
       card.innerHTML = `
         <div class="editorial-img-box">
-          <img src="${product.image}" alt="${product.name}" loading="lazy">
+          <img src="${product.image}" alt="${product.name}" loading="lazy" width="300" height="300">
         </div>
         <div class="editorial-info-box">
           <h3 class="editorial-product-title">${product.name}</h3>
@@ -640,7 +727,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; border-top: 1px solid var(--border-light); padding-top: 1rem;">
             <span style="font-family: var(--font-serif); font-weight: 800; font-size: 1.1rem; color: var(--color-primary);">${product.calories} kcal</span>
             <button class="btn btn-outline-dark product-btn-detail" data-id="${product.id}" style="padding: 0.6rem 1.2rem; font-size: 0.78rem;">
-              <span data-i18n="btn_details">${translations[currentLang].btn_details}</span> <i class="ri-arrow-right-line"></i>
+              <span>${translations[currentLang].btn_details}</span> <i class="ri-arrow-right-line"></i>
             </button>
           </div>
         </div>
@@ -656,14 +743,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  renderProducts();
-
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      const filterValue = btn.getAttribute('data-filter');
-      renderProducts(filterValue);
+      renderProducts(btn.getAttribute('data-filter'));
     });
   });
 
@@ -673,35 +757,36 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalCloseBtn = document.getElementById('modal-close');
 
   function openModal(id) {
-    const product = productsData.find(p => p.id === id);
+    const rawList = productsData[currentLang] || productsData.es;
+    const product = rawList.find(p => p.id === id);
     if (!product || !modalOverlay || !modalContainer) return;
 
     modalContainer.innerHTML = `
       <div class="modal-content-grid">
         <div class="modal-img-area">
-          <img src="${product.image}" alt="${product.name}">
+          <img src="${product.image}" alt="${product.name}" width="350" height="350">
         </div>
         <div class="modal-details-area">
           <span class="wild-badge" style="margin-bottom: 0.8rem; width: fit-content;">
-            ${product.category === 'chamoy' ? '🌶️ EDICIÓN CHAMOY' : '🌿 100% FRUTA PURA'}
+            ${product.category === 'chamoy' ? (currentLang === 'en' ? '🌶️ CHAMOY LINE' : '🌶️ EDICIÓN CHAMOY') : (currentLang === 'en' ? '🌿 100% PURE FRUIT' : '🌿 100% FRUTA PURA')}
           </span>
           <h2 style="font-family: var(--font-serif); font-size: 2.4rem; margin-bottom: 0.4rem; color: var(--color-primary);">${product.name}</h2>
-          <p style="color: var(--color-primary-muted); font-weight: 700; margin-bottom: 1.2rem;">Equivale a ${product.equivalence}</p>
+          <p style="color: var(--color-primary-muted); font-weight: 700; margin-bottom: 1.2rem;">${currentLang === 'en' ? 'Equals ' : 'Equivale a '}${product.equivalence}</p>
           <p style="color: var(--color-text-muted); font-size: 0.98rem; margin-bottom: 1.8rem; line-height: 1.6;">${product.desc}</p>
 
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; background: var(--bg-alt); padding: 1rem; border-radius: var(--radius-sm); margin-bottom: 1.8rem;">
             <div>
               <span style="font-family: var(--font-serif); font-weight: 800; font-size: 1.3rem; color: var(--color-accent-red);">${product.calories} kcal</span>
-              <span style="display: block; font-size: 0.7rem; text-transform: uppercase; font-weight: 700; color: var(--color-text-muted);">Calorías / Sobre</span>
+              <span style="display: block; font-size: 0.7rem; text-transform: uppercase; font-weight: 700; color: var(--color-text-muted);">${currentLang === 'en' ? 'Calories / Pack' : 'Calorías / Sobre'}</span>
             </div>
             <div>
               <span style="font-family: var(--font-serif); font-weight: 800; font-size: 1.3rem; color: var(--color-primary);">${product.weight}</span>
-              <span style="display: block; font-size: 0.7rem; text-transform: uppercase; font-weight: 700; color: var(--color-text-muted);">Contenido Neto</span>
+              <span style="display: block; font-size: 0.7rem; text-transform: uppercase; font-weight: 700; color: var(--color-text-muted);">${currentLang === 'en' ? 'Net Weight' : 'Contenido Neto'}</span>
             </div>
           </div>
 
           <a href="contacto.html" class="btn btn-luxury-dark" style="width: 100%;">
-            SOLICITAR COTIZACIÓN B2B <i class="ri-mail-send-line"></i>
+            ${currentLang === 'en' ? 'REQUEST B2B QUOTE' : 'SOLICITAR COTIZACIÓN B2B'} <i class="ri-mail-send-line"></i>
           </a>
         </div>
       </div>
@@ -726,7 +811,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================================
-  // 5. CALCULATOR LOGIC ("COMPARA TU SNACK")
+  // 5. CALCULATOR LOGIC ("COMPARA TU SNACK" BILINGUAL)
   // ==========================================================================
   const calcSelect = document.getElementById('calc-fruit');
   const calcQty = document.getElementById('calc-qty');
@@ -740,17 +825,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateCalculator() {
     if (!calcSelect || !calcQty) return;
-    const selectedProd = productsData.find(p => p.id === calcSelect.value) || productsData[0];
+    const rawList = productsData[currentLang] || productsData.es;
+    const selectedProd = rawList.find(p => p.id === calcSelect.value) || rawList[0];
     const qty = parseInt(calcQty.value, 10) || 1;
 
-    if (qtyValDisplay) qtyValDisplay.textContent = `${qty} porción${qty > 1 ? 'es' : ''}/semana`;
+    if (qtyValDisplay) {
+      if (currentLang === 'en') {
+        qtyValDisplay.textContent = `${qty} serving${qty > 1 ? 's' : ''}/week`;
+      } else {
+        qtyValDisplay.textContent = `${qty} porción${qty > 1 ? 'es' : ''}/semana`;
+      }
+    }
     
     const junkCal = 280 * qty;
     const huertaliaCal = selectedProd.calories * qty;
     const calSaved = junkCal - huertaliaCal;
 
     if (calSavedDisplay) calSavedDisplay.textContent = `-${calSaved} kcal`;
-    if (fruitEquivDisplay) fruitEquivDisplay.textContent = `${qty}x de ${selectedProd.name}`;
+    if (fruitEquivDisplay) fruitEquivDisplay.textContent = `${qty}x ${selectedProd.name}`;
 
     if (barJunk && barHuertalia) {
       const huertaliaPct = Math.round((huertaliaCal / junkCal) * 100);
@@ -765,8 +857,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (calcSelect && calcQty) {
     calcSelect.addEventListener('change', updateCalculator);
     calcQty.addEventListener('input', updateCalculator);
-    updateCalculator();
   }
+
+  // Apply initial language & renderer
+  applyLanguage(currentLang);
 
   // ==========================================================================
   // 6. INTERACTIVE MAP (LEAFLET.JS)
