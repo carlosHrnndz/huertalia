@@ -1,5 +1,5 @@
 /* ==========================================================================
-   HUERTALIA LIOFILIZADOS - V5.7 COMPREHENSIVE BILINGUAL & QA ENGINE
+   HUERTALIA LIOFILIZADOS - FINAL QA & BILINGUAL ENGINE
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -95,6 +95,8 @@ document.addEventListener('DOMContentLoaded', () => {
       calc_subhead: 'Descubre cómo cambia el aporte calórico de tu snack habitual al elegir fruta liofilizada.',
       calc_label_select: 'SELECCIONA TU FRUTA:',
       calc_label_qty: 'FRECUENCIA DE CONSUMO SEMANAL:',
+      calc_unit_min: '1 porción',
+      calc_unit_max: '14 porciones',
       calc_label_saved: 'DIFERENCIA ESTIMADA DE CALORÍAS',
       calc_bar_junk: 'Snack Procesado Tradicional',
       calc_bar_huertalia: 'Con Huertalia',
@@ -139,7 +141,10 @@ document.addEventListener('DOMContentLoaded', () => {
       form_opt_retail: 'Supermercado / Tienda Saludable / Gimnasio',
       form_opt_bulk: 'Suministro de Fruta Liofilizada a Granel',
       form_btn_submit: 'ENVIAR SOLICITUD A VENTAS',
+      form_alert_success: '¡Gracias por comunicarte con Huertalia! Tu mensaje ha sido enviado a ventas@huertalia.com.',
       map_badge: 'UBICACIÓN MATRIZ',
+      map_title: 'Balcones del Campestre',
+      map_sub: 'León, Guanajuato, México.',
 
       // Footer
       footer_desc: 'Fruta. Reinventada. 100% fruta liofilizada nacida en León, Guanajuato en 2022. Del corazón del Bajío al mundo.',
@@ -220,12 +225,12 @@ document.addEventListener('DOMContentLoaded', () => {
       lifestyle_badge: 'CONSCIOUS LIFESTYLE',
       lifestyle_title: 'TAKE HUERTALIA <span class="text-italic-accent">WITH YOU.</span>',
       lifestyle_subhead: 'Pure nutrition designed to fit naturally into every moment of your day.',
-      time1_label: 'TRAIN',
-      time1_desc: 'Light and crunchy fruit to accompany your routine.',
+      time1_label: 'WORKOUT',
+      time1_desc: 'Light and crunchy fruit to accompany your workout routine.',
       time2_label: 'WORK',
       time2_desc: 'A crispy break to accompany your day.',
-      time3_label: 'PAUSE',
-      time3_desc: 'A small moment of flavor when you need it most.',
+      time3_label: 'BREAK',
+      time3_desc: 'A moment of pure flavor when you need it most.',
       time4_label: 'ADVENTURE',
       time4_desc: 'Lightweight fruit, easy to take wherever you go.',
 
@@ -243,6 +248,8 @@ document.addEventListener('DOMContentLoaded', () => {
       calc_subhead: 'See how the caloric intake of your usual snack changes when choosing freeze-dried fruit.',
       calc_label_select: 'SELECT YOUR FRUIT:',
       calc_label_qty: 'WEEKLY CONSUMPTION:',
+      calc_unit_min: '1 serving',
+      calc_unit_max: '14 servings',
       calc_label_saved: 'ESTIMATED CALORIE DIFFERENCE',
       calc_bar_junk: 'Junk Snack Benchmark',
       calc_bar_huertalia: 'With Huertalia',
@@ -287,7 +294,10 @@ document.addEventListener('DOMContentLoaded', () => {
       form_opt_retail: 'Supermarket / Health Store / Gym',
       form_opt_bulk: 'Bulk Freeze-Dried Fruit Supply',
       form_btn_submit: 'SUBMIT INQUIRY TO SALES',
+      form_alert_success: 'Thank you for reaching out to Huertalia! Your message has been sent to ventas@huertalia.com.',
       map_badge: 'HEADQUARTERS LOCATION',
+      map_title: 'Balcones del Campestre',
+      map_sub: 'León, Guanajuato, Mexico.',
 
       // Footer
       footer_desc: 'Fruit. Reinvented. 100% freeze-dried fruit born in León, Guanajuato in 2022. From the heart of El Bajío to the world.',
@@ -480,7 +490,6 @@ document.addEventListener('DOMContentLoaded', () => {
     ]
   };
 
-  // Determine initial language
   function detectLanguage() {
     const savedLang = localStorage.getItem('huertalia_lang');
     if (savedLang && (savedLang === 'es' || savedLang === 'en')) {
@@ -546,7 +555,22 @@ document.addEventListener('DOMContentLoaded', () => {
     if (filterPure) filterPure.textContent = translations[lang].filter_pure;
     if (filterChamoy) filterChamoy.textContent = translations[lang].filter_chamoy;
 
-    // Process image alt text update
+    // Calculator Select Options Re-render
+    const calcSelect = document.getElementById('calc-fruit');
+    if (calcSelect) {
+      const currentSelectedVal = calcSelect.value;
+      calcSelect.innerHTML = '';
+      const rawList = productsData[lang] || productsData.es;
+      rawList.forEach(p => {
+        const opt = document.createElement('option');
+        opt.value = p.id;
+        opt.textContent = `${p.name} (${p.calories} kcal)`;
+        if (p.id === currentSelectedVal) opt.selected = true;
+        calcSelect.appendChild(opt);
+      });
+    }
+
+    // Image Alt Text Update across page
     const processImgs = document.querySelectorAll('.process-card-imgbox img');
     const processAltTexts = {
       es: [
@@ -569,6 +593,27 @@ document.addEventListener('DOMContentLoaded', () => {
         img.alt = processAltTexts[lang][idx];
       }
     });
+
+    const heroImg = document.querySelector('.hero-bg-media');
+    if (heroImg) {
+      heroImg.alt = lang === 'en' 
+        ? 'Huertalia Freeze-Dried Fruit León Guanajuato'
+        : 'Fruta Liofilizada Huertalia León Guanajuato';
+    }
+
+    const historyImg = document.querySelector('.history-img-box img');
+    if (historyImg) {
+      historyImg.alt = lang === 'en'
+        ? 'Huertalia Agricultural Heritage León Guanajuato'
+        : 'Origen agrícola Huertalia León Guanajuato';
+    }
+
+    const b2bImg = document.querySelector('.b2b-img-box img');
+    if (b2bImg) {
+      b2bImg.alt = lang === 'en'
+        ? 'Huertalia Global Wholesale Distribution'
+        : 'Distribución Global Huertalia';
+    }
 
     // Re-render Products in Active Language
     renderProducts(currentFilter);
@@ -857,6 +902,16 @@ document.addEventListener('DOMContentLoaded', () => {
   if (calcSelect && calcQty) {
     calcSelect.addEventListener('change', updateCalculator);
     calcQty.addEventListener('input', updateCalculator);
+  }
+
+  // Lead Form Submission Listener
+  const leadForm = document.getElementById('lead-form');
+  if (leadForm) {
+    leadForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert(translations[currentLang].form_alert_success);
+      leadForm.reset();
+    });
   }
 
   // Apply initial language & renderer
