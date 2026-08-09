@@ -1,6 +1,6 @@
 /* ==========================================================================
-   HUERTALIA LIOFILIZADOS - V5 INTERACTIVE & i18n ENGINE (ES / EN)
-   Auto-detects browser locale & supports manual ES / EN toggle
+   HUERTALIA LIOFILIZADOS - V5.3 INTERACTIVE & i18n ENGINE (ES / EN)
+   Includes complete translations for Homepage AND Contact Page
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -115,6 +115,28 @@ document.addEventListener('DOMContentLoaded', () => {
       final_subhead: 'Descubre la fruta liofilizada nacida en el corazón del Bajío. Calidad excepcional para tu estilo de vida o tu negocio.',
       final_cta1: 'DESCUBRE HUERTALIA',
       final_cta2: 'COTIZAR MAYOREO',
+
+      // Contact Page Specific
+      contact_hero_title: 'HABLA CON<br><span class="text-italic-accent" style="color: var(--color-sand);">HUERTALIA.</span>',
+      contact_direct_title: 'Canales Directos',
+      contact_direct_sub: 'Nuestro centro operativo y logístico se ubica en el corazón del Bajío en León, Guanajuato, México.',
+      contact_lbl_address: 'Dirección Matriz:',
+      contact_lbl_email: 'Correo Electrónico:',
+      contact_lbl_email_sub: 'Respuesta prioritaria en menos de 24 horas.',
+      contact_lbl_phone: 'Teléfono & WhatsApp B2B:',
+      contact_form_title: 'Enviar Mensaje',
+      form_name: 'NOMBRE COMPLETO *',
+      form_email: 'CORREO ELECTRÓNICO *',
+      form_phone: 'TELÉFONO / WHATSAPP *',
+      form_type: 'TIPO DE NEGOCIO / INTERÉS *',
+      form_message: 'MENSAJE O DETALLES DE LA SOLICITUD *',
+      form_select_default: 'Selecciona una opción...',
+      form_opt_wholesale: 'Distribución Nacional al Mayoreo',
+      form_opt_export: 'Exportación Internacional',
+      form_opt_retail: 'Supermercado / Tienda Saludable / Gimnasio',
+      form_opt_bulk: 'Suministro de Fruta Liofilizada a Granel',
+      form_btn_submit: 'ENVIAR SOLICITUD A VENTAS',
+      map_badge: 'UBICACIÓN MATRIZ',
 
       // Footer
       footer_desc: 'Fruta. Reinventada. 100% fruta liofilizada nacida en León, Guanajuato en 2022. Del corazón del Bajío al mundo.',
@@ -232,6 +254,28 @@ document.addEventListener('DOMContentLoaded', () => {
       final_cta1: 'DISCOVER HUERTALIA',
       final_cta2: 'WHOLESALE QUOTE',
 
+      // Contact Page Specific
+      contact_hero_title: 'TALK TO<br><span class="text-italic-accent" style="color: var(--color-sand);">HUERTALIA.</span>',
+      contact_direct_title: 'Direct Channels',
+      contact_direct_sub: 'Our central logistics hub is located in the heart of El Bajío in León, Guanajuato, Mexico.',
+      contact_lbl_address: 'Headquarters:',
+      contact_lbl_email: 'Sales Email:',
+      contact_lbl_email_sub: 'Priority response under 24 hours.',
+      contact_lbl_phone: 'Phone & WhatsApp B2B:',
+      contact_form_title: 'Send a Message',
+      form_name: 'FULL NAME *',
+      form_email: 'EMAIL *',
+      form_phone: 'PHONE / WHATSAPP *',
+      form_type: 'BUSINESS TYPE / INTEREST *',
+      form_message: 'MESSAGE / REQUEST DETAILS *',
+      form_select_default: 'Select an option...',
+      form_opt_wholesale: 'National Wholesale Distribution',
+      form_opt_export: 'International Export',
+      form_opt_retail: 'Supermarket / Health Store / Gym',
+      form_opt_bulk: 'Bulk Freeze-Dried Fruit Supply',
+      form_btn_submit: 'SUBMIT INQUIRY TO SALES',
+      map_badge: 'HEADQUARTERS LOCATION',
+
       // Footer
       footer_desc: 'Fruit. Reinvented. 100% freeze-dried fruit born in León, Guanajuato in 2022. From the heart of El Bajío to the world.',
       footer_col_title: 'COLLECTION',
@@ -278,7 +322,23 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Re-render Product Filter Buttons & Modal text
+    // Handle Form Placeholders dynamically
+    const nameInputs = document.querySelectorAll('input[placeholder*="Ana"], input[placeholder*="Jane"]');
+    nameInputs.forEach(input => {
+      input.placeholder = lang === 'en' ? 'e.g. Jane Doe' : 'Ej. Ana María Torres';
+    });
+
+    const emailInputs = document.querySelectorAll('input[placeholder*="tuempresa"], input[placeholder*="company"]');
+    emailInputs.forEach(input => {
+      input.placeholder = lang === 'en' ? 'contact@company.com' : 'contacto@tuempresa.com';
+    });
+
+    const msgInputs = document.querySelectorAll('textarea.form-control');
+    msgInputs.forEach(input => {
+      input.placeholder = lang === 'en' ? 'Estimated volumes, target markets or specific product lines...' : 'Volúmenes estimados, mercados de interés o líneas de productos específicas...';
+    });
+
+    // Re-render Product Filter Buttons
     const filterAll = document.querySelector('[data-filter="all"]');
     const filterPure = document.querySelector('[data-filter="natural"]');
     const filterChamoy = document.querySelector('[data-filter="chamoy"]');
@@ -290,8 +350,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Attach click listeners to language toggle buttons
   document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const lang = btn.getAttribute('data-lang');
+    btn.addEventListener('click', (e) => {
+      const lang = e.currentTarget.getAttribute('data-lang');
       applyLanguage(lang);
     });
   });
