@@ -32,9 +32,9 @@
 <body>
 
   <!-- Fullscreen Mobile Menu Overlay -->
-  <div id="mobile-menu-overlay" class="mobile-menu-overlay" role="dialog" aria-modal="true">
+  <div id="mobile-menu-overlay" class="mobile-menu-overlay" role="dialog" aria-modal="true" aria-expanded="false">
     <div class="overlay-header">
-      <a href="index.html" class="logo-brand" aria-label="HUERTALIA Liofilizados Inicio" data-i18n-aria="aria_logo_home">
+      <a href="index.html" class="logo-brand mobile-overlay-link" aria-label="HUERTALIA Liofilizados Inicio" data-i18n-aria="aria_logo_home">
         <img src="assets/images/logo/logo_huertalia_light.svg" alt="HUERTALIA LIOFILIZADOS" style="height: 42px; width: auto; display: block;" width="180" height="42">
       </a>
       <button id="overlay-close-btn" class="overlay-close-btn" aria-label="Cerrar menú móvil" data-i18n-aria="aria_close_overlay">
@@ -57,18 +57,18 @@
         <button class="lang-btn active" data-lang="es" aria-label="Cambiar idioma a Español" data-i18n-aria="aria_lang_es">🇲🇽 ES</button>
         <button class="lang-btn" data-lang="en" aria-label="Switch language to English" data-i18n-aria="aria_lang_en">🇺🇸 EN</button>
       </div>
-      <a href="#formulario" class="btn btn-luxury-light" style="width: 100%; min-height: 48px; justify-content: center;" data-i18n="nav_quote">
+      <a href="#formulario" class="btn btn-luxury-light mobile-overlay-link" style="width: 100%; min-height: 48px; justify-content: center;" data-i18n="nav_quote">
         COTIZAR
       </a>
     </div>
   </div>
 
-  <!-- Navegación Fija V5 con Conmutador de Idioma (ES / EN) -->
+  <!-- Header Fijo de Marca -->
   <div class="site-header-wrapper scrolled">
     <header class="site-header">
       <div class="container nav-wrapper">
         <a href="index.html" class="logo-brand" aria-label="HUERTALIA Liofilizados Inicio" data-i18n-aria="aria_logo_home">
-          <img src="assets/images/logo/logo_huertalia_light.svg" alt="HUERTALIA LIOFILIZADOS" style="height: 48px; width: auto; display: block;" width="200" height="48">
+          <img src="assets/images/logo/logo_huertalia_light.svg" alt="HUERTALIA LIOFILIZADOS" style="height: 44px; width: auto; display: block;" width="180" height="44">
         </a>
 
         <nav>
@@ -83,7 +83,7 @@
         </nav>
 
         <div class="nav-actions-flex">
-          <!-- Language Switcher Pill with USA Flag 🇺🇸 -->
+          <!-- Conmutador de Idioma -->
           <div class="lang-switcher">
             <button class="lang-btn active" data-lang="es" aria-label="Cambiar idioma a Español" data-i18n-aria="aria_lang_es">🇲🇽 ES</button>
             <button class="lang-btn" data-lang="en" aria-label="Switch language to English" data-i18n-aria="aria_lang_en">🇺🇸 EN</button>
@@ -102,10 +102,10 @@
   </div>
 
   <!-- Contact Hero Section -->
-  <section class="hero-section" style="min-height: 45vh; padding-top: 8rem; padding-bottom: 3rem;">
+  <section class="hero-section" style="min-height: 40vh; padding-top: 7.5rem; padding-bottom: 2.5rem;">
     <div class="container hero-content-wrapper reveal" style="text-align: center; max-width: 800px; margin: 0 auto;">
       <span class="wild-badge" style="background: rgba(255,255,255,0.1); color: var(--color-sand);" data-i18n="b2b_badge">MAYOREO Y DISTRIBUCIÓN</span>
-      <h1 class="title-display" style="color: var(--color-ivory); font-size: clamp(2.5rem, 7vw, 4.8rem); margin: 0.8rem 0;" data-i18n="contact_hero_title">
+      <h1 class="title-display" style="color: var(--color-ivory); font-size: clamp(2.2rem, 6vw, 4.8rem); margin: 0.8rem 0;" data-i18n="contact_hero_title">
         HABLA CON<br>
         <span class="text-italic-accent" style="color: var(--color-sand);">HUERTALIA.</span>
       </h1>
@@ -116,8 +116,8 @@
   </section>
 
   <!-- Contact Form & Info Grid -->
-  <section class="container" style="padding: 4rem 0;">
-    <div class="calculator-card-premium" style="grid-template-columns: 1fr 1.2fr; gap: 4rem;">
+  <section class="container" style="padding: 3.5rem 0;">
+    <div class="calculator-card-premium" style="grid-template-columns: 1fr 1.2fr; gap: 3.5rem;">
       
       <!-- Direct Contact Card -->
       <div class="reveal-left">
@@ -127,7 +127,7 @@
           Nuestro centro operativo y logístico se ubica en el corazón del Bajío en León, Guanajuato, México.
         </p>
 
-        <div style="display: flex; flex-direction: column; gap: 1.8rem;">
+        <div style="display: flex; flex-direction: column; gap: 1.6rem;">
           <div style="display: flex; gap: 1.2rem; align-items: flex-start;">
             <div style="width: 48px; height: 48px; border-radius: 12px; background: var(--color-primary); color: white; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0;"><i class="ri-map-pin-2-line"></i></div>
             <div>
@@ -202,22 +202,7 @@
     </div>
   </section>
 
-  <!-- Interactive Map Section -->
-  <section style="padding-bottom: 5rem;">
-    <div class="container">
-      <div style="text-align: center; margin-bottom: 2.5rem;" class="reveal">
-        <span class="badge-tag" data-i18n="map_badge">UBICACIÓN MATRIZ</span>
-        <h2 class="title-section" style="color: var(--color-primary); margin-top: 0.5rem;" data-i18n="map_title">Balcones del Campestre</h2>
-        <p class="text-editorial-sub" data-i18n="map_sub">León, Guanajuato, México.</p>
-      </div>
-
-      <div style="height: 380px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid var(--border-light);" class="reveal-scale">
-        <div id="map-container" style="width: 100%; height: 100%;"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pie de Página -->
+  <!-- Pie de Página Bilingüe -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
@@ -228,37 +213,52 @@
           <p data-i18n="footer_desc">Fruta. Reinventada. 100% fruta liofilizada nacida en León, Guanajuato en 2022. Del corazón del Bajío al mundo.</p>
         </div>
 
-        <div>
-          <h4 class="footer-title" data-i18n="nav_home">INICIO</h4>
-          <ul class="footer-links">
-            <li><a href="index.html#hero" data-i18n="nav_home">Inicio</a></li>
-            <li><a href="index.html#historia" data-i18n="nav_history">Nuestra Historia</a></li>
-            <li><a href="index.html#proceso" data-i18n="nav_process">El Proceso</a></li>
-            <li><a href="index.html#productos" data-i18n="nav_products">Productos</a></li>
-            <li><a href="index.html#estilo-de-vida" data-i18n="nav_lifestyle">Estilo de Vida</a></li>
-            <li><a href="index.html#negocios" data-i18n="nav_business">Para Negocios</a></li>
-            <li><a href="contacto.html" data-i18n="footer_contact_link">Contacto</a></li>
-          </ul>
+        <div class="footer-col-group">
+          <button class="footer-accordion-header" aria-expanded="false" aria-controls="footer-nav-panel">
+            <span class="footer-title" data-i18n="nav_home">INICIO</span>
+            <i class="ri-arrow-down-s-line"></i>
+          </button>
+          <div id="footer-nav-panel" class="footer-accordion-panel">
+            <ul class="footer-links">
+              <li><a href="index.html#hero" data-i18n="nav_home">Inicio</a></li>
+              <li><a href="index.html#historia" data-i18n="nav_history">Nuestra Historia</a></li>
+              <li><a href="index.html#proceso" data-i18n="nav_process">El Proceso</a></li>
+              <li><a href="index.html#productos" data-i18n="nav_products">Productos</a></li>
+              <li><a href="index.html#estilo-de-vida" data-i18n="nav_lifestyle">Estilo de Vida</a></li>
+              <li><a href="index.html#negocios" data-i18n="nav_business">Para Negocios</a></li>
+              <li><a href="contacto.html" data-i18n="footer_contact_link">Contacto</a></li>
+            </ul>
+          </div>
         </div>
 
-        <div>
-          <h4 class="footer-title" data-i18n="footer_col_title">COLECCIÓN</h4>
-          <ul class="footer-links">
-            <li><a href="index.html#productos" data-i18n="footer_item_fresas">Fresas Liofilizadas</a></li>
-            <li><a href="index.html#productos" data-i18n="footer_item_manzana">Manzana Liofilizada</a></li>
-            <li><a href="index.html#productos" data-i18n="footer_item_platano">Plátano Liofilizado</a></li>
-            <li><a href="index.html#productos" data-i18n="footer_item_mango">Mango Liofilizado</a></li>
-            <li><a href="index.html#productos" data-i18n="footer_item_chamoy">Línea Chamoy Salvaje</a></li>
-          </ul>
+        <div class="footer-col-group">
+          <button class="footer-accordion-header" aria-expanded="false" aria-controls="footer-col-panel">
+            <span class="footer-title" data-i18n="footer_col_title">COLECCIÓN</span>
+            <i class="ri-arrow-down-s-line"></i>
+          </button>
+          <div id="footer-col-panel" class="footer-accordion-panel">
+            <ul class="footer-links">
+              <li><a href="index.html#productos" data-i18n="footer_item_fresas">Fresas Liofilizadas</a></li>
+              <li><a href="index.html#productos" data-i18n="footer_item_manzana">Manzana Liofilizada</a></li>
+              <li><a href="index.html#productos" data-i18n="footer_item_platano">Plátano Liofilizado</a></li>
+              <li><a href="index.html#productos" data-i18n="footer_item_mango">Mango Liofilizado</a></li>
+              <li><a href="index.html#productos" data-i18n="footer_item_chamoy">Línea Chamoy Salvaje</a></li>
+            </ul>
+          </div>
         </div>
 
-        <div>
-          <h4 class="footer-title" data-i18n="footer_offices_title">OFICINAS MATRIZ</h4>
-          <ul class="footer-links">
-            <li><i class="ri-mail-line"></i> ventas@huertalia.com</li>
-            <li><i class="ri-phone-line"></i> +52 477 123 01256</li>
-            <li><i class="ri-map-pin-line"></i> <span data-i18n="footer_address">Balcones del Campestre<br>León, Guanajuato, México (C.P. 37138)</span></li>
-          </ul>
+        <div class="footer-col-group">
+          <button class="footer-accordion-header" aria-expanded="false" aria-controls="footer-offices-panel">
+            <span class="footer-title" data-i18n="footer_offices_title">OFICINAS MATRIZ</span>
+            <i class="ri-arrow-down-s-line"></i>
+          </button>
+          <div id="footer-offices-panel" class="footer-accordion-panel">
+            <ul class="footer-links">
+              <li><i class="ri-mail-line"></i> ventas@huertalia.com</li>
+              <li><i class="ri-phone-line"></i> +52 477 123 01256</li>
+              <li><i class="ri-map-pin-line"></i> <span data-i18n="footer_address">Balcones del Campestre<br>León, Guanajuato, México (C.P. 37138)</span></li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -269,8 +269,6 @@
     </div>
   </footer>
 
-  <!-- Leaflet JS for Map -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <!-- Main JavaScript File -->
   <script src="js/main.js"></script>
 </body>

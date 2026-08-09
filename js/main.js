@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
       claim_3: 'SIN CONSERVADORES',
       claim_4: 'LIOFILIZACIÓN EN FRÍO',
 
-      // History & Map Structural Component (01.png)
+      // History & Accordion
       history_badge: 'ORIGEN & AUTENTICIDAD',
       history_title: 'NACIMOS EN EL <span class="text-italic-accent">BAJÍO.</span>',
       history_origin: 'LEÓN, GUANAJUATO · 2022',
@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
       manifesto_badge: 'MANIFIESTO HUERTALIA',
       manifesto_title: 'DE LA TIERRA. AL CRUNCH.',
       manifesto_text: 'Creemos que la naturaleza ya hizo el trabajo difícil: crear una fruta perfecta.<br>Nosotros solo encontramos una manera de conservarla.<br>Sin añadir. Sin disfrazar. Sin complicarla.<br><strong style="color: #FFFFFF; font-size: 1.3rem;">Solo fruta. Solo Huertalia.</strong>',
+      story_accordion_btn: 'CONOCE NUESTRA HISTORIA COMPLETA',
       
       map_section_tag: 'NUESTRO TERRITORIO',
       map_section_title: 'DEL CORAZÓN DEL BAJÍO. <span class="text-italic-accent">PARA EL MUNDO.</span>',
@@ -62,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
       banner_bajio_tag: 'DESDE EL BAJÍO',
       banner_bajio_title: 'FRUTA CON ORIGEN. DE NUESTRA TIERRA AL MUNDO.',
 
-      // Process & Intro (03.png)
+      // Process & Accordion (03.png)
       process_badge: 'CIENCIA Y TECNOLOGÍA',
       process_title: 'EL PROCESO',
       process_subhead: 'Sublimación en frío al vacío para lograr hasta un 98% de retención de nutrientes.',
@@ -118,13 +119,14 @@ document.addEventListener('DOMContentLoaded', () => {
       time4_label: 'AVENTURA',
       time4_desc: 'Fruta ligera y fácil de llevar allá donde vayas.',
 
-      // Why Huertalia
+      // Why Huertalia & Accordion
       why_badge: 'BENEFICIOS COMPROBADOS',
       why_title: 'NADA AÑADIDO.<br><span class="text-italic-accent">TODO CONSERVADO.</span>',
       why_claim1: 'HASTA UN 98% DE RETENCIÓN DE NUTRIENTES',
       why_claim2: 'FRUTA REAL',
       why_claim3: 'AZÚCAR AÑADIDA',
       why_claim4: 'ACEITES AÑADIDOS',
+      benefits_accordion_btn: 'VER DETALLES DE NUTRICIÓN Y CALIDAD',
 
       // Calculator
       calc_badge: 'COMPARATIVA NUTRICIONAL',
@@ -139,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
       calc_bar_huertalia: 'Con Huertalia',
       calc_equiv_label: 'Equiv. a:',
 
-      // Business
+      // Business & Accordion
       b2b_badge: 'MAYOREO Y DISTRIBUCIÓN',
       b2b_title: 'HUERTALIA PARA<br><span class="text-italic-accent" style="color: var(--color-accent-mango);">NEGOCIOS.</span>',
       b2b_subhead: 'Suministramos a cadenas retail premium, supermercados gourmet, clubes de salud y distribuidores internacionales en América del Norte y Europa.',
@@ -150,6 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
       b2b_f3_title: 'Vida Útil de +12 Meses',
       b2b_f3_desc: 'Empaque hermético de alta barrera contra luz y oxígeno.',
       b2b_cta: 'CONVERTIRME EN DISTRIBUIDOR',
+      b2b_accordion_btn: 'VER VENTAJAS PARA DISTRIBUIDORES',
 
       // Final CTA
       final_badge: '¿LISTO PARA EL CRUNCH?',
@@ -233,7 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
       claim_3: 'NO PRESERVATIVES',
       claim_4: 'COLD FREEZE-DRIED',
 
-      // History & Map Structural Component (01.png)
+      // History & Accordion
       history_badge: 'ORIGIN & AUTHENTICITY',
       history_title: 'BORN IN <span class="text-italic-accent">EL BAJÍO.</span>',
       history_origin: 'LEÓN, GUANAJUATO · 2022',
@@ -245,7 +248,8 @@ document.addEventListener('DOMContentLoaded', () => {
       manifesto_badge: 'HUERTALIA MANIFESTO',
       manifesto_title: 'FROM THE EARTH. TO THE CRUNCH.',
       manifesto_text: 'We believe nature already did the hard work: creating perfect fruit.<br>We just found a way to preserve it.<br>Nothing added. Nothing disguised. Nothing complicated.<br><strong style="color: #FFFFFF; font-size: 1.3rem;">Just fruit. Just Huertalia.</strong>',
-      
+      story_accordion_btn: 'READ OUR FULL STORY',
+
       map_section_tag: 'OUR TERRITORY',
       map_section_title: 'FROM THE HEART OF EL BAJÍO. <span class="text-italic-accent">TO THE WORLD.</span>',
       map_section_desc: 'Born in León, Guanajuato in 2022. A strategic location in Mexico\'s agricultural heartland connecting fresh harvests to global markets.',
@@ -254,7 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
       banner_bajio_tag: 'FROM EL BAJÍO',
       banner_bajio_title: 'FRUIT WITH ORIGIN. FROM OUR LAND TO THE WORLD.',
 
-      // Process & Intro (03.png)
+      // Process & Accordion (03.png)
       process_badge: 'SCIENCE & TECHNOLOGY',
       process_title: 'THE PROCESS',
       process_subhead: 'Cold vacuum sublimation to achieve up to 98% nutrient retention.',
@@ -310,13 +314,14 @@ document.addEventListener('DOMContentLoaded', () => {
       time4_label: 'ADVENTURE',
       time4_desc: 'Lightweight fruit, easy to take wherever you go.',
 
-      // Why Huertalia
+      // Why Huertalia & Accordion
       why_badge: 'PROVEN BENEFITS',
       why_title: 'NOTHING ADDED.<br><span class="text-italic-accent">EVERYTHING PRESERVED.</span>',
       why_claim1: 'UP TO 98% NUTRIENT RETENTION',
       why_claim2: 'REAL FRUIT',
       why_claim3: 'ADDED SUGAR',
       why_claim4: 'ADDED OILS',
+      benefits_accordion_btn: 'VIEW NUTRITION & QUALITY DETAILS',
 
       // Calculator
       calc_badge: 'NUTRITIONAL COMPARISON',
@@ -331,7 +336,7 @@ document.addEventListener('DOMContentLoaded', () => {
       calc_bar_huertalia: 'With Huertalia',
       calc_equiv_label: 'Equiv. to:',
 
-      // Business
+      // Business & Accordion
       b2b_badge: 'WHOLESALE & DISTRIBUTION',
       b2b_title: 'HUERTALIA FOR<br><span class="text-italic-accent" style="color: var(--color-accent-mango);">BUSINESS.</span>',
       b2b_subhead: 'Supplying premium retail chains, gourmet supermarkets, fitness clubs and international distributors across North America and Europe.',
@@ -342,6 +347,7 @@ document.addEventListener('DOMContentLoaded', () => {
       b2b_f3_title: '12+ Month Shelf-Life',
       b2b_f3_desc: 'High-barrier oxygen protective packaging.',
       b2b_cta: 'BECOME A DISTRIBUTOR',
+      b2b_accordion_btn: 'VIEW DISTRIBUTOR ADVANTAGES',
 
       // Final CTA
       final_badge: 'READY TO CRUNCH?',
@@ -604,7 +610,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (twitterDesc) twitterDesc.content = translations[lang].seo_meta;
     }
 
-    // 3. Update Language Pill Buttons Active State (both header & mobile overlay)
+    // 3. Update Language Pill Buttons Active State (header & mobile overlay)
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
     });
@@ -668,7 +674,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // 10. Image Alt Text Update across page (including campaign banners)
+    // 10. Image Alt Text Update across page
     const processImgs = document.querySelectorAll('.process-card-imgbox img');
     const processAltTexts = {
       es: [
@@ -748,7 +754,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================================================
-  // 2. FULLSCREEN MOBILE MENU OVERLAY LOGIC
+  // 2. FULLSCREEN MOBILE MENU OVERLAY & ACCESSIBILITY LOGIC
   // ==========================================================================
   const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
   const mobileOverlay = document.getElementById('mobile-menu-overlay');
@@ -757,6 +763,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function openMobileOverlay() {
     if (mobileOverlay) {
       mobileOverlay.classList.add('active');
+      mobileOverlay.setAttribute('aria-expanded', 'true');
       document.body.style.overflow = 'hidden';
     }
   }
@@ -764,6 +771,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function closeMobileOverlay() {
     if (mobileOverlay) {
       mobileOverlay.classList.remove('active');
+      mobileOverlay.setAttribute('aria-expanded', 'false');
       document.body.style.overflow = '';
     }
   }
@@ -776,13 +784,50 @@ document.addEventListener('DOMContentLoaded', () => {
     overlayCloseBtn.addEventListener('click', closeMobileOverlay);
   }
 
-  // Close mobile overlay when clicking any navigation link inside it
   document.querySelectorAll('.mobile-overlay-link').forEach(link => {
     link.addEventListener('click', closeMobileOverlay);
   });
 
+  // Keyboard Accessibility: Close overlay or modal with ESC key
+  window.addEventListener('keyup', (e) => {
+    if (e.key === 'Escape' || e.key === 'Esc') {
+      closeMobileOverlay();
+      closeModal();
+    }
+  });
+
   // ==========================================================================
-  // 3. NAVIGATION & ACTIVE LINK TRACKER ON SCROLL
+  // 3. MOBILE ACCORDIONS SYSTEM (PROGRESSIVE DISCLOSURE)
+  // ==========================================================================
+  const accordionTriggers = document.querySelectorAll('.mobile-accordion-trigger, .process-accordion-header, .footer-accordion-header');
+
+  accordionTriggers.forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+      trigger.setAttribute('aria-expanded', !isExpanded);
+      
+      const targetId = trigger.getAttribute('aria-controls');
+      const panel = document.getElementById(targetId);
+      
+      if (panel) {
+        panel.classList.toggle('active', !isExpanded);
+      }
+
+      const icon = trigger.querySelector('i');
+      if (icon) {
+        if (trigger.classList.contains('process-accordion-header')) {
+          icon.className = !isExpanded ? 'ri-subtract-line proc-icon' : 'ri-add-line proc-icon';
+        } else if (trigger.classList.contains('footer-accordion-header')) {
+          icon.className = !isExpanded ? 'ri-arrow-up-s-line' : 'ri-arrow-down-s-line';
+        } else {
+          icon.className = !isExpanded ? 'ri-subtract-line' : 'ri-add-line';
+        }
+      }
+    });
+  });
+
+  // ==========================================================================
+  // 4. NAVIGATION & ACTIVE LINK TRACKER ON SCROLL
   // ==========================================================================
   const headerWrapper = document.querySelector('.site-header-wrapper');
   const sections = document.querySelectorAll('section[id]');
@@ -818,7 +863,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================================================
-  // 4. SCROLL REVEAL & NUMBER COUNTER OBSERVER
+  // 5. SCROLL REVEAL & NUMBER COUNTER OBSERVER
   // ==========================================================================
   const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
   const countElements = document.querySelectorAll('.count-number');
@@ -881,7 +926,7 @@ document.addEventListener('DOMContentLoaded', () => {
   countElements.forEach(el => revealObserver.observe(el));
 
   // ==========================================================================
-  // 5. PRODUCTS RENDERER (BILINGUAL STORE)
+  // 6. PRODUCTS RENDERER (BILINGUAL STORE)
   // ==========================================================================
   const productsGrid = document.getElementById('products-grid');
   const filterBtns = document.querySelectorAll('.filter-btn');
@@ -994,7 +1039,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================================
-  // 6. CALCULATOR LOGIC ("COMPARA TU SNACK" BILINGUAL)
+  // 7. CALCULATOR LOGIC ("COMPARA TU SNACK" BILINGUAL)
   // ==========================================================================
   const calcSelect = document.getElementById('calc-fruit');
   const calcQty = document.getElementById('calc-qty');

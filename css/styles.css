@@ -1474,7 +1474,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   FULLSCREEN MOBILE MENU OVERLAY & MOBILE POLISH
+   FULLSCREEN MOBILE MENU OVERLAY & MOBILE REDESIGN ACCORDION SYSTEM
    ========================================================================== */
 
 /* Anchor Scroll Padding to compensate sticky header */
@@ -1496,32 +1496,37 @@ a.btn,
 .product-btn-detail,
 .modal-close-btn,
 .overlay-close-btn,
-.mobile-menu-btn {
+.mobile-menu-btn,
+.mobile-accordion-trigger,
+.footer-accordion-header {
   min-height: 44px;
   touch-action: manipulation;
 }
 
-/* Fullscreen Mobile Menu Overlay */
+/* Fullscreen Mobile Menu Overlay - PURE CSS INITIALIZATION TO PREVENT UNSTYLED FLASH */
 .mobile-menu-overlay {
+  display: none;
   position: fixed;
   inset: 0;
   z-index: 3500;
   background: rgba(14, 22, 17, 0.98);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 1.8rem 1.6rem 2.5rem;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   overflow-y: auto;
 }
 
 .mobile-menu-overlay.active {
+  display: flex;
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }
 
 .overlay-header {
@@ -1585,11 +1590,79 @@ a.btn,
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* RESPONSIVE MOBILE POLISH BREAKPOINTS (< 860px, < 580px, < 390px) */
+/* MOBILE ACCORDIONS (PROGRESSIVE DISCLOSURE SYSTEM) */
+.mobile-accordion-trigger {
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.2rem;
+  background: rgba(18, 35, 23, 0.05);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.mobile-accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-accordion-panel.active {
+  max-height: 1400px;
+  opacity: 1;
+  padding-top: 1rem;
+}
+
+.footer-accordion-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  border: none;
+  color: var(--color-ivory);
+  text-align: left;
+  padding: 0.5rem 0;
+  cursor: pointer;
+}
+
+/* RESPONSIVE MOBILE FLOW (< 860px) */
 @media (max-width: 860px) {
+  /* SECTION REORDERING FOR COMMERCIAL PRIORITY: HERO → STORY → BANNER → PRODUCTS! */
+  .main-content-flow {
+    display: flex;
+    flex-direction: column;
+  }
+  #hero { order: 1; }
+  #historia { order: 2; }
+  .campaign-banner-fullwidth { order: 3; }
+  #productos { order: 4; } /* PRODUCTS MOVED RIGHT AFTER STORY & ORIGIN BANNER! */
+  #proceso { order: 5; }
+  #estilo-de-vida { order: 6; }
+  #porque-huertalia { order: 7; }
+  #calculadora { order: 8; }
+  #negocios { order: 9; }
+  #final-cta { order: 10; }
+
+  /* Mobile Accordions Display */
+  .mobile-accordion-trigger {
+    display: flex;
+  }
+
   .site-header {
-    height: 70px;
+    height: 62px;
     padding: 0 1rem;
+    background: rgba(14, 22, 17, 0.94);
+    backdrop-filter: blur(16px);
   }
 
   .nav-wrapper {
@@ -1601,7 +1674,7 @@ a.btn,
   }
 
   .nav-actions-flex .btn-luxury-light {
-    display: none;
+    display: none !important;
   }
 
   .mobile-menu-btn {
@@ -1619,24 +1692,24 @@ a.btn,
   }
 
   .hero-section {
-    padding-top: 7rem;
-    padding-bottom: 4rem;
+    padding-top: 6.5rem;
+    padding-bottom: 3.5rem;
     min-height: auto;
   }
 
   .hero-bg-media {
-    height: 420px;
-    max-height: 55vh;
+    height: 380px;
+    max-height: 50vh;
   }
 
   .hero-headline-level1 {
-    font-size: clamp(1.9rem, 7vw, 2.5rem);
-    line-height: 1.12;
+    font-size: clamp(1.8rem, 6.5vw, 2.4rem);
+    line-height: 1.1;
   }
 
   .hero-headline-level2 {
-    font-size: clamp(1.6rem, 6vw, 2.1rem);
-    line-height: 1.18;
+    font-size: clamp(1.5rem, 5.5vw, 2.0rem);
+    line-height: 1.15;
   }
 
   .hero-cta-group {
@@ -1652,15 +1725,15 @@ a.btn,
   }
 
   .claims-bar {
-    padding: 1.2rem 0;
+    padding: 1rem 0;
   }
 
   .claims-flex {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 0.8rem;
     text-align: center;
-    font-size: 0.76rem;
+    font-size: 0.74rem;
   }
 
   .filter-bar {
@@ -1685,50 +1758,50 @@ a.btn,
 
   .collection-grid {
     grid-template-columns: 1fr;
-    gap: 2.2rem;
+    gap: 2rem;
   }
 
   .editorial-img-box {
     aspect-ratio: 1 / 1;
-    padding: 1.8rem;
+    padding: 1.5rem;
   }
 
   .timeline-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 1.2rem;
+    gap: 1rem;
   }
 
   .timeline-card {
-    padding: 1.8rem 1.2rem;
+    padding: 1.5rem 1rem;
   }
 
   .claims-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1.8rem;
+    gap: 1.5rem;
   }
 
   .claim-big-text {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
   }
 
   .calculator-card-premium {
     grid-template-columns: 1fr;
-    padding: 2.2rem 1.4rem;
-    gap: 2.5rem;
+    padding: 1.8rem 1.2rem;
+    gap: 2rem;
   }
 
   .calc-stat-display {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
   }
 
   .b2b-grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2.5rem;
   }
 
   .final-cta-section {
-    padding: 6rem 1.2rem;
+    padding: 5rem 1.2rem;
   }
 
   .final-cta-section div[style*="display: flex"] {
@@ -1744,13 +1817,48 @@ a.btn,
 
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 1.5rem;
+  }
+
+  .footer-accordion-panel {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+  }
+
+  .footer-accordion-panel.active {
+    max-height: 500px;
+    opacity: 1;
+    padding-top: 0.8rem;
   }
 
   .footer-bottom {
     flex-direction: column;
     gap: 0.6rem;
     text-align: center;
+  }
+}
+
+/* DESKTOP RESET FOR ACCORDIONS & PANELS (> 860px) */
+@media (min-width: 861px) {
+  .mobile-accordion-trigger,
+  .footer-accordion-header i {
+    display: none !important;
+  }
+
+  .footer-accordion-header {
+    cursor: default;
+    padding: 0;
+  }
+
+  .mobile-accordion-panel,
+  .footer-accordion-panel {
+    max-height: none !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+    display: block !important;
+    padding: initial !important;
   }
 }
 
@@ -1768,13 +1876,14 @@ a.btn,
   }
 
   .map-img-container {
-    min-height: 250px;
+    min-height: 240px;
   }
 
   .campaign-banner-fullwidth {
-    height: 38vh;
-    min-height: 280px;
+    height: 35vh;
+    min-height: 260px;
   }
 }
+
 
 
