@@ -29,7 +29,7 @@
 </head>
 <body>
 
-  <!-- Fullscreen Mobile Menu Overlay -->
+  <!-- Fullscreen Mobile Menu Overlay (Pure CSS Hidden on Initial Render) -->
   <div id="mobile-menu-overlay" class="mobile-menu-overlay" role="dialog" aria-modal="true" aria-expanded="false">
     <div class="overlay-header">
       <a href="#hero" class="logo-brand mobile-overlay-link" aria-label="HUERTALIA Liofilizados Inicio" data-i18n-aria="aria_logo_home">
@@ -43,8 +43,8 @@
     <ul class="overlay-nav-list">
       <li><a href="#hero" class="mobile-overlay-link" data-i18n="nav_home">INICIO</a></li>
       <li><a href="#historia" class="mobile-overlay-link" data-i18n="nav_history">NUESTRA HISTORIA</a></li>
-      <li><a href="#proceso" class="mobile-overlay-link" data-i18n="nav_process">EL PROCESO</a></li>
       <li><a href="#productos" class="mobile-overlay-link" data-i18n="nav_products">PRODUCTOS</a></li>
+      <li><a href="#proceso" class="mobile-overlay-link" data-i18n="nav_process">EL PROCESO</a></li>
       <li><a href="#estilo-de-vida" class="mobile-overlay-link" data-i18n="nav_lifestyle">ESTILO DE VIDA</a></li>
       <li><a href="#negocios" class="mobile-overlay-link" data-i18n="nav_business">PARA NEGOCIOS</a></li>
       <li><a href="contacto.html" class="mobile-overlay-link" data-i18n="nav_contact">CONTACTO</a></li>
@@ -66,7 +66,7 @@
     <header class="site-header">
       <div class="container nav-wrapper">
         <a href="#hero" class="logo-brand" aria-label="HUERTALIA Liofilizados Inicio" data-i18n-aria="aria_logo_home">
-          <img src="assets/images/logo/logo_huertalia_light.svg" alt="HUERTALIA LIOFILIZADOS" style="height: 44px; width: auto; display: block;" width="180" height="44">
+          <img src="assets/images/logo/logo_huertalia_light.svg" alt="HUERTALIA LIOFILIZADOS" style="height: 42px; width: auto; display: block;" width="180" height="42">
         </a>
 
         <nav>
@@ -99,10 +99,10 @@
     </header>
   </div>
 
-  <!-- MAIN NARRATIVE FLOW CONTAINER -->
+  <!-- MAIN EDITORIAL CONTENT FLOW -->
   <main class="main-content-flow">
 
-    <!-- 01 — HERO SECTION (COMPACT & CONTROLLED HIGH IMPACT) -->
+    <!-- 01 — HERO SECTION (PRODUCT CLARITY + COMPACT EDITORIAL SCALE) -->
     <section id="hero" class="hero-section">
       <img src="assets/images/lifestyle/hero_healthy_snack.jpg" alt="Fruta Liofilizada Huertalia León Guanajuato" class="hero-bg-media">
       <div class="hero-overlay-vignette"></div>
@@ -133,7 +133,7 @@
         </div>
       </div>
 
-      <!-- Barra de Declaraciones -->
+      <!-- Barra de Declaraciones Clave -->
       <div class="hero-claims-bar">
         <div class="container claims-flex">
           <span data-i18n="claim_1">100% FRUTA REAL</span>
@@ -144,7 +144,7 @@
       </div>
     </section>
 
-    <!-- 02 — NUESTRA HISTORIA & MANIFIESTO & STRUCTURAL MAP (01.png) -->
+    <!-- 02 — NUESTRA HISTORIA & MAPA DE TERRITORIO (01.png) -->
     <section id="historia" class="history-section">
       <div class="container">
         <div class="history-grid">
@@ -153,7 +153,7 @@
             <h2 class="title-section" style="color: var(--color-primary); margin: 0.8rem 0 1.2rem;" data-i18n="history_title">
               NACIMOS EN EL <span class="text-italic-accent">BAJÍO.</span>
             </h2>
-            <p style="font-weight: 700; color: var(--color-primary); font-size: 1rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem;" data-i18n="history_origin">
+            <p style="font-weight: 700; color: var(--color-primary); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.2rem;" data-i18n="history_origin">
               LEÓN, GUANAJUATO · 2022
             </p>
 
@@ -194,7 +194,7 @@
           </div>
         </div>
 
-        <!-- 01.png MAPA STRUCTURAL FEATURE BLOCK (LEÓN, GTO → BAJÍO → WORLD) -->
+        <!-- 01.png MAPA EDITORIAL FULL-WIDTH BLOCK -->
         <div class="map-editorial-block reveal-scale">
           <div class="map-img-container">
             <img src="assets/images/banners/01.png" alt="Mapa de Territorio Huertalia León Guanajuato El Bajío al Mundo" loading="lazy" width="2752" height="1536">
@@ -220,18 +220,15 @@
       <div class="campaign-banner-overlay">
         <div class="container">
           <span class="wild-badge" style="background: rgba(255,255,255,0.15); color: var(--color-sand);" data-i18n="banner_bajio_tag">DESDE EL BAJÍO</span>
-          <h2 class="title-display" style="color: var(--color-ivory); font-size: clamp(2.2rem, 5vw, 4.2rem); margin-top: 0.6rem;" data-i18n="banner_bajio_title">
+          <h2 class="title-display" style="color: var(--color-ivory); font-size: clamp(2.0rem, 5vw, 4.2rem); margin-top: 0.6rem;" data-i18n="banner_bajio_title">
             FRUTA CON ORIGEN. DE NUESTRA TIERRA AL MUNDO.
           </h2>
         </div>
       </div>
     </div>
 
-    <!-- 03 — PRODUCTOS (PLACED IMMEDIATELY AFTER ORIGIN ON MOBILE!) -->
+    <!-- 03 — PRODUCTOS (COMMERCIAL PRIORITY — MOVED EARLY!) -->
     <section id="productos" class="collection-section">
-      <img src="assets/images/floating/strawberry.jpg" alt="" class="floating-fruit float-slow" style="top: 10%; right: 4%; width: 100px; height: 100px;">
-      <img src="assets/images/floating/mango.jpg" alt="" class="floating-fruit float-reverse" style="top: 60%; left: 3%; width: 100px; height: 100px;">
-
       <div class="container">
         <div class="collection-header reveal">
           <div>
@@ -249,10 +246,10 @@
         </div>
 
         <div id="products-grid" class="collection-grid">
-          <!-- Rendered dynamically by JS in active language with real original packaging packshots -->
+          <!-- Rendered dynamically by JS in active language -->
         </div>
 
-        <!-- 04.png EDITORIAL PRODUCT MOMENT -->
+        <!-- 04.png ADVERTISING EDITORIAL BREAK -->
         <div class="crunch-editorial-moment reveal-scale">
           <div class="crunch-img-container">
             <img src="assets/images/banners/04.png" alt="Momento de consumo El Crunch de la fruta real Huertalia" loading="lazy" width="2752" height="1536">
@@ -262,7 +259,7 @@
             <h2 class="title-section" style="color: var(--color-primary); margin: 0.8rem 0 1rem;" data-i18n="crunch_moment_title">
               EL CRUNCH DE LA <span class="text-italic-accent">FRUTA REAL.</span>
             </h2>
-            <p style="color: var(--color-text-muted); font-size: 1.05rem; line-height: 1.6;" data-i18n="crunch_moment_subhead">
+            <p style="color: var(--color-text-muted); font-size: 1.02rem; line-height: 1.6;" data-i18n="crunch_moment_subhead">
               Imposiblemente crujiente. 100% fruta natural.
             </p>
           </div>
@@ -270,7 +267,7 @@
       </div>
     </section>
 
-    <!-- 04 — EL PROCESO (IMAGE-LED EDITORIAL STORY CARDS + 03.png INTRO) -->
+    <!-- 04 — EL PROCESO (COMPACT MOBILE TIMELINE: SINGLE-EXPAND STEP) -->
     <section id="proceso" class="process-section">
       <div class="container">
         <div style="max-width: 650px; margin-bottom: 2.5rem;" class="reveal">
@@ -279,7 +276,7 @@
           <p class="text-editorial-sub" style="color: rgba(250,246,240,0.75);" data-i18n="process_subhead">Sublimación en frío al vacío para lograr hasta un 98% de retención de nutrientes.</p>
         </div>
 
-        <!-- 03.png ORIGEN / FRUTA FRESCA INTRODUCING PROCESO -->
+        <!-- 03.png INTRO BLOCK -->
         <div class="process-intro-editorial reveal-scale">
           <div class="process-intro-imgbox">
             <img src="assets/images/banners/03.png" alt="Selección de fruta fresca de origen Huertalia" loading="lazy" width="1696" height="2528">
@@ -289,13 +286,13 @@
             <h3 class="title-section" style="color: var(--color-ivory); margin: 0.8rem 0 1.2rem;" data-i18n="process_intro_title">
               DE LA FRUTA FRESCA AL CRUNCH PERFECTO.
             </h3>
-            <p style="color: rgba(250, 246, 240, 0.8); font-size: 1.05rem; line-height: 1.7;" data-i18n="process_intro_desc">
+            <p style="color: rgba(250, 246, 240, 0.8); font-size: 1.02rem; line-height: 1.7;" data-i18n="process_intro_desc">
               Seleccionamos únicamente fruta de la más alta calidad en su punto idóneo de madurez antes de iniciar la sublimación en frío.
             </p>
           </div>
         </div>
 
-        <!-- 5 Process Cards -->
+        <!-- Desktop 5 Cards / Mobile Single-Step Interactive Timeline -->
         <div class="process-flow-grid reveal-scale">
           <!-- Stage 1 -->
           <div class="process-card-imageled">
@@ -345,7 +342,7 @@
             </div>
           </div>
 
-          <!-- Stage 5 (Payoff Card) -->
+          <!-- Stage 5 -->
           <div class="process-card-imageled process-payoff-card">
             <div class="process-card-imgbox">
               <img src="assets/images/proceso/05.png" alt="Fruta liofilizada final con textura crujiente inolvidable" width="400" height="250" loading="lazy">
@@ -360,7 +357,7 @@
       </div>
     </section>
 
-    <!-- 05 — ESTILO DE VIDA (MAGAZINE CAMPAIGN SPREAD WITH 05.png & 06.png) -->
+    <!-- 05 — ESTILO DE VIDA (MAGAZINE CAMPAIGN SPREAD 05.png & 06.png) -->
     <section id="estilo-de-vida" class="lifestyle-section">
       <div class="container">
         <div style="text-align: center; max-width: 750px; margin: 0 auto 3rem;" class="reveal">
@@ -368,10 +365,10 @@
           <h2 class="title-section" style="color: var(--color-primary); margin-top: 0.6rem;" data-i18n="lifestyle_title">
             LLEVA HUERTALIA <span class="text-italic-accent">CONTIGO.</span>
           </h2>
-          <p class="text-editorial-sub" data-i18n="lifestyle_subhead">Nutrición pura diseñada para integrarse naturally en cada momento de tu día.</p>
+          <p class="text-editorial-sub" data-i18n="lifestyle_subhead">Nutrición pura diseñada para integrarse naturalmente en cada momento de tu día.</p>
         </div>
 
-        <!-- Magazine Campaign Layout (05.png & 06.png) -->
+        <!-- Magazine Campaign Spreads -->
         <div class="lifestyle-campaign-container">
           <!-- Work Spread (05.png) -->
           <div id="work-spread" class="lifestyle-campaign-spread reveal">
@@ -383,7 +380,7 @@
               <h3 class="title-section" style="color: var(--color-primary); margin: 0.8rem 0 1.2rem;" data-i18n="lifestyle_work_title">
                 UNA PAUSA CRUJIENTE <span class="text-italic-accent">PARA TU DÍA.</span>
               </h3>
-              <p style="color: var(--color-text-muted); font-size: 1.05rem; line-height: 1.7;" data-i18n="lifestyle_work_desc">
+              <p style="color: var(--color-text-muted); font-size: 1.02rem; line-height: 1.7;" data-i18n="lifestyle_work_desc">
                 Nutrición pura para mantener tu enfoque diario sin caídas de energía ni pesadez.
               </p>
             </div>
@@ -396,7 +393,7 @@
               <h3 class="title-section" style="color: var(--color-primary); margin: 0.8rem 0 1.2rem;" data-i18n="lifestyle_adv_title">
                 FRUTA LIGERA <span class="text-italic-accent">ALLÁ DONDE VAYAS.</span>
               </h3>
-              <p style="color: var(--color-text-muted); font-size: 1.05rem; line-height: 1.7;" data-i18n="lifestyle_adv_desc">
+              <p style="color: var(--color-text-muted); font-size: 1.02rem; line-height: 1.7;" data-i18n="lifestyle_adv_desc">
                 Empaque ultraligero de alta barrera listo para cualquier trayecto o actividad al aire libre.
               </p>
             </div>
@@ -406,40 +403,47 @@
           </div>
         </div>
 
-        <!-- Timeline Bar for Quick Moments -->
-        <div class="timeline-grid reveal-scale">
-          <div class="timeline-card">
-            <div class="timeline-time">06:30</div>
-            <div class="timeline-label" data-i18n="time1_label">ENTRENAR</div>
-            <p class="timeline-desc" data-i18n="time1_desc">Fruta ligera y crujiente para acompañar tu rutina.</p>
-          </div>
+        <!-- Mobile Collapsible Timeline Moments -->
+        <button class="mobile-accordion-trigger" aria-expanded="false" aria-controls="lifestyle-moments-panel" style="margin: 2.5rem auto 0; display: flex;">
+          <span data-i18n="lifestyle_more_btn">VER OTROS MOMENTOS DEL DÍA</span>
+          <i class="ri-add-line"></i>
+        </button>
 
-          <div class="timeline-card">
-            <div class="timeline-time">11:45</div>
-            <div class="timeline-label" data-i18n="time2_label">TRABAJO</div>
-            <p class="timeline-desc" data-i18n="time2_desc">Una pausa crujiente para acompañar tu día.</p>
-          </div>
+        <div id="lifestyle-moments-panel" class="mobile-accordion-panel">
+          <div class="timeline-grid" style="margin-top: 1.5rem;">
+            <div class="timeline-card">
+              <div class="timeline-time">06:30</div>
+              <div class="timeline-label" data-i18n="time1_label">ENTRENAR</div>
+              <p class="timeline-desc" data-i18n="time1_desc">Fruta ligera y crujiente para acompañar tu rutina.</p>
+            </div>
 
-          <div class="timeline-card">
-            <div class="timeline-time">16:30</div>
-            <div class="timeline-label" data-i18n="time3_label">PAUSA</div>
-            <p class="timeline-desc" data-i18n="time3_desc">Un pequeño momento de sabor cuando más lo necesitas.</p>
-          </div>
+            <div class="timeline-card">
+              <div class="timeline-time">11:45</div>
+              <div class="timeline-label" data-i18n="time2_label">TRABAJO</div>
+              <p class="timeline-desc" data-i18n="time2_desc">Una pausa crujiente para acompañar tu día.</p>
+            </div>
 
-          <div class="timeline-card">
-            <div class="timeline-time">19:20</div>
-            <div class="timeline-label" data-i18n="time4_label">AVENTURA</div>
-            <p class="timeline-desc" data-i18n="time4_desc">Fruta ligera y fácil de llevar allá donde vayas.</p>
+            <div class="timeline-card">
+              <div class="timeline-time">16:30</div>
+              <div class="timeline-label" data-i18n="time3_label">PAUSA</div>
+              <p class="timeline-desc" data-i18n="time3_desc">Un pequeño momento de sabor cuando más lo necesitas.</p>
+            </div>
+
+            <div class="timeline-card">
+              <div class="timeline-time">19:20</div>
+              <div class="timeline-label" data-i18n="time4_label">AVENTURA</div>
+              <p class="timeline-desc" data-i18n="time4_desc">Fruta ligera y fácil de llevar allá donde vayas.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 06 — POR QUÉ HUERTALIA -->
+    <!-- 06 — POR QUÉ HUERTALIA (BENEFICIOS COMPACTOS 2x2) -->
     <section id="porque-huertalia" class="why-huertalia-section">
       <div class="container reveal">
         <span class="badge-tag" data-i18n="why_badge">BENEFICIOS COMPROBADOS</span>
-        <h2 class="title-display" style="color: var(--color-primary); font-size: clamp(2.2rem, 5vw, 4.8rem); margin-top: 0.8rem;" data-i18n="why_title">
+        <h2 class="title-display" style="color: var(--color-primary); font-size: clamp(2.0rem, 5vw, 4.8rem); margin-top: 0.8rem;" data-i18n="why_title">
           NADA AÑADIDO.<br>
           <span class="text-italic-accent">TODO CONSERVADO.</span>
         </h2>
@@ -486,7 +490,7 @@
           <div>
             <span class="badge-tag" data-i18n="calc_badge">COMPARATIVA NUTRICIONAL</span>
             <h2 class="title-section" style="color: var(--color-primary); margin-top: 0.6rem;" data-i18n="calc_title">Compara tu Snack</h2>
-            <p style="color: var(--color-text-muted); font-size: 0.98rem; margin-top: 0.8rem;" data-i18n="calc_subhead">
+            <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-top: 0.8rem;" data-i18n="calc_subhead">
               Descubre cómo cambia el aporte calórico de tu snack habitual (referencia: botana procesada ~280 kcal) al elegir fruta liofilizada Huertalia.
             </p>
 
@@ -550,12 +554,12 @@
       </div>
     </section>
 
-    <!-- 08 — PARA NEGOCIOS (B2B) -->
+    <!-- 08 — PARA NEGOCIOS (B2B COMPACTO) -->
     <section id="negocios" class="b2b-section">
       <div class="container b2b-grid">
         <div class="reveal-left">
           <span class="wild-badge" style="background: rgba(255,255,255,0.1); color: var(--color-accent-mango);" data-i18n="b2b_badge">MAYOREO Y DISTRIBUCIÓN</span>
-          <h2 class="title-display" style="color: var(--color-ivory); font-size: clamp(2.2rem, 5vw, 4.8rem); margin-top: 0.8rem;" data-i18n="b2b_title">
+          <h2 class="title-display" style="color: var(--color-ivory); font-size: clamp(2.0rem, 5vw, 4.8rem); margin-top: 0.8rem;" data-i18n="b2b_title">
             HUERTALIA PARA<br>
             <span class="text-italic-accent" style="color: var(--color-accent-mango);">NEGOCIOS.</span>
           </h2>
@@ -613,7 +617,7 @@
     <section id="final-cta" class="final-cta-section">
       <div class="container reveal">
         <span class="wild-badge" style="background: rgba(255,255,255,0.15); color: var(--color-sand);" data-i18n="final_badge">¿LISTO PARA EL CRUNCH?</span>
-        <h2 class="title-display" style="color: var(--color-ivory); font-size: clamp(2.4rem, 6vw, 6.5rem); margin: 0.8rem 0;" data-i18n="final_title">
+        <h2 class="title-display" style="color: var(--color-ivory); font-size: clamp(2.2rem, 6vw, 6.5rem); margin: 0.8rem 0;" data-i18n="final_title">
           READY TO<br>
           <span class="text-italic-accent" style="color: var(--color-accent-mango);">CRUNCH?</span>
         </h2>
@@ -642,7 +646,7 @@
     </div>
   </div>
 
-  <!-- Pie de Página Bilingüe con Acordeones Móviles -->
+  <!-- Pie de Página Bilingüe -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">

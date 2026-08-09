@@ -1,5 +1,5 @@
 /* ==========================================================================
-   HUERTALIA LIOFILIZADOS - MOBILE EDITORIAL UX/UI & BILINGUAL ENGINE
+   HUERTALIA LIOFILIZADOS - MOBILE EDITORIAL ART DIRECTION & BILINGUAL ENGINE
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -110,6 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
       lifestyle_adv_tag: '19:20 · AVENTURA',
       lifestyle_adv_title: 'FRUTA LIGERA <span class="text-italic-accent">ALLÁ DONDE VAYAS.</span>',
       lifestyle_adv_desc: 'Empaque ultraligero de alta barrera listo para cualquier trayecto o actividad al aire libre.',
+      lifestyle_more_btn: 'VER OTROS MOMENTOS DEL DÍA',
       time1_label: 'ENTRENAR',
       time1_desc: 'Fruta ligera y crujiente para acompañar tu rutina.',
       time2_label: 'TRABAJO',
@@ -305,6 +306,7 @@ document.addEventListener('DOMContentLoaded', () => {
       lifestyle_adv_tag: '19:20 · ADVENTURE',
       lifestyle_adv_title: 'LIGHTWEIGHT FRUIT <span class="text-italic-accent">WHEREVER YOU GO.</span>',
       lifestyle_adv_desc: 'Ultra-lightweight high-barrier pouch ready for any trail or outdoor activity.',
+      lifestyle_more_btn: 'VIEW OTHER DAILY MOMENTS',
       time1_label: 'WORKOUT',
       time1_desc: 'Light and crunchy fruit to accompany your workout routine.',
       time2_label: 'WORK',
@@ -610,7 +612,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (twitterDesc) twitterDesc.content = translations[lang].seo_meta;
     }
 
-    // 3. Update Language Pill Buttons Active State (header & mobile overlay)
+    // 3. Update Language Pill Buttons Active State
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
     });
@@ -674,73 +676,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // 10. Image Alt Text Update across page
-    const processImgs = document.querySelectorAll('.process-card-imgbox img');
-    const processAltTexts = {
-      es: [
-        'Fruta fresca seleccionada para el proceso de liofilización Huertalia',
-        'Congelación rápida a menos 40 grados para congelar el agua contenida',
-        'Cámara de vacío de alta presión para reducir la presión atmosférica',
-        'Sublimación en frío pasando el hielo congelado directamente a vapor',
-        'Fruta liofilizada final con textura crujiente e intensa en nutrientes'
-      ],
-      en: [
-        'Fresh fruit selected for the Huertalia freeze-drying process',
-        'Flash freezing at minus 40 degrees to lock in moisture',
-        'Low atmospheric pressure vacuum chamber process',
-        'Cold sublimation turning frozen ice directly into vapor',
-        'Final freeze-dried fruit with incredible crunch and rich nutrients'
-      ]
-    };
-    processImgs.forEach((img, idx) => {
-      if (processAltTexts[lang] && processAltTexts[lang][idx]) {
-        img.alt = processAltTexts[lang][idx];
-      }
-    });
-
-    const mapBannerImg = document.querySelector('.map-img-container img');
-    if (mapBannerImg) {
-      mapBannerImg.alt = lang === 'en'
-        ? 'Huertalia Territory Map León Guanajuato El Bajío to the World'
-        : 'Mapa de Territorio Huertalia León Guanajuato El Bajío al Mundo';
-    }
-
-    const territorioBannerImg = document.querySelector('.campaign-banner-fullwidth img');
-    if (territorioBannerImg) {
-      territorioBannerImg.alt = lang === 'en'
-        ? 'El Bajío Agricultural Harvest Huertalia'
-        : 'Territorio agrícola El Bajío Huertalia';
-    }
-
-    const processIntroImg = document.querySelector('.process-intro-imgbox img');
-    if (processIntroImg) {
-      processIntroImg.alt = lang === 'en'
-        ? 'Fresh Fruit Selection Huertalia Raw Harvest'
-        : 'Selección de fruta fresca de origen Huertalia';
-    }
-
-    const crunchMomentImg = document.querySelector('.crunch-img-container img');
-    if (crunchMomentImg) {
-      crunchMomentImg.alt = lang === 'en'
-        ? 'Huertalia Real Fruit Crunch Consumption Moment'
-        : 'Momento de consumo El Crunch de la fruta real Huertalia';
-    }
-
-    const lifestyleWorkImg = document.querySelector('#work-spread .lifestyle-campaign-imgbox img');
-    if (lifestyleWorkImg) {
-      lifestyleWorkImg.alt = lang === 'en'
-        ? 'Huertalia Conscious Lifestyle Work Break'
-        : 'Estilo de Vida Huertalia Pausa de Trabajo';
-    }
-
-    const lifestyleAdvImg = document.querySelector('#adv-spread .lifestyle-campaign-imgbox img');
-    if (lifestyleAdvImg) {
-      lifestyleAdvImg.alt = lang === 'en'
-        ? 'Huertalia Conscious Lifestyle Outdoor Adventure'
-        : 'Estilo de Vida Huertalia Aventura al Aire Libre';
-    }
-
-    // 11. Re-render Products & Calculator in Active Language
+    // 10. Re-render Products & Calculator in Active Language
     renderProducts(currentFilter);
     updateCalculator();
   }
@@ -797,9 +733,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================================================
-  // 3. MOBILE ACCORDIONS SYSTEM (PROGRESSIVE DISCLOSURE)
+  // 3. MOBILE ACCORDIONS & PROCESS SINGLE-STEP EXPAND LOGIC
   // ==========================================================================
-  const accordionTriggers = document.querySelectorAll('.mobile-accordion-trigger, .process-accordion-header, .footer-accordion-header');
+  const accordionTriggers = document.querySelectorAll('.mobile-accordion-trigger, .footer-accordion-header');
 
   accordionTriggers.forEach(trigger => {
     trigger.addEventListener('click', () => {
@@ -815,12 +751,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const icon = trigger.querySelector('i');
       if (icon) {
-        if (trigger.classList.contains('process-accordion-header')) {
-          icon.className = !isExpanded ? 'ri-subtract-line proc-icon' : 'ri-add-line proc-icon';
-        } else if (trigger.classList.contains('footer-accordion-header')) {
+        if (trigger.classList.contains('footer-accordion-header')) {
           icon.className = !isExpanded ? 'ri-arrow-up-s-line' : 'ri-arrow-down-s-line';
         } else {
           icon.className = !isExpanded ? 'ri-subtract-line' : 'ri-add-line';
+        }
+      }
+    });
+  });
+
+  // Process Card Click Handling on Mobile (Collapses all other process steps so only 1 is open at a time!)
+  const processCards = document.querySelectorAll('.process-card-imageled');
+  processCards.forEach(card => {
+    card.addEventListener('click', () => {
+      if (window.innerWidth <= 860) {
+        const isCurrentActive = card.classList.contains('mobile-expanded');
+        processCards.forEach(c => c.classList.remove('mobile-expanded'));
+        if (!isCurrentActive) {
+          card.classList.add('mobile-expanded');
         }
       }
     });
@@ -952,9 +900,9 @@ document.addEventListener('DOMContentLoaded', () => {
           <h3 class="editorial-product-title">${product.name}</h3>
           <p class="editorial-product-desc">${product.sub}</p>
           
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; border-top: 1px solid var(--border-light); padding-top: 1rem;">
-            <span style="font-family: var(--font-serif); font-weight: 800; font-size: 1.1rem; color: var(--color-primary);">${product.calories} kcal</span>
-            <button class="btn btn-outline-dark product-btn-detail" data-id="${product.id}" style="padding: 0.7rem 1.4rem; font-size: 0.8rem; min-height: 44px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; border-top: 1px solid var(--border-light); padding-top: 0.8rem;">
+            <span style="font-family: var(--font-serif); font-weight: 800; font-size: 1.05rem; color: var(--color-primary);">${product.calories} kcal</span>
+            <button class="btn btn-outline-dark product-btn-detail" data-id="${product.id}" style="padding: 0.6rem 1.1rem; font-size: 0.76rem; min-height: 44px;">
               <span>${translations[currentLang].btn_details}</span> <i class="ri-arrow-right-line"></i>
             </button>
           </div>
