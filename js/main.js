@@ -1,11 +1,10 @@
 /* ==========================================================================
-   HUERTALIA LIOFILIZADOS - V5.4 REFINED COMMUNICATION ENGINE (ES / EN)
-   Hierarchy: 1. PRODUCT (Freeze-Dried Fruit) -> 2. ORIGIN (El Bajío) -> 3. ASPIRATION (For the World)
+   HUERTALIA LIOFILIZADOS - V5.5 AUDITED & REFINED ENGINE (ES / EN)
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
   // ==========================================================================
-  // 1. i18n DICTIONARY SYSTEM (ESPAÑOL / ENGLISH)
+  // 1. i18n DICTIONARY SYSTEM (100% PURE ESPAÑOL / 100% PURE ENGLISH)
   // ==========================================================================
   const translations = {
     es: {
@@ -18,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
       nav_business: 'PARA NEGOCIOS',
       nav_quote: 'COTIZAR',
 
-      // Hero - Clear Communication Hierarchy: Product + Origin + Aspiration
+      // Hero
       hero_tag: 'LEÓN · GUANAJUATO · DESDE 2022',
       hero_title_level1: 'DEL CORAZÓN DEL BAJÍO.',
       hero_title_level2: 'FRUTA LIOFILIZADA PARA EL MUNDO.',
@@ -46,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Process
       process_badge: 'CIENCIA Y TECNOLOGÍA',
       process_title: 'EL PROCESO',
-      process_subhead: 'Sublimación en frío al vacío para preservar el 98% de los nutrientes vivos.',
+      process_subhead: 'Sublimación en frío al vacío para preservar hasta un 98% de nutrientes conservados.',
       step1_title: 'FRUTA FRESCA',
       step1_desc: 'Cosecha en punto óptimo',
       step2_title: 'CONGELACIÓN',
@@ -54,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
       step3_title: 'VACÍO',
       step3_desc: 'Presión atmosférica baja',
       step4_title: 'SUBLIMACIÓN',
-      step4_desc: 'El hielo pasa directo a vapor',
+      step4_desc: 'El hielo pasa directamente a vapor',
       step5_title: 'CRUNCH',
       step5_desc: 'Textura crujiente inolvidable',
 
@@ -66,23 +65,23 @@ document.addEventListener('DOMContentLoaded', () => {
       filter_chamoy: 'LÍNEA CHAMOY',
       btn_details: 'VER DETALLES',
 
-      // Lifestyle
+      // Lifestyle (Corrected Spanish: "naturalmente" & Factual, Safe Claims)
       lifestyle_badge: 'ESTILO DE VIDA CONSCIENTE',
       lifestyle_title: 'LLEVA HUERTALIA <span class="text-italic-accent">CONTIGO.</span>',
       lifestyle_subhead: 'Nutrición pura diseñada para integrarse naturalmente en cada momento de tu día.',
       time1_label: 'ENTRENAR',
-      time1_desc: 'Energía glucémica limpia y potasio pre-entreno sin provocar pesadez estomacal.',
+      time1_desc: 'Un snack ligero y crujiente para acompañar tu rutina de entrenamiento.',
       time2_label: 'TRABAJO',
-      time2_desc: 'Eleva tu enfoque mental en la oficina sustituyendo antojos procesados.',
+      time2_desc: 'Una alternativa práctica y crujiente para tus pausas durante el día.',
       time3_label: 'PAUSA',
-      time3_desc: 'Un bocado crujiente y táctil para recargar vitalidad durante tus pausas.',
+      time3_desc: 'Bocado crujiente de fruta pura listo en cualquier momento.',
       time4_label: 'AVENTURA',
-      time4_desc: 'Nutrición ligera y duradera lista para tus viajes de fin de semana.',
+      time4_desc: 'Nutrición ligera y duradera lista para tus viajes y aventuras.',
 
-      // Why Huertalia
+      // Why Huertalia (Factual Nutrient Retention Fix)
       why_badge: 'BENEFICIOS COMPROBADOS',
       why_title: 'NADA AÑADIDO.<br><span class="text-italic-accent">TODO CONSERVADO.</span>',
-      why_claim1: 'RETENCIÓN DE NUTRIENTES',
+      why_claim1: 'HASTA 98% NUTRIENTES CONSERVADOS',
       why_claim2: 'FRUTA REAL',
       why_claim3: 'AZÚCAR AÑADIDA O ACEITES',
       why_claim4: 'VEGANO Y SIN GLUTEN',
@@ -90,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Calculator
       calc_badge: 'DIAGNÓSTICO NUTRICIONAL',
       calc_title: 'Calculadora de Impacto Calórico',
-      calc_subhead: 'Descubre cuántas calorías vacías y grasas saturadas ahorras a la semana sustituyendo botanas procesadas por Huertalia.',
+      calc_subhead: 'Descubre cuántas calorías vacías ahorras a la semana sustituyendo botanas procesadas por Huertalia.',
       calc_label_select: 'SELECCIONA TU FRUTA:',
       calc_label_qty: 'FRECUENCIA DE CONSUMO SEMANAL:',
       calc_label_saved: 'AHORRO ESTIMADO DE CALORÍAS VACÍAS',
@@ -155,9 +154,9 @@ document.addEventListener('DOMContentLoaded', () => {
       nav_products: 'PRODUCTS',
       nav_lifestyle: 'LIFESTYLE',
       nav_business: 'FOR BUSINESS',
-      nav_quote: 'GET QUOTE',
+      nav_quote: 'GET A QUOTE',
 
-      // Hero - Clear Communication Hierarchy: Product + Origin + Aspiration
+      // Hero
       hero_tag: 'LEÓN · GUANAJUATO · SINCE 2022',
       hero_title_level1: 'FROM THE HEART OF EL BAJÍO.',
       hero_title_level2: 'FREEZE-DRIED FRUIT FOR THE WORLD.',
@@ -185,15 +184,15 @@ document.addEventListener('DOMContentLoaded', () => {
       // Process
       process_badge: 'SCIENCE & TECHNOLOGY',
       process_title: 'THE PROCESS',
-      process_subhead: 'Cold vacuum sublimation to preserve 98% of living nutrients.',
+      process_subhead: 'Cold vacuum sublimation to preserve up to 98% of essential nutrients.',
       step1_title: 'FRESH FRUIT',
       step1_desc: 'Harvested at peak ripeness',
       step2_title: 'FREEZING',
       step2_desc: 'Flash frozen at -40°C',
       step3_title: 'VACUUM',
-      step3_desc: 'Ultra low atmospheric pressure',
+      step3_desc: 'Ultra-low atmospheric pressure',
       step4_title: 'SUBLIMATION',
-      step4_desc: 'Ice turns directly to vapor',
+      step4_desc: 'Ice turns directly into vapor',
       step5_title: 'CRUNCH',
       step5_desc: 'Unforgettable crispy texture',
 
@@ -208,20 +207,20 @@ document.addEventListener('DOMContentLoaded', () => {
       // Lifestyle
       lifestyle_badge: 'CONSCIOUS LIFESTYLE',
       lifestyle_title: 'TAKE HUERTALIA <span class="text-italic-accent">WITH YOU.</span>',
-      lifestyle_subhead: 'Pure nutrition designed to fit naturally into every high-performance moment of your day.',
+      lifestyle_subhead: 'Pure nutrition designed to fit naturally into every moment of your day.',
       time1_label: 'TRAIN',
-      time1_desc: 'Clean glycemic energy and pre-workout potassium without stomach heaviness.',
+      time1_desc: 'A light, crunchy snack to complement your training routine.',
       time2_label: 'WORK',
-      time2_desc: 'Elevate focus during intense office hours by replacing processed cravings.',
-      time3_label: 'EXPLORE',
-      time3_desc: 'A tactile, crispy bite to recharge vitality during your breaks.',
-      time4_label: 'SHARE',
-      time4_desc: 'Share a delicious, vegan, light snack with your family and friends.',
+      time2_desc: 'A convenient, crunchy alternative for your breaks throughout the day.',
+      time3_label: 'PAUSE',
+      time3_desc: 'Crispy pure fruit bite ready whenever you need it.',
+      time4_label: 'ADVENTURE',
+      time4_desc: 'Lightweight, durable nutrition ready for your travels and adventures.',
 
       // Why Huertalia
       why_badge: 'PROVEN BENEFITS',
       why_title: 'NOTHING ADDED.<br><span class="text-italic-accent">EVERYTHING PRESERVED.</span>',
-      why_claim1: 'NUTRIENT RETENTION',
+      why_claim1: 'UP TO 98% NUTRIENTS PRESERVED',
       why_claim2: 'REAL FRUIT',
       why_claim3: 'ADDED SUGARS OR OILS',
       why_claim4: 'VEGAN & GLUTEN FREE',
@@ -229,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Calculator
       calc_badge: 'NUTRITIONAL DIAGNOSTIC',
       calc_title: 'Caloric Impact Calculator',
-      calc_subhead: 'See how much empty calories and saturated fats you save weekly by replacing junk snacks with Huertalia.',
+      calc_subhead: 'See how much empty calories you save weekly by replacing junk snacks with Huertalia.',
       calc_label_select: 'SELECT YOUR FRUIT:',
       calc_label_qty: 'WEEKLY CONSUMPTION:',
       calc_label_saved: 'ESTIMATED SAVED EMPTY CALORIES',
@@ -242,7 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
       b2b_title: 'HUERTALIA FOR<br><span class="text-italic-accent" style="color: var(--color-accent-mango);">BUSINESS.</span>',
       b2b_subhead: 'Supplying premium retail chains, gourmet supermarkets, fitness clubs and international distributors across North America and Europe.',
       b2b_f1_title: 'Wholesale & Mixed Cases',
-      b2b_f1_desc: 'High margin volume tiers and scheduled deliveries.',
+      b2b_f1_desc: 'High-margin volume tiers and scheduled deliveries.',
       b2b_f2_title: 'Global Export Logistics',
       b2b_f2_desc: 'Strict compliance with FDA, SAGARPA and international standards.',
       b2b_f3_title: '12+ Month Shelf-Life',
@@ -252,7 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Final CTA
       final_badge: 'READY TO CRUNCH?',
       final_title: 'READY TO<br><span class="text-italic-accent" style="color: var(--color-accent-mango);">CRUNCH?</span>',
-      final_subhead: 'Discover freeze-dried fruit born in the heart of El Bajío. Exceptional quality for your lifestyle or business.',
+      final_subhead: 'Discover the freeze-dried fruit born in the heart of El Bajío. Exceptional quality for your lifestyle or your business.',
       final_cta1: 'DISCOVER HUERTALIA',
       final_cta2: 'WHOLESALE QUOTE',
 
@@ -348,6 +347,30 @@ document.addEventListener('DOMContentLoaded', () => {
     if (filterAll) filterAll.textContent = translations[lang].filter_all;
     if (filterPure) filterPure.textContent = translations[lang].filter_pure;
     if (filterChamoy) filterChamoy.textContent = translations[lang].filter_chamoy;
+
+    // Process image alt text update according to language
+    const processImgs = document.querySelectorAll('.process-card-imgbox img');
+    const processAltTexts = {
+      es: [
+        'Fruta fresca seleccionada para el proceso de liofilización Huertalia',
+        'Congelación rápida a menos 40 grados para congelar el agua contenida',
+        'Cámara de vacío de alta presión para reducir la presión atmosférica',
+        'Sublimación en frío pasando el hielo congelado directamente a vapor',
+        'Fruta liofilizada final con textura crujiente e intensa en nutrientes'
+      ],
+      en: [
+        'Fresh fruit selected for the Huertalia freeze-drying process',
+        'Flash freezing at minus 40 degrees to lock in moisture',
+        'Low atmospheric pressure vacuum chamber process',
+        'Cold sublimation turning frozen ice directly into vapor',
+        'Final freeze-dried fruit with incredible crunch and rich nutrients'
+      ]
+    };
+    processImgs.forEach((img, idx) => {
+      if (processAltTexts[lang] && processAltTexts[lang][idx]) {
+        img.alt = processAltTexts[lang][idx];
+      }
+    });
   }
 
   // Attach click listeners to language toggle buttons
@@ -499,7 +522,7 @@ document.addEventListener('DOMContentLoaded', () => {
       calories: 46,
       weight: '15 g',
       equivalence: '10 Fresas Frescas (1 Taza)',
-      desc: 'Fresas seleccionadas en su punto óptimo de madurez, liofilizadas mediante sublimación en frío. Cada bocado crujiente conserva la intensidad de sabor natural y el 98% de los nutrientes intactos.',
+      desc: 'Fresas seleccionadas en su punto óptimo de madurez, liofilizadas mediante sublimación en frío. Cada bocado crujiente conserva la intensidad de sabor natural y hasta el 98% de los nutrientes intactos.',
       benefits: ['Solo fresa. Nada más.', 'Sin azúcar añadida', 'Sin conservadores ni colorantes', '46 kcal por empaque completo'],
       image: 'assets/images/products/packshot_fresas.jpg'
     },
@@ -571,8 +594,8 @@ document.addEventListener('DOMContentLoaded', () => {
       calories: 93,
       weight: '22 g',
       equivalence: '1 Taza de Piña Tropical Picosita',
-      desc: 'Bocado tropical agridulce con el nivel exacto de piña natural liofilizada y sazón chamoy. Aporta bromelina natural para una digestión ágil.',
-      benefits: ['Piña natural con enzimas vivas', 'Sabor agridulce explosivo', 'Libre de glutamato monosódico', 'Equivale a 1 taza completa de fruta'],
+      desc: 'Bocado tropical agridulce con el nivel exacto de piña natural liofilizada y sazón chamoy. Aporta fibra natural y enzimas naturales para una digestión ágil.',
+      benefits: ['Piña natural seleccionada', 'Sabor agridulce explosivo', 'Libre de glutamato monosódico', 'Equivale a 1 taza completa de fruta'],
       image: 'assets/images/products/packshot_pina_chamoy.jpg'
     }
   ];

@@ -1,6 +1,5 @@
 /* ==========================================================================
-   HUERTALIA LIOFILIZADOS - V5.4 REFINED COMMUNICATION HIERARCHY
-   Origin Narrative: "Del Corazón del Bajío" + Clear Product Category
+   HUERTALIA LIOFILIZADOS - V5.5 REFINED PROCESS & AUDITED i18n DESIGN SYSTEM
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap');
@@ -405,7 +404,7 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
-/* 01 — HERO SECTION (OPTIMIZED FRUIT VISIBILITY & TWO-LEVEL HEADLINE) */
+/* 01 — HERO SECTION */
 .hero-section {
   position: relative;
   min-height: 100vh;
@@ -424,7 +423,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.65; /* Enhanced visibility for strawberry, mango, apple textures */
+  opacity: 0.65;
   filter: contrast(1.25) saturate(1.15) brightness(0.9);
 }
 
@@ -586,7 +585,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.85;
 }
 
-/* 03 — EL PROCESO */
+/* 03 — EL PROCESO (IMAGE-LED EDITORIAL FLOW CARDS) */
 .process-section {
   padding: 9rem 0;
   background-color: var(--bg-dark-alt);
@@ -598,41 +597,98 @@ h1, h2, h3, h4, h5, h6 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1.5rem;
-  margin-top: 5rem;
+  margin-top: 4.5rem;
   position: relative;
 }
 
-.process-node {
-  background: rgba(255, 255, 255, 0.04);
+.process-card-imageled {
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 2.4rem 1.5rem;
   border-radius: var(--radius-md);
-  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   transition: var(--transition-smooth);
+  position: relative;
 }
 
-.process-node:hover {
-  background: rgba(255, 255, 255, 0.09);
+.process-card-imageled:hover {
+  background: rgba(255, 255, 255, 0.07);
   transform: translateY(-8px);
-  border-color: var(--color-accent-mango);
+  border-color: rgba(227, 136, 51, 0.4);
+  box-shadow: var(--shadow-dark);
 }
 
-.process-step-num {
-  font-family: var(--font-serif);
-  font-size: 2.6rem;
-  font-weight: 800;
+/* Stage 05 (CRUNCH Payoff Card styling) */
+.process-card-imageled.process-payoff-card {
+  border: 1px solid var(--color-accent-mango);
+  background: rgba(227, 136, 51, 0.06);
+  box-shadow: 0 0 35px rgba(227, 136, 51, 0.15);
+}
+
+.process-card-imageled.process-payoff-card:hover {
+  border-color: #FFA447;
+  box-shadow: 0 12px 40px rgba(227, 136, 51, 0.3);
+}
+
+.process-card-imgbox {
+  position: relative;
+  width: 100%;
+  height: 210px;
+  overflow: hidden;
+  background-color: #0B0E0C;
+}
+
+.process-card-imgbox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), filter 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  filter: contrast(1.1) brightness(0.92);
+}
+
+.process-card-imageled:hover .process-card-imgbox img {
+  transform: scale(1.08);
+  filter: contrast(1.18) brightness(1.02);
+}
+
+.process-card-num-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(17, 20, 18, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   color: var(--color-accent-mango);
-  line-height: 1;
-  margin-bottom: 0.8rem;
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 800;
+  padding: 0.2rem 0.75rem;
+  border-radius: var(--radius-full);
 }
 
-.process-node-title {
+.process-card-body {
+  padding: 1.8rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.process-card-title {
   font-family: var(--font-sans);
-  font-size: 0.95rem;
-  font-weight: 700;
+  font-size: 0.92rem;
+  font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-ivory);
+  margin-bottom: 0.5rem;
+}
+
+.process-card-desc {
+  font-size: 0.84rem;
+  color: rgba(250, 246, 240, 0.68);
+  line-height: 1.5;
 }
 
 /* 04 — PRODUCTOS */
@@ -1102,6 +1158,9 @@ h1, h2, h3, h4, h5, h6 {
   .nav-link {
     font-size: 0.7rem;
   }
+  .process-flow-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 1024px) {
@@ -1111,7 +1170,7 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-  .process-flow-grid, .timeline-grid {
+  .timeline-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .footer-grid {
@@ -1145,8 +1204,13 @@ h1, h2, h3, h4, h5, h6 {
   
   .hero-headline-level1 { font-size: 2.5rem; }
   .hero-headline-level2 { font-size: 2.0rem; }
-  .process-flow-grid, .timeline-grid { grid-template-columns: 1fr; }
+  .process-flow-grid { grid-template-columns: repeat(2, 1fr); }
+  .timeline-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .claims-flex { flex-direction: column; gap: 0.8rem; text-align: center; }
   .floating-fruit { display: none; }
+}
+
+@media (max-width: 580px) {
+  .process-flow-grid { grid-template-columns: 1fr; }
 }
