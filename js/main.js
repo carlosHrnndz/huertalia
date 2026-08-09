@@ -1,6 +1,6 @@
 /* ==========================================================================
-   HUERTALIA LIOFILIZADOS - V5.3 INTERACTIVE & i18n ENGINE (ES / EN)
-   Includes complete translations for Homepage AND Contact Page
+   HUERTALIA LIOFILIZADOS - V5.4 REFINED COMMUNICATION ENGINE (ES / EN)
+   Hierarchy: 1. PRODUCT (Freeze-Dried Fruit) -> 2. ORIGIN (El Bajío) -> 3. ASPIRATION (For the World)
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -18,12 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
       nav_business: 'PARA NEGOCIOS',
       nav_quote: 'COTIZAR',
 
-      // Hero
-      hero_tag: 'LEÓN · GUANAJUATO | DESDE 2022',
-      hero_title: 'DEL CORAZÓN DEL BAJÍO.<br><span class="text-italic-accent" style="color: var(--color-sand);">AL MUNDO.</span>',
-      hero_subhead: 'Fruta real. Conservada de otra manera. Reteniendo el 98% de los nutrientes naturales, vitaminas y sabor puro sin azúcares ni aceites añadidos.',
+      // Hero - Clear Communication Hierarchy: Product + Origin + Aspiration
+      hero_tag: 'LEÓN · GUANAJUATO · DESDE 2022',
+      hero_title_level1: 'DEL CORAZÓN DEL BAJÍO.',
+      hero_title_level2: 'FRUTA LIOFILIZADA PARA EL MUNDO.',
+      hero_subhead: '100% fruta real liofilizada para conservar su sabor natural, color vivo y un crujido increíble — sin azúcar añadida ni conservadores.',
       hero_cta_discover: 'DESCUBRE HUERTALIA',
-      hero_cta_history: 'CONOCE NUESTRA HISTORIA',
+      hero_cta_history: 'NUESTRA HISTORIA',
       claim_1: '100% FRUTA REAL',
       claim_2: 'SIN AZÚCAR AÑADIDA',
       claim_3: 'SIN CONSERVADORES',
@@ -156,10 +157,11 @@ document.addEventListener('DOMContentLoaded', () => {
       nav_business: 'FOR BUSINESS',
       nav_quote: 'GET QUOTE',
 
-      // Hero
-      hero_tag: 'LEÓN · GUANAJUATO | SINCE 2022',
-      hero_title: 'FROM THE HEART OF EL BAJÍO.<br><span class="text-italic-accent" style="color: var(--color-sand);">TO THE WORLD.</span>',
-      hero_subhead: 'Real fruit. Preserved differently. Retaining 98% of natural nutrients, vitamins and pure flavor with zero added sugar or oils.',
+      // Hero - Clear Communication Hierarchy: Product + Origin + Aspiration
+      hero_tag: 'LEÓN · GUANAJUATO · SINCE 2022',
+      hero_title_level1: 'FROM THE HEART OF EL BAJÍO.',
+      hero_title_level2: 'FREEZE-DRIED FRUIT FOR THE WORLD.',
+      hero_subhead: '100% real fruit, freeze-dried to preserve its natural flavor, vibrant color and incredible crunch — with no added sugar or preservatives.',
       hero_cta_discover: 'DISCOVER HUERTALIA',
       hero_cta_history: 'OUR STORY',
       claim_1: '100% REAL FRUIT',
@@ -171,11 +173,11 @@ document.addEventListener('DOMContentLoaded', () => {
       history_badge: 'ORIGIN & AUTHENTICITY',
       history_title: 'BORN IN <span class="text-italic-accent">EL BAJÍO.</span>',
       history_origin: 'LEÓN, GUANAJUATO · 2022',
-      history_quote: '"We were born from a land that tastes like fruit."',
+      history_quote: '"We were born from a land that knows fruit."',
       history_p1: 'In the heart of El Bajío, where fertile land nourishes generations and agriculture is cultural pride, <strong>Huertalia was born in 2022</strong>.',
       history_p2: 'Our journey began with a simple question: <em>What if we could take the best of fruit with us while keeping its flavor and nutrition intact?</em>',
       history_p3: 'Freeze-drying allowed us to find a new way to preserve it: flash freezing, vacuum water extraction, and locking in the essential. Light texture and unforgettable crunch.',
-      history_p4: 'FROM OUR LAND. FOR ANYWHERE.',
+      history_p4: 'FROM OUR LAND. TO EVERYWHERE.',
       manifesto_badge: 'HUERTALIA MANIFESTO',
       manifesto_title: 'FROM THE EARTH. TO THE CRUNCH.',
       manifesto_text: 'We believe nature already did the hard work: creating perfect fruit.<br>We just found a way to preserve it.<br>Nothing added. Nothing disguised. Nothing complicated.<br><strong style="color: #FFFFFF; font-size: 1.3rem;">Just fruit. Just Huertalia.</strong>',
