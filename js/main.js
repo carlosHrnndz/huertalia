@@ -1,5 +1,5 @@
 /* ==========================================================================
-   HUERTALIA LIOFILIZADOS - V4 INTERACTIVE LOGIC
+   HUERTALIA LIOFILIZADOS - V4 INTERACTIVE LOGIC (ESPAÑOL)
    Desire-First Luxury Editorial Brand Experience
    ========================================================================== */
 
@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
       const scrollPos = window.scrollY;
       if (scrollPos > 50) {
-        // Check if we are over light or dark section
         headerWrapper.classList.add('scrolled');
       } else {
         headerWrapper.classList.remove('scrolled', 'scrolled-light');
@@ -106,13 +105,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 5. Products Collection Data
+  // 5. Products Collection Data (en Español)
   const productsData = [
     {
       id: 'fresas-natural',
       name: 'Fresas Liofilizadas',
       category: 'natural',
-      sub: 'Sweet. Intense. Crunchy.',
+      sub: 'Dulce. Intensa. Crujiente.',
       calories: 46,
       weight: '15 g',
       equivalence: '10 Fresas Frescas (1 Taza)',
@@ -124,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'manzana-natural',
       name: 'Manzana Liofilizada',
       category: 'natural',
-      sub: 'Crisp. Clean. Pure.',
+      sub: 'Crujiente. Limpia. Pura.',
       calories: 67,
       weight: '20 g',
       equivalence: '1 Manzana Entera (3/4 Taza)',
@@ -136,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'platano-natural',
       name: 'Plátano Liofilizado',
       category: 'natural',
-      sub: 'Rich. Golden. Natural.',
+      sub: 'Rico. Dorado. Natural.',
       calories: 98,
       weight: '28 g',
       equivalence: '1 Plátano Entero',
@@ -148,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'mango-natural',
       name: 'Mango Liofilizado',
       category: 'natural',
-      sub: 'Tropical. Vibrant. Exotic.',
+      sub: 'Tropical. Vibrante. Exótico.',
       calories: 80,
       weight: '24 g',
       equivalence: '1 Mango de la Huerta (1 Taza)',
@@ -160,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'mango-chamoy',
       name: 'Mango Chamoy',
       category: 'chamoy',
-      sub: 'Bold. Spicy. Wild.',
+      sub: 'Audaz. Picosito. Salvaje.',
       calories: 76,
       weight: '24 g',
       equivalence: '1 Mango entero con Toque Picosito',
@@ -172,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'manzana-chamoy',
       name: 'Manzana Chamoy',
       category: 'chamoy',
-      sub: 'Tangy. Crunchy. Addictive.',
+      sub: 'Agridulce. Crujiente. Adictiva.',
       calories: 60,
       weight: '20 g',
       equivalence: '1 Manzana crujiente picosita',
@@ -184,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'pina-chamoy',
       name: 'Piña Chamoy',
       category: 'chamoy',
-      sub: 'Zesty. Tropical. Fire.',
+      sub: 'Refrescante. Tropical. Intenso.',
       calories: 93,
       weight: '22 g',
       equivalence: '1 Taza de Piña Tropical Picosita',
@@ -220,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; border-top: 1px solid var(--border-light); padding-top: 1rem;">
             <span style="font-family: var(--font-serif); font-weight: 800; font-size: 1.1rem; color: var(--color-primary);">${product.calories} kcal</span>
             <button class="btn btn-outline-dark product-btn-detail" data-id="${product.id}" style="padding: 0.6rem 1.2rem; font-size: 0.78rem;">
-              EXPLORE <i class="ri-arrow-right-line"></i>
+              VER DETALLES <i class="ri-arrow-right-line"></i>
             </button>
           </div>
         </div>
@@ -265,7 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <div class="modal-details-area">
           <span class="wild-badge" style="margin-bottom: 0.8rem; width: fit-content;">
-            ${product.category === 'chamoy' ? '🌶️ WILD CHAMOY' : '🌿 100% PURE FRUIT'}
+            ${product.category === 'chamoy' ? '🌶️ EDICIÓN CHAMOY' : '🌿 100% FRUTA PURA'}
           </span>
           <h2 style="font-family: var(--font-serif); font-size: 2.4rem; margin-bottom: 0.4rem; color: var(--color-primary);">${product.name}</h2>
           <p style="color: var(--color-primary-muted); font-weight: 700; margin-bottom: 1.2rem;">Equivale a ${product.equivalence}</p>
@@ -283,7 +282,7 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
 
           <a href="contacto.html" class="btn btn-luxury-dark" style="width: 100%;">
-            BECOME A DISTRIBUTOR / ORDER <i class="ri-mail-send-line"></i>
+            SOLICITAR COTIZACIÓN B2B <i class="ri-mail-send-line"></i>
           </a>
         </div>
       </div>
