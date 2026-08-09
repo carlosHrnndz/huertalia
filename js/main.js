@@ -1,10 +1,307 @@
 /* ==========================================================================
-   HUERTALIA LIOFILIZADOS - V5 INTERACTIVE LOGIC
-   Navigation Architecture & Origin Narrative (León, GTO - 2022)
+   HUERTALIA LIOFILIZADOS - V5 INTERACTIVE & i18n ENGINE (ES / EN)
+   Auto-detects browser locale & supports manual ES / EN toggle
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Navigation Backdrop & Active Section Tracker
+  // ==========================================================================
+  // 1. i18n DICTIONARY SYSTEM (ESPAÑOL / ENGLISH)
+  // ==========================================================================
+  const translations = {
+    es: {
+      // Nav
+      nav_home: 'INICIO',
+      nav_history: 'NUESTRA HISTORIA',
+      nav_process: 'EL PROCESO',
+      nav_products: 'PRODUCTOS',
+      nav_lifestyle: 'ESTILO DE VIDA',
+      nav_business: 'PARA NEGOCIOS',
+      nav_quote: 'COTIZAR',
+
+      // Hero
+      hero_tag: 'LEÓN · GUANAJUATO | DESDE 2022',
+      hero_title: 'DEL CORAZÓN DEL BAJÍO.<br><span class="text-italic-accent" style="color: var(--color-sand);">AL MUNDO.</span>',
+      hero_subhead: 'Fruta real. Conservada de otra manera. Reteniendo el 98% de los nutrientes naturales, vitaminas y sabor puro sin azúcares ni aceites añadidos.',
+      hero_cta_discover: 'DESCUBRE HUERTALIA',
+      hero_cta_history: 'CONOCE NUESTRA HISTORIA',
+      claim_1: '100% FRUTA REAL',
+      claim_2: 'SIN AZÚCAR AÑADIDA',
+      claim_3: 'SIN CONSERVADORES',
+      claim_4: 'LIOFILIZACIÓN EN FRÍO',
+
+      // History
+      history_badge: 'ORIGEN & AUTENTICIDAD',
+      history_title: 'NACIMOS EN EL <span class="text-italic-accent">BAJÍO.</span>',
+      history_origin: 'LEÓN, GUANAJUATO · 2022',
+      history_quote: '"Nacimos de una tierra que sabe a fruta."',
+      history_p1: 'En el corazón del Bajío, donde la tierra fértil alimenta generaciones y la agricultura es orgullo cultural, nació <strong>Huertalia en 2022</strong>.',
+      history_p2: 'Nuestra búsqueda comenzó con una pregunta sencilla: <em>¿Y si pudiéramos llevarnos lo mejor de la fruta con nosotros, conservando intactos su sabor, aroma y nutrición?</em>',
+      history_p3: 'La liofilización nos permitió encontrar una nueva forma de conservarla: congelar en frío, extraer la humedad bajo vacío y preservar lo esencial. Su textura ligera y su crujido inconfundible.',
+      history_p4: 'DE NUESTRA TIERRA. PARA CUALQUIER LUGAR.',
+      manifesto_badge: 'MANIFIESTO HUERTALIA',
+      manifesto_title: 'DE LA TIERRA. AL CRUNCH.',
+      manifesto_text: 'Creemos que la naturaleza ya hizo el trabajo difícil: crear una fruta perfecta.<br>Nosotros solo encontramos una manera de conservarla.<br>Sin añadir. Sin disfrazar. Sin complicarla.<br><strong style="color: #FFFFFF; font-size: 1.3rem;">Solo fruta. Solo Huertalia.</strong>',
+
+      // Process
+      process_badge: 'CIENCIA Y TECNOLOGÍA',
+      process_title: 'EL PROCESO',
+      process_subhead: 'Sublimación en frío al vacío para preservar el 98% de los nutrientes vivos.',
+      step1_title: 'FRUTA FRESCA',
+      step1_desc: 'Cosecha en punto óptimo',
+      step2_title: 'CONGELACIÓN',
+      step2_desc: 'Congelación rápida a -40°C',
+      step3_title: 'VACÍO',
+      step3_desc: 'Presión atmosférica baja',
+      step4_title: 'SUBLIMACIÓN',
+      step4_desc: 'El hielo pasa directo a vapor',
+      step5_title: 'CRUNCH',
+      step5_desc: 'Textura crujiente inolvidable',
+
+      // Products
+      collection_badge: 'LA COLECCIÓN',
+      collection_title: 'ELIGE TU <span class="text-italic-accent">CRUNCH.</span>',
+      filter_all: 'TODOS',
+      filter_pure: 'FRUTA PURA',
+      filter_chamoy: 'LÍNEA CHAMOY',
+      btn_details: 'VER DETALLES',
+
+      // Lifestyle
+      lifestyle_badge: 'ESTILO DE VIDA CONSCIENTE',
+      lifestyle_title: 'LLEVA HUERTALIA <span class="text-italic-accent">CONTIGO.</span>',
+      lifestyle_subhead: 'Nutrición pura diseñada para integrarse naturalmente en cada momento de tu día.',
+      time1_label: 'ENTRENAR',
+      time1_desc: 'Energía glucémica limpia y potasio pre-entreno sin provocar pesadez estomacal.',
+      time2_label: 'TRABAJO',
+      time2_desc: 'Eleva tu enfoque mental en la oficina sustituyendo antojos procesados.',
+      time3_label: 'PAUSA',
+      time3_desc: 'Un bocado crujiente y táctil para recargar vitalidad durante tus pausas.',
+      time4_label: 'AVENTURA',
+      time4_desc: 'Nutrición ligera y duradera lista para tus viajes de fin de semana.',
+
+      // Why Huertalia
+      why_badge: 'BENEFICIOS COMPROBADOS',
+      why_title: 'NADA AÑADIDO.<br><span class="text-italic-accent">TODO CONSERVADO.</span>',
+      why_claim1: 'RETENCIÓN DE NUTRIENTES',
+      why_claim2: 'FRUTA REAL',
+      why_claim3: 'AZÚCAR AÑADIDA O ACEITES',
+      why_claim4: 'VEGANO Y SIN GLUTEN',
+
+      // Calculator
+      calc_badge: 'DIAGNÓSTICO NUTRICIONAL',
+      calc_title: 'Calculadora de Impacto Calórico',
+      calc_subhead: 'Descubre cuántas calorías vacías y grasas saturadas ahorras a la semana sustituyendo botanas procesadas por Huertalia.',
+      calc_label_select: 'SELECCIONA TU FRUTA:',
+      calc_label_qty: 'FRECUENCIA DE CONSUMO SEMANAL:',
+      calc_label_saved: 'AHORRO ESTIMADO DE CALORÍAS VACÍAS',
+      calc_bar_junk: 'Snack Procesado Tradicional',
+      calc_bar_huertalia: 'Con Huertalia',
+      calc_equiv_label: 'Equiv. a:',
+
+      // Business
+      b2b_badge: 'MAYOREO Y DISTRIBUCIÓN',
+      b2b_title: 'HUERTALIA PARA<br><span class="text-italic-accent" style="color: var(--color-accent-mango);">NEGOCIOS.</span>',
+      b2b_subhead: 'Suministramos a cadenas retail premium, supermercados gourmet, clubes de salud y distribuidores internacionales en América del Norte y Europa.',
+      b2b_f1_title: 'Mayoreo y Cajas Mixtas',
+      b2b_f1_desc: 'Esquemas de volumen altamente competitivos y entregas programadas.',
+      b2b_f2_title: 'Logística de Exportación Global',
+      b2b_f2_desc: 'Cumplimiento estricto de normativas FDA, SAGARPA y estándares internacionales.',
+      b2b_f3_title: 'Vida Útil de +12 Meses',
+      b2b_f3_desc: 'Empaque hermético de alta barrera contra luz y oxígeno.',
+      b2b_cta: 'CONVERTIRME EN DISTRIBUIDOR',
+
+      // Final CTA
+      final_badge: '¿LISTO PARA EL CRUNCH?',
+      final_title: 'READY TO<br><span class="text-italic-accent" style="color: var(--color-accent-mango);">CRUNCH?</span>',
+      final_subhead: 'Descubre la fruta liofilizada nacida en el corazón del Bajío. Calidad excepcional para tu estilo de vida o tu negocio.',
+      final_cta1: 'DESCUBRE HUERTALIA',
+      final_cta2: 'COTIZAR MAYOREO',
+
+      // Footer
+      footer_desc: 'Fruta. Reinventada. 100% fruta liofilizada nacida en León, Guanajuato en 2022. Del corazón del Bajío al mundo.',
+      footer_col_title: 'COLECCIÓN',
+      footer_offices_title: 'OFICINAS MATRIZ',
+      footer_rights: '&copy; 2026 HUERTALIA. Todos los derechos reservados.',
+      footer_location: 'León, Guanajuato, México · Desde 2022'
+    },
+
+    en: {
+      // Nav
+      nav_home: 'HOME',
+      nav_history: 'OUR STORY',
+      nav_process: 'THE PROCESS',
+      nav_products: 'PRODUCTS',
+      nav_lifestyle: 'LIFESTYLE',
+      nav_business: 'FOR BUSINESS',
+      nav_quote: 'GET QUOTE',
+
+      // Hero
+      hero_tag: 'LEÓN · GUANAJUATO | SINCE 2022',
+      hero_title: 'FROM THE HEART OF EL BAJÍO.<br><span class="text-italic-accent" style="color: var(--color-sand);">TO THE WORLD.</span>',
+      hero_subhead: 'Real fruit. Preserved differently. Retaining 98% of natural nutrients, vitamins and pure flavor with zero added sugar or oils.',
+      hero_cta_discover: 'DISCOVER HUERTALIA',
+      hero_cta_history: 'OUR STORY',
+      claim_1: '100% REAL FRUIT',
+      claim_2: 'NO ADDED SUGAR',
+      claim_3: 'NO PRESERVATIVES',
+      claim_4: 'COLD FREEZE-DRIED',
+
+      // History
+      history_badge: 'ORIGIN & AUTHENTICITY',
+      history_title: 'BORN IN <span class="text-italic-accent">EL BAJÍO.</span>',
+      history_origin: 'LEÓN, GUANAJUATO · 2022',
+      history_quote: '"We were born from a land that tastes like fruit."',
+      history_p1: 'In the heart of El Bajío, where fertile land nourishes generations and agriculture is cultural pride, <strong>Huertalia was born in 2022</strong>.',
+      history_p2: 'Our journey began with a simple question: <em>What if we could take the best of fruit with us while keeping its flavor and nutrition intact?</em>',
+      history_p3: 'Freeze-drying allowed us to find a new way to preserve it: flash freezing, vacuum water extraction, and locking in the essential. Light texture and unforgettable crunch.',
+      history_p4: 'FROM OUR LAND. FOR ANYWHERE.',
+      manifesto_badge: 'HUERTALIA MANIFESTO',
+      manifesto_title: 'FROM THE EARTH. TO THE CRUNCH.',
+      manifesto_text: 'We believe nature already did the hard work: creating perfect fruit.<br>We just found a way to preserve it.<br>Nothing added. Nothing disguised. Nothing complicated.<br><strong style="color: #FFFFFF; font-size: 1.3rem;">Just fruit. Just Huertalia.</strong>',
+
+      // Process
+      process_badge: 'SCIENCE & TECHNOLOGY',
+      process_title: 'THE PROCESS',
+      process_subhead: 'Cold vacuum sublimation to preserve 98% of living nutrients.',
+      step1_title: 'FRESH FRUIT',
+      step1_desc: 'Harvested at peak ripeness',
+      step2_title: 'FREEZING',
+      step2_desc: 'Flash frozen at -40°C',
+      step3_title: 'VACUUM',
+      step3_desc: 'Ultra low atmospheric pressure',
+      step4_title: 'SUBLIMATION',
+      step4_desc: 'Ice turns directly to vapor',
+      step5_title: 'CRUNCH',
+      step5_desc: 'Unforgettable crispy texture',
+
+      // Products
+      collection_badge: 'THE COLLECTION',
+      collection_title: 'CHOOSE YOUR <span class="text-italic-accent">CRUNCH.</span>',
+      filter_all: 'ALL',
+      filter_pure: 'PURE FRUIT',
+      filter_chamoy: 'CHAMOY LINE',
+      btn_details: 'VIEW DETAILS',
+
+      // Lifestyle
+      lifestyle_badge: 'CONSCIOUS LIFESTYLE',
+      lifestyle_title: 'TAKE HUERTALIA <span class="text-italic-accent">WITH YOU.</span>',
+      lifestyle_subhead: 'Pure nutrition designed to fit naturally into every high-performance moment of your day.',
+      time1_label: 'TRAIN',
+      time1_desc: 'Clean glycemic energy and pre-workout potassium without stomach heaviness.',
+      time2_label: 'WORK',
+      time2_desc: 'Elevate focus during intense office hours by replacing processed cravings.',
+      time3_label: 'EXPLORE',
+      time3_desc: 'A tactile, crispy bite to recharge vitality during your breaks.',
+      time4_label: 'SHARE',
+      time4_desc: 'Share a delicious, vegan, light snack with your family and friends.',
+
+      // Why Huertalia
+      why_badge: 'PROVEN BENEFITS',
+      why_title: 'NOTHING ADDED.<br><span class="text-italic-accent">EVERYTHING PRESERVED.</span>',
+      why_claim1: 'NUTRIENT RETENTION',
+      why_claim2: 'REAL FRUIT',
+      why_claim3: 'ADDED SUGARS OR OILS',
+      why_claim4: 'VEGAN & GLUTEN FREE',
+
+      // Calculator
+      calc_badge: 'NUTRITIONAL DIAGNOSTIC',
+      calc_title: 'Caloric Impact Calculator',
+      calc_subhead: 'See how much empty calories and saturated fats you save weekly by replacing junk snacks with Huertalia.',
+      calc_label_select: 'SELECT YOUR FRUIT:',
+      calc_label_qty: 'WEEKLY CONSUMPTION:',
+      calc_label_saved: 'ESTIMATED SAVED EMPTY CALORIES',
+      calc_bar_junk: 'Junk Snack Benchmark',
+      calc_bar_huertalia: 'With Huertalia',
+      calc_equiv_label: 'Equiv. to:',
+
+      // Business
+      b2b_badge: 'WHOLESALE & DISTRIBUTION',
+      b2b_title: 'HUERTALIA FOR<br><span class="text-italic-accent" style="color: var(--color-accent-mango);">BUSINESS.</span>',
+      b2b_subhead: 'Supplying premium retail chains, gourmet supermarkets, fitness clubs and international distributors across North America and Europe.',
+      b2b_f1_title: 'Wholesale & Mixed Cases',
+      b2b_f1_desc: 'High margin volume tiers and scheduled deliveries.',
+      b2b_f2_title: 'Global Export Logistics',
+      b2b_f2_desc: 'Strict compliance with FDA, SAGARPA and international standards.',
+      b2b_f3_title: '12+ Month Shelf-Life',
+      b2b_f3_desc: 'High-barrier oxygen protective packaging.',
+      b2b_cta: 'BECOME A DISTRIBUTOR',
+
+      // Final CTA
+      final_badge: 'READY TO CRUNCH?',
+      final_title: 'READY TO<br><span class="text-italic-accent" style="color: var(--color-accent-mango);">CRUNCH?</span>',
+      final_subhead: 'Discover freeze-dried fruit born in the heart of El Bajío. Exceptional quality for your lifestyle or business.',
+      final_cta1: 'DISCOVER HUERTALIA',
+      final_cta2: 'WHOLESALE QUOTE',
+
+      // Footer
+      footer_desc: 'Fruit. Reinvented. 100% freeze-dried fruit born in León, Guanajuato in 2022. From the heart of El Bajío to the world.',
+      footer_col_title: 'COLLECTION',
+      footer_offices_title: 'HEADQUARTERS',
+      footer_rights: '&copy; 2026 HUERTALIA. All rights reserved.',
+      footer_location: 'León, Guanajuato, Mexico · Since 2022'
+    }
+  };
+
+  // Determine initial language: Saved preference OR auto-detect from browser locale
+  function detectLanguage() {
+    const savedLang = localStorage.getItem('huertalia_lang');
+    if (savedLang && (savedLang === 'es' || savedLang === 'en')) {
+      return savedLang;
+    }
+    const userLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    if (userLang.startsWith('en')) {
+      return 'en';
+    }
+    return 'es'; // Default to Spanish
+  }
+
+  let currentLang = detectLanguage();
+
+  function applyLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('huertalia_lang', lang);
+
+    // Update Language Pill Selector active state
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      if (btn.getAttribute('data-lang') === lang) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+
+    // Translate all elements with data-i18n
+    const elements = document.querySelectorAll('[data-i18n]');
+    elements.forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (translations[lang] && translations[lang][key]) {
+        el.innerHTML = translations[lang][key];
+      }
+    });
+
+    // Re-render Product Filter Buttons & Modal text
+    const filterAll = document.querySelector('[data-filter="all"]');
+    const filterPure = document.querySelector('[data-filter="natural"]');
+    const filterChamoy = document.querySelector('[data-filter="chamoy"]');
+
+    if (filterAll) filterAll.textContent = translations[lang].filter_all;
+    if (filterPure) filterPure.textContent = translations[lang].filter_pure;
+    if (filterChamoy) filterChamoy.textContent = translations[lang].filter_chamoy;
+  }
+
+  // Attach click listeners to language toggle buttons
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.getAttribute('data-lang');
+      applyLanguage(lang);
+    });
+  });
+
+  // Apply initial language
+  applyLanguage(currentLang);
+
+  // ==========================================================================
+  // 2. NAVIGATION & ACTIVE LINK TRACKER ON SCROLL
+  // ==========================================================================
   const headerWrapper = document.querySelector('.site-header-wrapper');
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link');
@@ -12,7 +309,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', () => {
     const scrollPos = window.scrollY;
 
-    // Header Background Blur Transition
     if (headerWrapper) {
       if (scrollPos > 50) {
         headerWrapper.classList.add('scrolled');
@@ -21,10 +317,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // Highlight Active Link in Navigation based on Scroll Position
     let currentSectionId = '';
     sections.forEach(section => {
-      const sectionTop = section.offsetTop - 120;
+      const sectionTop = section.offsetTop - 130;
       const sectionHeight = section.offsetHeight;
       if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
         currentSectionId = section.getAttribute('id');
@@ -40,7 +335,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 2. Mobile Navigation Toggle
+  // Mobile Navigation Toggle
   const mobileBtn = document.querySelector('.mobile-menu-btn');
   const navMenu = document.querySelector('.nav-links');
   if (mobileBtn && navMenu) {
@@ -55,7 +350,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Scroll Reveal & Number Counter Observer
+  // ==========================================================================
+  // 3. SCROLL REVEAL & NUMBER COUNTER OBSERVER
+  // ==========================================================================
   const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
   const countElements = document.querySelectorAll('.count-number');
 
@@ -116,7 +413,7 @@ document.addEventListener('DOMContentLoaded', () => {
   revealElements.forEach(el => revealObserver.observe(el));
   countElements.forEach(el => revealObserver.observe(el));
 
-  // 4. Parallax Scroll Effect on Floating Fruits
+  // Parallax Scroll Effect on Floating Fruits
   const floatingFruits = document.querySelectorAll('.floating-fruit');
   if (floatingFruits.length > 0) {
     window.addEventListener('scroll', () => {
@@ -128,7 +425,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 5. Products Collection Data
+  // ==========================================================================
+  // 4. PRODUCTS DATA & RENDERER
+  // ==========================================================================
   const productsData = [
     {
       id: 'fresas-natural',
@@ -216,7 +515,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   ];
 
-  // Render Collection
   const productsGrid = document.getElementById('products-grid');
   const filterBtns = document.querySelectorAll('.filter-btn');
 
@@ -242,7 +540,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; border-top: 1px solid var(--border-light); padding-top: 1rem;">
             <span style="font-family: var(--font-serif); font-weight: 800; font-size: 1.1rem; color: var(--color-primary);">${product.calories} kcal</span>
             <button class="btn btn-outline-dark product-btn-detail" data-id="${product.id}" style="padding: 0.6rem 1.2rem; font-size: 0.78rem;">
-              VER DETALLES <i class="ri-arrow-right-line"></i>
+              <span data-i18n="btn_details">${translations[currentLang].btn_details}</span> <i class="ri-arrow-right-line"></i>
             </button>
           </div>
         </div>
@@ -250,7 +548,6 @@ document.addEventListener('DOMContentLoaded', () => {
       productsGrid.appendChild(card);
     });
 
-    // Attach event listeners to detail buttons
     document.querySelectorAll('.product-btn-detail').forEach(btn => {
       btn.addEventListener('click', (e) => {
         const prodId = e.currentTarget.getAttribute('data-id');
@@ -261,7 +558,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   renderProducts();
 
-  // Filter Buttons
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => b.classList.remove('active'));
@@ -329,7 +625,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 6. Interactive Premium Calculator Data Visualization Logic
+  // ==========================================================================
+  // 5. CALCULATOR LOGIC
+  // ==========================================================================
   const calcSelect = document.getElementById('calc-fruit');
   const calcQty = document.getElementById('calc-qty');
   const qtyValDisplay = document.getElementById('qty-val');
@@ -370,7 +668,9 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCalculator();
   }
 
-  // 7. Interactive Map (Leaflet.js)
+  // ==========================================================================
+  // 6. INTERACTIVE MAP (LEAFLET.JS)
+  // ==========================================================================
   const mapContainer = document.getElementById('map-container');
   if (mapContainer && typeof L !== 'undefined') {
     const leonCoords = [21.1683, -101.6912];

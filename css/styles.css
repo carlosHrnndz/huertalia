@@ -272,7 +272,7 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(17, 20, 18, 0.05);
 }
 
-/* NAVIGATION BAR (REDESIGNED V5 ARCHITECTURE) */
+/* NAVIGATION BAR (WITH LANGUAGE SWITCHER) */
 .site-header-wrapper {
   position: fixed;
   top: 0;
@@ -347,6 +347,45 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-link.active::after {
   width: 100%;
+}
+
+/* LANGUAGE SWITCHER PILL */
+.nav-actions-flex {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-full);
+  padding: 3px;
+  gap: 2px;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: rgba(250, 246, 240, 0.7);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.lang-btn:hover {
+  color: #FFFFFF;
+}
+
+.lang-btn.active {
+  background: var(--color-ivory);
+  color: var(--color-primary);
 }
 
 .mobile-menu-btn {
@@ -435,6 +474,28 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   gap: 1.5rem;
   flex-wrap: wrap;
+}
+
+/* CLAIMS BAR BELOW HERO */
+.hero-claims-bar {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 1.5rem;
+}
+
+.claims-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(250, 246, 240, 0.6);
 }
 
 /* 02 — NUESTRA HISTORIA & MANIFIESTO */
@@ -1044,5 +1105,6 @@ h1, h2, h3, h4, h5, h6 {
   .hero-headline { font-size: 2.8rem; }
   .process-flow-grid, .timeline-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
+  .claims-flex { flex-direction: column; gap: 0.8rem; text-align: center; }
   .floating-fruit { display: none; }
 }
