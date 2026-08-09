@@ -1,5 +1,5 @@
 /* ==========================================================================
-   HUERTALIA LIOFILIZADOS - FINAL QA, BILINGUAL SYSTEM & CAMPAIGN ENGINE
+   HUERTALIA LIOFILIZADOS - MOBILE EDITORIAL UX/UI & BILINGUAL ENGINE
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -14,17 +14,19 @@ document.addEventListener('DOMContentLoaded', () => {
       // Accessibility ARIA labels
       aria_logo_home: 'HUERTALIA Liofilizados Inicio',
       aria_mobile_menu: 'Abrir menú de navegación',
+      aria_close_overlay: 'Cerrar menú móvil',
       aria_lang_es: 'Cambiar idioma a Español',
       aria_lang_en: 'Cambiar idioma a Inglés',
       aria_close_modal: 'Cerrar modal',
 
-      // Nav
+      // Nav & Mobile Menu Overlay
       nav_home: 'INICIO',
       nav_history: 'NUESTRA HISTORIA',
       nav_process: 'EL PROCESO',
       nav_products: 'PRODUCTOS',
       nav_lifestyle: 'ESTILO DE VIDA',
       nav_business: 'PARA NEGOCIOS',
+      nav_contact: 'CONTACTO',
       nav_quote: 'COTIZAR',
 
       // Hero
@@ -204,17 +206,19 @@ document.addEventListener('DOMContentLoaded', () => {
       // Accessibility ARIA labels
       aria_logo_home: 'HUERTALIA Freeze-Dried Home',
       aria_mobile_menu: 'Open navigation menu',
+      aria_close_overlay: 'Close mobile menu',
       aria_lang_es: 'Switch language to Spanish',
       aria_lang_en: 'Switch language to English',
       aria_close_modal: 'Close modal',
 
-      // Nav
+      // Nav & Mobile Menu Overlay
       nav_home: 'HOME',
       nav_history: 'OUR STORY',
       nav_process: 'THE PROCESS',
       nav_products: 'PRODUCTS',
       nav_lifestyle: 'LIFESTYLE',
       nav_business: 'FOR BUSINESS',
+      nav_contact: 'CONTACT',
       nav_quote: 'GET A QUOTE',
 
       // Hero
@@ -600,7 +604,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (twitterDesc) twitterDesc.content = translations[lang].seo_meta;
     }
 
-    // 3. Update Language Pill Buttons Active State
+    // 3. Update Language Pill Buttons Active State (both header & mobile overlay)
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
     });
@@ -664,7 +668,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // 10. Image Alt Text Update across page (including new campaign banners)
+    // 10. Image Alt Text Update across page (including campaign banners)
     const processImgs = document.querySelectorAll('.process-card-imgbox img');
     const processAltTexts = {
       es: [
@@ -744,11 +748,45 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================================================
-  // 2. NAVIGATION & ACTIVE LINK TRACKER ON SCROLL
+  // 2. FULLSCREEN MOBILE MENU OVERLAY LOGIC
+  // ==========================================================================
+  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+  const mobileOverlay = document.getElementById('mobile-menu-overlay');
+  const overlayCloseBtn = document.getElementById('overlay-close-btn');
+
+  function openMobileOverlay() {
+    if (mobileOverlay) {
+      mobileOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeMobileOverlay() {
+    if (mobileOverlay) {
+      mobileOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+
+  if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', openMobileOverlay);
+  }
+
+  if (overlayCloseBtn) {
+    overlayCloseBtn.addEventListener('click', closeMobileOverlay);
+  }
+
+  // Close mobile overlay when clicking any navigation link inside it
+  document.querySelectorAll('.mobile-overlay-link').forEach(link => {
+    link.addEventListener('click', closeMobileOverlay);
+  });
+
+  // ==========================================================================
+  // 3. NAVIGATION & ACTIVE LINK TRACKER ON SCROLL
   // ==========================================================================
   const headerWrapper = document.querySelector('.site-header-wrapper');
   const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-link');
+  const navLinks = document.querySelectorAll('.nav-link, .mobile-overlay-link');
 
   window.addEventListener('scroll', () => {
     const scrollPos = window.scrollY;
@@ -763,7 +801,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentSectionId = '';
     sections.forEach(section => {
-      const sectionTop = section.offsetTop - 130;
+      const sectionTop = section.offsetTop - 110;
       const sectionHeight = section.offsetHeight;
       if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
         currentSectionId = section.getAttribute('id');
@@ -779,23 +817,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Mobile Navigation Toggle
-  const mobileBtn = document.querySelector('.mobile-menu-btn');
-  const navMenu = document.querySelector('.nav-links');
-  if (mobileBtn && navMenu) {
-    mobileBtn.addEventListener('click', () => {
-      navMenu.classList.toggle('mobile-active');
-      const icon = mobileBtn.querySelector('i');
-      if (icon) {
-        icon.className = navMenu.classList.contains('mobile-active') 
-          ? 'ri-close-line' 
-          : 'ri-menu-line';
-      }
-    });
-  }
-
   // ==========================================================================
-  // 3. SCROLL REVEAL & NUMBER COUNTER OBSERVER
+  // 4. SCROLL REVEAL & NUMBER COUNTER OBSERVER
   // ==========================================================================
   const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
   const countElements = document.querySelectorAll('.count-number');
@@ -858,7 +881,7 @@ document.addEventListener('DOMContentLoaded', () => {
   countElements.forEach(el => revealObserver.observe(el));
 
   // ==========================================================================
-  // 4. PRODUCTS RENDERER (BILINGUAL STORE)
+  // 5. PRODUCTS RENDERER (BILINGUAL STORE)
   // ==========================================================================
   const productsGrid = document.getElementById('products-grid');
   const filterBtns = document.querySelectorAll('.filter-btn');
@@ -886,7 +909,7 @@ document.addEventListener('DOMContentLoaded', () => {
           
           <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; border-top: 1px solid var(--border-light); padding-top: 1rem;">
             <span style="font-family: var(--font-serif); font-weight: 800; font-size: 1.1rem; color: var(--color-primary);">${product.calories} kcal</span>
-            <button class="btn btn-outline-dark product-btn-detail" data-id="${product.id}" style="padding: 0.6rem 1.2rem; font-size: 0.78rem;">
+            <button class="btn btn-outline-dark product-btn-detail" data-id="${product.id}" style="padding: 0.7rem 1.4rem; font-size: 0.8rem; min-height: 44px;">
               <span>${translations[currentLang].btn_details}</span> <i class="ri-arrow-right-line"></i>
             </button>
           </div>
@@ -930,7 +953,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <span class="wild-badge" style="margin-bottom: 0.8rem; width: fit-content;">
             ${product.category === 'chamoy' ? translations[currentLang].modal_chamoy_badge : translations[currentLang].modal_pure_badge}
           </span>
-          <h2 style="font-family: var(--font-serif); font-size: 2.4rem; margin-bottom: 0.4rem; color: var(--color-primary);">${product.name}</h2>
+          <h2 style="font-family: var(--font-serif); font-size: 2.2rem; margin-bottom: 0.4rem; color: var(--color-primary);">${product.name}</h2>
           <p style="color: var(--color-primary-muted); font-weight: 700; margin-bottom: 1.2rem;">${translations[currentLang].modal_equals}${product.equivalence}</p>
           <p style="color: var(--color-text-muted); font-size: 0.98rem; margin-bottom: 1.8rem; line-height: 1.6;">${product.desc}</p>
 
@@ -945,7 +968,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
           </div>
 
-          <a href="contacto.html" class="btn btn-luxury-dark" style="width: 100%;">
+          <a href="contacto.html" class="btn btn-luxury-dark" style="width: 100%; min-height: 48px; justify-content: center;">
             ${translations[currentLang].modal_b2b_btn} <i class="ri-mail-send-line"></i>
           </a>
         </div>
@@ -971,7 +994,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================================
-  // 5. CALCULATOR LOGIC ("COMPARA TU SNACK" BILINGUAL)
+  // 6. CALCULATOR LOGIC ("COMPARA TU SNACK" BILINGUAL)
   // ==========================================================================
   const calcSelect = document.getElementById('calc-fruit');
   const calcQty = document.getElementById('calc-qty');

@@ -29,6 +29,38 @@
 </head>
 <body>
 
+  <!-- Fullscreen Mobile Menu Overlay -->
+  <div id="mobile-menu-overlay" class="mobile-menu-overlay" role="dialog" aria-modal="true">
+    <div class="overlay-header">
+      <a href="#hero" class="logo-brand" aria-label="HUERTALIA Liofilizados Inicio" data-i18n-aria="aria_logo_home">
+        <img src="assets/images/logo/logo_huertalia_light.svg" alt="HUERTALIA LIOFILIZADOS" style="height: 42px; width: auto; display: block;" width="180" height="42">
+      </a>
+      <button id="overlay-close-btn" class="overlay-close-btn" aria-label="Cerrar menú móvil" data-i18n-aria="aria_close_overlay">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+
+    <ul class="overlay-nav-list">
+      <li><a href="#hero" class="mobile-overlay-link" data-i18n="nav_home">INICIO</a></li>
+      <li><a href="#historia" class="mobile-overlay-link" data-i18n="nav_history">NUESTRA HISTORIA</a></li>
+      <li><a href="#proceso" class="mobile-overlay-link" data-i18n="nav_process">EL PROCESO</a></li>
+      <li><a href="#productos" class="mobile-overlay-link" data-i18n="nav_products">PRODUCTOS</a></li>
+      <li><a href="#estilo-de-vida" class="mobile-overlay-link" data-i18n="nav_lifestyle">ESTILO DE VIDA</a></li>
+      <li><a href="#negocios" class="mobile-overlay-link" data-i18n="nav_business">PARA NEGOCIOS</a></li>
+      <li><a href="contacto.html" class="mobile-overlay-link" data-i18n="nav_contact">CONTACTO</a></li>
+    </ul>
+
+    <div class="overlay-footer-actions">
+      <div class="lang-switcher" style="justify-content: center; width: 100%;">
+        <button class="lang-btn active" data-lang="es" aria-label="Cambiar idioma a Español" data-i18n-aria="aria_lang_es">🇲🇽 ES</button>
+        <button class="lang-btn" data-lang="en" aria-label="Switch language to English" data-i18n-aria="aria_lang_en">🇺🇸 EN</button>
+      </div>
+      <a href="contacto.html" class="btn btn-luxury-light" style="width: 100%; min-height: 48px; justify-content: center;" data-i18n="nav_quote">
+        COTIZAR
+      </a>
+    </div>
+  </div>
+
   <!-- Navegación Fija V5 con Conmutador de Idioma (ES / EN) -->
   <div class="site-header-wrapper">
     <header class="site-header">
@@ -324,7 +356,7 @@
         <h2 class="title-section" style="color: var(--color-primary); margin-top: 0.6rem;" data-i18n="lifestyle_title">
           LLEVA HUERTALIA <span class="text-italic-accent">CONTIGO.</span>
         </h2>
-        <p class="text-editorial-sub" data-i18n="lifestyle_subhead">Nutrición pura diseñada para integrarse naturally en cada momento de tu día.</p>
+        <p class="text-editorial-sub" data-i18n="lifestyle_subhead">Nutrición pura diseñada para integrarse naturalmente en cada momento de tu día.</p>
       </div>
 
       <!-- Magazine Campaign Layout (05.png & 06.png) -->

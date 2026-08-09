@@ -31,6 +31,38 @@
 </head>
 <body>
 
+  <!-- Fullscreen Mobile Menu Overlay -->
+  <div id="mobile-menu-overlay" class="mobile-menu-overlay" role="dialog" aria-modal="true">
+    <div class="overlay-header">
+      <a href="index.html" class="logo-brand" aria-label="HUERTALIA Liofilizados Inicio" data-i18n-aria="aria_logo_home">
+        <img src="assets/images/logo/logo_huertalia_light.svg" alt="HUERTALIA LIOFILIZADOS" style="height: 42px; width: auto; display: block;" width="180" height="42">
+      </a>
+      <button id="overlay-close-btn" class="overlay-close-btn" aria-label="Cerrar menú móvil" data-i18n-aria="aria_close_overlay">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+
+    <ul class="overlay-nav-list">
+      <li><a href="index.html#hero" class="mobile-overlay-link" data-i18n="nav_home">INICIO</a></li>
+      <li><a href="index.html#historia" class="mobile-overlay-link" data-i18n="nav_history">NUESTRA HISTORIA</a></li>
+      <li><a href="index.html#proceso" class="mobile-overlay-link" data-i18n="nav_process">EL PROCESO</a></li>
+      <li><a href="index.html#productos" class="mobile-overlay-link" data-i18n="nav_products">PRODUCTOS</a></li>
+      <li><a href="index.html#estilo-de-vida" class="mobile-overlay-link" data-i18n="nav_lifestyle">ESTILO DE VIDA</a></li>
+      <li><a href="index.html#negocios" class="mobile-overlay-link" data-i18n="nav_business">PARA NEGOCIOS</a></li>
+      <li><a href="contacto.html" class="mobile-overlay-link active" data-i18n="nav_contact">CONTACTO</a></li>
+    </ul>
+
+    <div class="overlay-footer-actions">
+      <div class="lang-switcher" style="justify-content: center; width: 100%;">
+        <button class="lang-btn active" data-lang="es" aria-label="Cambiar idioma a Español" data-i18n-aria="aria_lang_es">🇲🇽 ES</button>
+        <button class="lang-btn" data-lang="en" aria-label="Switch language to English" data-i18n-aria="aria_lang_en">🇺🇸 EN</button>
+      </div>
+      <a href="#formulario" class="btn btn-luxury-light" style="width: 100%; min-height: 48px; justify-content: center;" data-i18n="nav_quote">
+        COTIZAR
+      </a>
+    </div>
+  </div>
+
   <!-- Navegación Fija V5 con Conmutador de Idioma (ES / EN) -->
   <div class="site-header-wrapper scrolled">
     <header class="site-header">
@@ -70,10 +102,10 @@
   </div>
 
   <!-- Contact Hero Section -->
-  <section class="hero-section" style="min-height: 55vh; padding-top: 10rem;">
+  <section class="hero-section" style="min-height: 45vh; padding-top: 8rem; padding-bottom: 3rem;">
     <div class="container hero-content-wrapper reveal" style="text-align: center; max-width: 800px; margin: 0 auto;">
       <span class="wild-badge" style="background: rgba(255,255,255,0.1); color: var(--color-sand);" data-i18n="b2b_badge">MAYOREO Y DISTRIBUCIÓN</span>
-      <h1 class="title-display" style="color: var(--color-ivory); font-size: clamp(3rem, 6vw, 5.5rem); margin: 0.8rem 0;" data-i18n="contact_hero_title">
+      <h1 class="title-display" style="color: var(--color-ivory); font-size: clamp(2.5rem, 7vw, 4.8rem); margin: 0.8rem 0;" data-i18n="contact_hero_title">
         HABLA CON<br>
         <span class="text-italic-accent" style="color: var(--color-sand);">HUERTALIA.</span>
       </h1>
@@ -84,7 +116,7 @@
   </section>
 
   <!-- Contact Form & Info Grid -->
-  <section class="container" style="padding: 6rem 0;">
+  <section class="container" style="padding: 4rem 0;">
     <div class="calculator-card-premium" style="grid-template-columns: 1fr 1.2fr; gap: 4rem;">
       
       <!-- Direct Contact Card -->
@@ -131,23 +163,23 @@
         <form id="lead-form">
           <div style="margin-bottom: 1.2rem;">
             <label style="display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem;" data-i18n="form_name">NOMBRE COMPLETO *</label>
-            <input type="text" class="form-control" placeholder="Ej. Ana María Torres" required style="width: 100%; padding: 0.9rem; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
+            <input type="text" class="form-control" placeholder="Ej. Ana María Torres" required style="width: 100%; min-height: 48px; padding: 0.9rem; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
           </div>
 
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.2rem;">
             <div>
               <label style="display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem;" data-i18n="form_email">CORREO ELECTRÓNICO *</label>
-              <input type="email" class="form-control" placeholder="contacto@tuempresa.com" required style="width: 100%; padding: 0.9rem; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
+              <input type="email" class="form-control" placeholder="contacto@tuempresa.com" required style="width: 100%; min-height: 48px; padding: 0.9rem; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
             </div>
             <div>
               <label style="display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem;" data-i18n="form_phone">TELÉFONO / WHATSAPP *</label>
-              <input type="tel" class="form-control" placeholder="+52 477 ..." required style="width: 100%; padding: 0.9rem; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
+              <input type="tel" class="form-control" placeholder="+52 477 ..." required style="width: 100%; min-height: 48px; padding: 0.9rem; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
             </div>
           </div>
 
           <div style="margin-bottom: 1.2rem;">
             <label style="display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem;" data-i18n="form_type">TIPO DE NEGOCIO / INTERÉS *</label>
-            <select class="form-control" required style="width: 100%; padding: 0.9rem; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
+            <select class="form-control" required style="width: 100%; min-height: 48px; padding: 0.9rem; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
               <option value="" data-i18n="form_select_default">Selecciona una opción...</option>
               <option value="wholesale" data-i18n="form_opt_wholesale">Distribución Nacional al Mayoreo</option>
               <option value="export" data-i18n="form_opt_export">Exportación Internacional</option>
@@ -161,7 +193,7 @@
             <textarea class="form-control" placeholder="Volúmenes estimados, mercados de interés o líneas de productos específicas..." required style="width: 100%; padding: 0.9rem; border-radius: var(--radius-sm); border: 1px solid var(--border-light); min-height: 120px;"></textarea>
           </div>
 
-          <button type="submit" class="btn btn-luxury-dark" style="width: 100%;">
+          <button type="submit" class="btn btn-luxury-dark" style="width: 100%; min-height: 48px; justify-content: center;">
             <span data-i18n="form_btn_submit">ENVIAR SOLICITUD A VENTAS</span> <i class="ri-send-plane-fill"></i>
           </button>
         </form>
@@ -171,15 +203,15 @@
   </section>
 
   <!-- Interactive Map Section -->
-  <section style="padding-bottom: 7rem;">
+  <section style="padding-bottom: 5rem;">
     <div class="container">
-      <div style="text-align: center; margin-bottom: 3rem;" class="reveal">
+      <div style="text-align: center; margin-bottom: 2.5rem;" class="reveal">
         <span class="badge-tag" data-i18n="map_badge">UBICACIÓN MATRIZ</span>
         <h2 class="title-section" style="color: var(--color-primary); margin-top: 0.5rem;" data-i18n="map_title">Balcones del Campestre</h2>
         <p class="text-editorial-sub" data-i18n="map_sub">León, Guanajuato, México.</p>
       </div>
 
-      <div style="height: 480px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid var(--border-light);" class="reveal-scale">
+      <div style="height: 380px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid var(--border-light);" class="reveal-scale">
         <div id="map-container" style="width: 100%; height: 100%;"></div>
       </div>
     </div>
