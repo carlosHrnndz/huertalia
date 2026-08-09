@@ -1,17 +1,17 @@
 /* ==========================================================================
-   HUERTALIA LIOFILIZADOS - INTERACTIVE JAVASCRIPT LOGIC
+   HUERTALIA LIOFILIZADOS - INTERACTIVE JAVASCRIPT LOGIC (V2)
    Senior Healthy Food Marketing & Web Design Standard
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Header Scroll Glassmorphism effect
-  const header = document.querySelector('.site-header');
-  if (header) {
+  // 1. Header Wrapper Scroll Glassmorphism & Top Bar Collapse Effect
+  const headerWrapper = document.querySelector('.site-header-wrapper');
+  if (headerWrapper) {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 40) {
-        header.classList.add('scrolled');
+        headerWrapper.classList.add('scrolled');
       } else {
-        header.classList.remove('scrolled');
+        headerWrapper.classList.remove('scrolled');
       }
     });
   }
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const observerOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.15
+    threshold: 0.12
   };
 
   const revealObserver = new IntersectionObserver((entries, observer) => {
@@ -50,7 +50,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   revealElements.forEach(el => revealObserver.observe(el));
 
-  // 4. Products Data & Modal Manager
+  // Parallax subtle movement for floating fruits
+  const floatingFruits = document.querySelectorAll('.floating-fruit');
+  if (floatingFruits.length > 0) {
+    window.addEventListener('mousemove', (e) => {
+      const mouseX = e.clientX / window.innerWidth - 0.5;
+      const mouseY = e.clientY / window.innerHeight - 0.5;
+
+      floatingFruits.forEach((fruit, idx) => {
+        const speed = (idx + 1) * 15;
+        fruit.style.transform = `translate(${mouseX * speed}px, ${mouseY * speed}px)`;
+      });
+    });
+  }
+
+  // 4. Products Data & Ultra-Clean Packshots
   const productsData = [
     {
       id: 'fresas-natural',
@@ -62,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
       equivalence: '10 Fresas Frescas (1 Taza)',
       desc: 'Fresas seleccionadas en su punto óptimo de madurez, liofilizadas mediante sublimación en frío. Cada bocado crujiente conserva la intensidad de sabor natural, la vitamina C y los antioxidantes intactos.',
       benefits: ['Solo fresa. Nada más.', 'Sin azúcar añadida', 'Sin conservadores ni colorantes', '46 kcal por empaque completo'],
-      image: 'assets/images/products/fresas_natural.jpg'
+      image: 'assets/images/products/packshot_fresas.jpg'
     },
     {
       id: 'manzana-natural',
@@ -74,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
       equivalence: '1 Manzana Entera (3/4 Taza)',
       desc: 'Láminas crujientes de manzana natural sin cáscara ni ceras añadidas. Una fuente pura de fibra dietética y potasio ideal para mantener tus niveles de energía estables durante el día.',
       benefits: ['100% Manzana seleccionada', 'Súper ligera y crujiente', 'Rica en fibra soluble', 'Excelente snack para niños y adultos'],
-      image: 'assets/images/products/manzana_natural.jpg'
+      image: 'assets/images/products/packshot_manzana.jpg'
     },
     {
       id: 'platano-natural',
@@ -86,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
       equivalence: '1 Plátano Entero',
       desc: 'Rodajas de plátano dulce sin aceites ni azúcares añadidos. A diferencia de las fichas de plátano frito tradicional, nuestro proceso de liofilización mantiene cero grasas y 100% del potasio.',
       benefits: ['Sin aceites ni fritos', 'Energía limpia para deportistas', 'Rico en potasio y vitamina B6', '98 kcal de nutrición pura'],
-      image: 'assets/images/products/platano_natural.jpg'
+      image: 'assets/images/products/packshot_platano.jpg'
     },
     {
       id: 'mango-natural',
@@ -98,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
       equivalence: '1 Mango de la Huerta (1 Taza)',
       desc: 'Lajas del más jugoso mango tropical transformadas en un snack super crujiente. Retiene el complejo B, beta-carotenos y todo el sabor vibrante sin una sola gota de almíbar.',
       benefits: ['Solo mango. Nada más.', 'Alto en Vitamina A y C', 'Textura crujiente irresistible', 'Empaque listo para llevar'],
-      image: 'assets/images/products/mango_natural.jpg'
+      image: 'assets/images/products/packshot_mango.jpg'
     },
     {
       id: 'mango-chamoy',
@@ -110,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
       equivalence: '1 Mango entero con Toque Picosito',
       desc: 'La combinación perfecta entre la dulzura tropical del mango liofilizado y una receta artesanal de chamoy sin colorantes ni saborizantes artificiales. Picor suave y adictivo.',
       benefits: ['Chamoy sin azúcar refinada', 'Sabor mexicano auténtico y picosito', 'Solo 76 kcal por paquete', '100% Vegano y libre de gluten'],
-      image: 'assets/images/products/mango_chamoy.jpg'
+      image: 'assets/images/products/packshot_mango_chamoy.jpg'
     },
     {
       id: 'manzana-chamoy',
@@ -122,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
       equivalence: '1 Manzana crujiente picosita',
       desc: 'Crujientes trozos de manzana natural cubiertos con una sazón ligera de chile en polvo y chamoy natural. La alternativa saludable perfecta para tus antojos de la tarde.',
       benefits: ['Bajo en calorías (solo 60 kcal)', 'Crujido intenso con toque agridulce', 'Sin conservadores químicos', 'Perfecto snack escolar o de oficina'],
-      image: 'assets/images/products/manzana_chamoy.jpg'
+      image: 'assets/images/products/packshot_manzana_chamoy.jpg'
     },
     {
       id: 'pina-chamoy',
@@ -134,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
       equivalence: '1 Taza de Piña Tropical Picosita',
       desc: 'Bocado tropical agridulce con el nivel exacto de piña natural liofilizada y sazón chamoy. Aporta bromelina natural para una digestión ágil y refrescante.',
       benefits: ['Piña natural con enzimas vivas', 'Sabor agridulce explosivo', 'Libre de glutamato monosódico', 'Equivale a 1 taza completa de fruta'],
-      image: 'assets/images/products/pina_chamoy.jpg'
+      image: 'assets/images/products/packshot_pina_chamoy.jpg'
     }
   ];
 
@@ -279,7 +293,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (qtyValDisplay) qtyValDisplay.textContent = `${qty} paquete${qty > 1 ? 's' : ''}`;
     
-    // Average unhealthy snack calorie benchmark = 280 kcal per bag (chips/bar)
     const junkCal = 280 * qty;
     const huertaliaCal = selectedProd.calories * qty;
     const calSaved = junkCal - huertaliaCal;
@@ -297,7 +310,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // 6. Hyper-Stylized Interactive Map (Leaflet.js)
   const mapContainer = document.getElementById('map-container');
   if (mapContainer && typeof L !== 'undefined') {
-    // Balcones del Campestre, León, Guanajuato
     const leonCoords = [21.1683, -101.6912];
     
     const map = L.map('map-container', {
@@ -307,14 +319,12 @@ document.addEventListener('DOMContentLoaded', () => {
       scrollWheelZoom: false
     });
 
-    // Custom stylized Voyager/Positron clean tiles
     L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
       attribution: '&copy; <a href="https://carto.com/">CARTO</a> &copy; OpenStreetMap',
       subdomains: 'abcd',
       maxZoom: 19
     }).addTo(map);
 
-    // Custom Emerald Pin Icon
     const customIcon = L.divIcon({
       className: 'custom-map-pin',
       html: `
