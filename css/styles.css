@@ -1,26 +1,27 @@
 /* ==========================================================================
-   HUERTALIA LIOFILIZADOS - V4 DESIRE-FIRST LUXURY EDITORIAL DESIGN SYSTEM
-   Aspirational Food & Lifestyle Brand Standard (Apple, Aesop, Nike, Graza)
+   HUERTALIA LIOFILIZADOS - V5 EDITORIAL RE-ARCHITECTURE DESIGN SYSTEM
+   Origin Narrative: "Del Corazón del Bajío al Mundo" (León, GTO - Desde 2022)
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root {
   /* Neutral Luxury Palette */
-  --bg-dark: #111412;         /* Cinematic Dark Charcoal Hero/Crunch */
+  --bg-dark: #111412;         /* Cinematic Dark Charcoal */
   --bg-dark-alt: #181C19;     /* Deep Botanical Obsidian */
   --bg-primary: #FAF6F0;      /* Warm Ivory / Cream */
   --bg-surface: #FFFFFF;      /* Pure White */
   --bg-alt: #F4EFEA;          /* Natural Sand / Linen */
-  --bg-glass-dark: rgba(17, 20, 18, 0.88);
+  --bg-glass-dark: rgba(17, 20, 18, 0.9);
   --bg-glass-light: rgba(250, 246, 240, 0.92);
   
   --color-primary: #122317;   /* Deep Botanical Forest Green */
   --color-primary-muted: #2C3E31;
   --color-ivory: #FAF6F0;
   --color-sand: #E8E2D8;
+  --color-earth: #8C6D53;     /* Warm Earthy Bajío Accent */
   
-  /* Natural Fruit Color Accents (Used as Pop/Highlights) */
+  /* Natural Fruit Accents */
   --color-accent-red: #C83E3D;     /* Strawberry Red */
   --color-accent-mango: #E38833;   /* Mango Amber */
   --color-accent-chamoy: #B32025;  /* Chamoy Ruby */
@@ -29,12 +30,11 @@
   --color-text-dark: #111412;
   --color-text-light: #FAF6F0;
   --color-text-muted: #6B756E;
-  --color-text-muted-light: #A3AFA7;
   
   --border-dark: rgba(255, 255, 255, 0.12);
   --border-light: rgba(18, 35, 23, 0.1);
   
-  /* High-Contrast Typography System */
+  /* Typography System */
   --font-serif: 'Fraunces', Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   
@@ -54,7 +54,7 @@
   --transition-bounce: 0.65s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* Base Resets & Global Styles */
+/* Base Resets */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -70,7 +70,7 @@ body {
   font-family: var(--font-sans);
   background-color: var(--bg-primary);
   color: var(--color-text-dark);
-  line-height: 1.6;
+  line-height: 1.65;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
@@ -93,16 +93,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .title-display {
   font-family: var(--font-serif);
-  font-size: clamp(3.5rem, 8vw, 7.5rem);
+  font-size: clamp(3.2rem, 7.5vw, 7rem);
   font-weight: 800;
-  line-height: 0.95;
+  line-height: 0.98;
   letter-spacing: -0.03em;
   text-transform: uppercase;
 }
 
 .title-section {
   font-family: var(--font-serif);
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-size: clamp(2.4rem, 4.5vw, 4.2rem);
   font-weight: 700;
   line-height: 1.05;
   letter-spacing: -0.02em;
@@ -110,9 +110,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .text-editorial-sub {
   font-family: var(--font-sans);
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.65;
   color: var(--color-text-muted);
 }
 
@@ -133,6 +133,28 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(0);
 }
 
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .reveal-scale {
   opacity: 0;
   transform: scale(0.95);
@@ -144,7 +166,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: scale(1);
 }
 
-/* Floating Fruit Parallax Elements */
+/* Floating Fruit Elements */
 .floating-fruit {
   position: absolute;
   z-index: 3;
@@ -155,7 +177,37 @@ h1, h2, h3, h4, h5, h6 {
   transition: transform 0.25s cubic-bezier(0.1, 1, 0.1, 1);
 }
 
-/* Buttons & CTAs */
+/* Badges & Tags */
+.badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1.1rem;
+  background-color: var(--bg-alt);
+  color: var(--color-primary);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 800;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-light);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.wild-badge {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--color-accent-red), var(--color-accent-chamoy));
+  color: white;
+  padding: 0.4rem 1.2rem;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -220,7 +272,7 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(17, 20, 18, 0.05);
 }
 
-/* MINIMAL LUXURY NAVIGATION */
+/* NAVIGATION BAR (REDESIGNED V5 ARCHITECTURE) */
 .site-header-wrapper {
   position: fixed;
   top: 0;
@@ -235,13 +287,6 @@ h1, h2, h3, h4, h5, h6 {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-dark);
-}
-
-.site-header-wrapper.scrolled-light {
-  background: var(--bg-glass-light);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border-light);
 }
 
 .site-header {
@@ -266,38 +311,42 @@ h1, h2, h3, h4, h5, h6 {
   transition: var(--transition-fast);
 }
 
-.logo-brand.dark-mode-logo {
-  color: var(--color-primary);
-}
-
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 2.8rem;
+  gap: 2.2rem;
   list-style: none;
 }
 
 .nav-link {
   font-family: var(--font-sans);
   text-decoration: none;
-  color: rgba(250, 246, 240, 0.8);
-  font-weight: 600;
-  font-size: 0.85rem;
+  color: rgba(250, 246, 240, 0.75);
+  font-weight: 700;
+  font-size: 0.82rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   transition: var(--transition-fast);
-}
-
-.nav-link.dark-text {
-  color: rgba(17, 20, 18, 0.8);
+  position: relative;
 }
 
 .nav-link:hover, .nav-link.active {
   color: #FFFFFF;
 }
 
-.nav-link.dark-text:hover, .nav-link.dark-text.active {
-  color: var(--color-primary);
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-accent-mango);
+  transition: var(--transition-smooth);
+}
+
+.nav-link.active::after {
+  width: 100%;
 }
 
 .mobile-menu-btn {
@@ -309,7 +358,7 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
-/* CINEMATIC HERO SECTION */
+/* 01 — HERO SECTION */
 .hero-section {
   position: relative;
   min-height: 100vh;
@@ -318,7 +367,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding: 8rem 0 4rem;
+  padding: 9rem 0 5rem;
 }
 
 .hero-bg-media {
@@ -328,9 +377,8 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.45;
-  filter: contrast(1.1) brightness(0.9);
-  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0.42;
+  filter: contrast(1.15) brightness(0.85);
 }
 
 .hero-overlay-vignette {
@@ -339,24 +387,24 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at center, rgba(17, 20, 18, 0.2) 0%, rgba(17, 20, 18, 0.85) 100%),
-              linear-gradient(to bottom, rgba(17, 20, 18, 0.5) 0%, rgba(17, 20, 18, 0.95) 100%);
+  background: radial-gradient(circle at center, rgba(17, 20, 18, 0.2) 0%, rgba(17, 20, 18, 0.88) 100%),
+              linear-gradient(to bottom, rgba(17, 20, 18, 0.4) 0%, rgba(17, 20, 18, 0.95) 100%);
 }
 
 .hero-content-wrapper {
   position: relative;
   z-index: 10;
-  max-width: 900px;
+  max-width: 920px;
 }
 
 .hero-tag-line {
   font-family: var(--font-sans);
-  font-size: 0.82rem;
-  font-weight: 700;
+  font-size: 0.8rem;
+  font-weight: 800;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--color-accent-mango);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.4rem;
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -364,22 +412,22 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-tag-line::before {
   content: '';
-  width: 30px;
+  width: 35px;
   height: 1px;
   background-color: var(--color-accent-mango);
 }
 
 .hero-headline {
   color: var(--color-ivory);
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.6rem;
 }
 
 .hero-subhead {
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   color: rgba(250, 246, 240, 0.85);
   font-weight: 300;
   margin-bottom: 3rem;
-  max-width: 540px;
+  max-width: 560px;
 }
 
 .hero-cta-group {
@@ -389,31 +437,66 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
 }
 
-/* MINIMAL HERO FOOTER CLAIMS */
-.hero-claims-bar {
-  position: absolute;
-  bottom: 40px;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  padding-top: 1.5rem;
+/* 02 — NUESTRA HISTORIA & MANIFIESTO */
+.history-section {
+  padding: 9rem 0;
+  background: radial-gradient(circle at 80% 20%, #F5EFE8 0%, var(--bg-primary) 70%);
+  position: relative;
+  overflow: hidden;
 }
 
-.claims-flex {
-  display: flex;
-  justify-content: space-between;
+.history-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 5rem;
   align-items: center;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(250, 246, 240, 0.6);
 }
 
-/* SCROLL STORYTELLING PROCESS FLOW */
-.storytelling-section {
-  padding: 8rem 0;
+.history-content p {
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  margin-bottom: 1.4rem;
+}
+
+.history-quote {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-style: italic;
+  color: var(--color-primary);
+  line-height: 1.3;
+  margin: 2rem 0;
+  padding-left: 1.5rem;
+  border-left: 3px solid var(--color-earth);
+}
+
+.manifesto-box {
+  background-color: var(--color-primary);
+  color: var(--color-ivory);
+  border-radius: var(--radius-lg);
+  padding: 4rem 3.5rem;
+  margin-top: 5rem;
+  position: relative;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-dark);
+}
+
+.manifesto-title {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  color: var(--color-ivory);
+  margin-bottom: 1.5rem;
+}
+
+.manifesto-text {
+  font-size: 1.2rem;
+  color: rgba(250, 246, 240, 0.85);
+  line-height: 1.85;
+}
+
+/* 03 — EL PROCESO */
+.process-section {
+  padding: 9rem 0;
   background-color: var(--bg-dark-alt);
   color: var(--color-ivory);
   position: relative;
@@ -430,7 +513,7 @@ h1, h2, h3, h4, h5, h6 {
 .process-node {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 2.2rem 1.5rem;
+  padding: 2.4rem 1.5rem;
   border-radius: var(--radius-md);
   text-align: center;
   transition: var(--transition-smooth);
@@ -444,7 +527,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .process-step-num {
   font-family: var(--font-serif);
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   font-weight: 800;
   color: var(--color-accent-mango);
   line-height: 1;
@@ -460,38 +543,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-ivory);
 }
 
-/* THE CRUNCH SECTION (SENSORY TEXTURE FOCUS) */
-.crunch-section {
-  padding: 9rem 0;
-  background-color: var(--bg-dark);
-  color: var(--color-ivory);
-  position: relative;
-  overflow: hidden;
-}
-
-.crunch-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 5rem;
-  align-items: center;
-}
-
-.crunch-img-card {
-  position: relative;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-dark);
-}
-
-.crunch-img-card img {
-  width: 100%;
-  height: 580px;
-  object-fit: cover;
-  display: block;
-  filter: contrast(1.15);
-}
-
-/* PRODUCT COLLECTION ("CHOOSE YOUR CRUNCH.") */
+/* 04 — PRODUCTOS */
 .collection-section {
   padding: 9rem 0;
   background-color: var(--bg-primary);
@@ -503,6 +555,31 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 5rem;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.7rem 1.6rem;
+  border-radius: var(--radius-full);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  color: var(--color-text-dark);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background: var(--color-primary);
+  color: #FFFFFF;
+  border-color: var(--color-primary);
 }
 
 .collection-grid {
@@ -570,29 +647,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1.5rem;
 }
 
-/* CHAMOY LINE ("THE WILD ONE.") */
-.chamoy-wild-section {
-  padding: 9rem 0;
-  background: linear-gradient(135deg, #240809 0%, #160505 100%);
-  color: var(--color-ivory);
-  position: relative;
-  overflow: hidden;
-}
-
-.wild-badge {
-  display: inline-block;
-  background: linear-gradient(90deg, var(--color-accent-red), var(--color-accent-chamoy));
-  color: white;
-  padding: 0.4rem 1.2rem;
-  border-radius: var(--radius-full);
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
-}
-
-/* LIFESTYLE TIMELINE ("TAKE HUERTALIA WITH YOU.") */
+/* 05 — ESTILO DE VIDA */
 .lifestyle-section {
   padding: 9rem 0;
   background-color: var(--bg-surface);
@@ -642,9 +697,9 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-text-muted);
 }
 
-/* NUTRITION & CLAIMS ("NOTHING ADDED.") */
-.claims-typographic-section {
-  padding: 8rem 0;
+/* 06 — POR QUÉ HUERTALIA */
+.why-huertalia-section {
+  padding: 8.5rem 0;
   background-color: var(--bg-alt);
   text-align: center;
 }
@@ -680,7 +735,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0.5rem;
 }
 
-/* CALCULATOR INTERACTIVE DATA VISUALIZATION */
+/* 07 — CALCULADORA HEALTHY */
 .calculator-section {
   padding: 9rem 0;
   background-color: var(--bg-primary);
@@ -745,7 +800,7 @@ h1, h2, h3, h4, h5, h6 {
 .fill-junk { background: linear-gradient(90deg, #C83E3D, #B32025); }
 .fill-huertalia { background: linear-gradient(90deg, #122317, #2C3E31); }
 
-/* B2B SECTION ("HUERTALIA FOR BUSINESS") */
+/* 08 — PARA NEGOCIOS (B2B) */
 .b2b-section {
   padding: 9rem 0;
   background-color: var(--bg-dark);
@@ -783,6 +838,14 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   font-size: 1.4rem;
   flex-shrink: 0;
+}
+
+/* 09 — FINAL CTA */
+.final-cta-section {
+  padding: 10rem 0;
+  background: radial-gradient(circle at center, #1C3323 0%, var(--bg-dark) 100%);
+  color: var(--color-ivory);
+  text-align: center;
 }
 
 /* MODAL STYLING */
@@ -877,7 +940,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
 }
 
-/* MINIMAL LUXURY FOOTER */
+/* FOOTER */
 .site-footer {
   background-color: var(--bg-dark);
   color: rgba(250, 246, 240, 0.7);
@@ -939,17 +1002,14 @@ h1, h2, h3, h4, h5, h6 {
   color: rgba(250, 246, 240, 0.4);
 }
 
-/* RESPONSIVE DESIGN BREAKPOINTS */
+/* RESPONSIVE BREAKPOINTS */
 @media (max-width: 1024px) {
   .hero-headline { font-size: 3.5rem; }
-  .crunch-grid, .b2b-grid, .calculator-card-premium, .lifestyle-grid {
+  .history-grid, .b2b-grid, .calculator-card-premium {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-  .process-flow-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .timeline-grid {
+  .process-flow-grid, .timeline-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .footer-grid {
@@ -984,6 +1044,5 @@ h1, h2, h3, h4, h5, h6 {
   .hero-headline { font-size: 2.8rem; }
   .process-flow-grid, .timeline-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
-  .claims-flex { flex-direction: column; gap: 0.8rem; text-align: center; }
   .floating-fruit { display: none; }
 }

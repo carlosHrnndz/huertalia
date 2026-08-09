@@ -1,39 +1,62 @@
 /* ==========================================================================
-   HUERTALIA LIOFILIZADOS - V4 INTERACTIVE LOGIC (ESPAÑOL)
-   Desire-First Luxury Editorial Brand Experience
+   HUERTALIA LIOFILIZADOS - V5 INTERACTIVE LOGIC
+   Navigation Architecture & Origin Narrative (León, GTO - 2022)
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Navigation Scroll Backdrop & Theme Detection
+  // 1. Navigation Backdrop & Active Section Tracker
   const headerWrapper = document.querySelector('.site-header-wrapper');
-  if (headerWrapper) {
-    window.addEventListener('scroll', () => {
-      const scrollPos = window.scrollY;
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  window.addEventListener('scroll', () => {
+    const scrollPos = window.scrollY;
+
+    // Header Background Blur Transition
+    if (headerWrapper) {
       if (scrollPos > 50) {
         headerWrapper.classList.add('scrolled');
       } else {
-        headerWrapper.classList.remove('scrolled', 'scrolled-light');
+        headerWrapper.classList.remove('scrolled');
+      }
+    }
+
+    // Highlight Active Link in Navigation based on Scroll Position
+    let currentSectionId = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 120;
+      const sectionHeight = section.offsetHeight;
+      if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+        currentSectionId = section.getAttribute('id');
       }
     });
-  }
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      const href = link.getAttribute('href');
+      if (href === `#${currentSectionId}` || (href === 'index.html' && currentSectionId === 'hero')) {
+        link.classList.add('active');
+      }
+    });
+  });
 
   // 2. Mobile Navigation Toggle
   const mobileBtn = document.querySelector('.mobile-menu-btn');
-  const navLinks = document.querySelector('.nav-links');
-  if (mobileBtn && navLinks) {
+  const navMenu = document.querySelector('.nav-links');
+  if (mobileBtn && navMenu) {
     mobileBtn.addEventListener('click', () => {
-      navLinks.classList.toggle('mobile-active');
+      navMenu.classList.toggle('mobile-active');
       const icon = mobileBtn.querySelector('i');
       if (icon) {
-        icon.className = navLinks.classList.contains('mobile-active') 
+        icon.className = navMenu.classList.contains('mobile-active') 
           ? 'ri-close-line' 
-          : 'ri-menu-3-line';
+          : 'ri-menu-line';
       }
     });
   }
 
   // 3. Scroll Reveal & Number Counter Observer
-  const revealElements = document.querySelectorAll('.reveal, .reveal-scale');
+  const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
   const countElements = document.querySelectorAll('.count-number');
 
   function animateCount(el) {
@@ -105,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 5. Products Collection Data (en Español)
+  // 5. Products Collection Data
   const productsData = [
     {
       id: 'fresas-natural',
