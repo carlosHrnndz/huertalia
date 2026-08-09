@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto & Distribución | Huertalia Liofilizados</title>
-  <meta name="description" content="Ponte en contacto con Huertalia Liofilizados para ventas al mayoreo, distribución nacional e internacional. Email: ventas@huertalia.com, Teléfono: +52 477 123 01256, León Guanajuato México.">
+  <title>Contact & Distribution | HUERTALIA</title>
+  <meta name="description" content="Ponte en contacto con Huertalia para ventas al mayoreo y distribución internacional. Email: ventas@huertalia.com, Teléfono: +52 477 123 01256, León Guanajuato México.">
 
   <!-- Google Fonts & Remix Icon -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 
-  <!-- Leaflet CSS for Hyper-Stylized Map -->
+  <!-- Leaflet CSS for Map -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 
   <!-- Main Stylesheet -->
@@ -20,148 +20,128 @@
 </head>
 <body>
 
-  <!-- Unified Sticky Header Wrapper (Zero Overlap) -->
+  <!-- Minimal Navigation Header -->
   <div class="site-header-wrapper scrolled">
-    <div class="top-notice-bar">
-      <span><i class="ri-planet-line"></i> <strong>Atención Personalizada B2B y Distribución:</strong> Lunes a Viernes 9:00 - 18:00 hrs.</span>
-      <span style="margin-left: 1rem; display: inline-flex; align-items: center; gap: 0.3rem;"><i class="ri-phone-line"></i> +52 477 123 01256</span>
-    </div>
-
     <header class="site-header">
       <div class="container nav-wrapper">
-        <a href="index.html" class="logo-brand">
-          <div class="logo-icon"><i class="ri-leaf-line"></i></div>
-          <div class="logo-text-group">
-            <span class="logo-title">HUERTALIA</span>
-            <span class="logo-subtitle">LIOFILIZADOS</span>
-          </div>
-        </a>
+        <a href="index.html" class="logo-brand">HUERTALIA</a>
 
         <nav>
           <ul class="nav-links">
-            <li><a href="index.html" class="nav-link">Inicio</a></li>
-            <li><a href="index.html#liofilizacion" class="nav-link">¿Qué es Liofilizado?</a></li>
-            <li><a href="index.html#productos" class="nav-link">Colección</a></li>
-            <li><a href="index.html#momentos" class="nav-link">Estilo de Vida</a></li>
-            <li><a href="index.html#calculadora" class="nav-link">Calculadora Healthy</a></li>
-            <li><a href="index.html#distribucion" class="nav-link">Distribución Global</a></li>
-            <li><a href="contacto.html" class="nav-link active">Contacto</a></li>
+            <li><a href="index.html#collection" class="nav-link">PRODUCTS</a></li>
+            <li><a href="index.html#process" class="nav-link">THE PROCESS</a></li>
+            <li><a href="index.html#lifestyle" class="nav-link">LIFESTYLE</a></li>
+            <li><a href="index.html#wild-chamoy" class="nav-link">OUR STORY</a></li>
+            <li><a href="index.html#business" class="nav-link">FOR BUSINESS</a></li>
+            <li><a href="contacto.html" class="nav-link active">CONTACT</a></li>
           </ul>
         </nav>
 
-        <a href="#formulario" class="btn btn-primary" style="padding: 0.75rem 1.6rem; font-size: 0.9rem;">
-          Enviar Mensaje <i class="ri-send-plane-line"></i>
+        <a href="#formulario" class="btn btn-luxury-light" style="padding: 0.75rem 1.6rem; font-size: 0.8rem;">
+          SEND INQUIRY
         </a>
 
-        <button class="mobile-menu-btn" aria-label="Abrir menú">
-          <i class="ri-menu-3-line"></i>
+        <button class="mobile-menu-btn" aria-label="Toggle menu">
+          <i class="ri-menu-line"></i>
         </button>
       </div>
     </header>
   </div>
 
-  <!-- Contact Hero -->
-  <section class="contact-hero">
-    <img src="assets/images/floating/strawberry.jpg" alt="Fresa" class="floating-fruit float-slow" style="top: 20%; left: 5%; width: 90px; height: 90px;">
-    <img src="assets/images/floating/apple.jpg" alt="Manzana" class="floating-fruit float-reverse" style="top: 25%; right: 6%; width: 90px; height: 90px;">
-
-    <div class="container reveal">
-      <span class="badge-tag">✉️ Centro de Ventas & Atención</span>
-      <h1 style="font-family: var(--font-serif); font-size: 3.2rem; margin: 1rem 0 0.5rem; color: var(--color-primary);">Conéctate con Huertalia</h1>
-      <p style="font-size: 1.15rem; color: var(--color-text-muted); max-width: 650px; margin: 0 auto;">
-        Estamos listos para llevar la fruta liofilizada de la más alta calidad a tu negocio, supermercado, gimnasio o tienda saludable.
+  <!-- Contact Hero Section -->
+  <section class="hero-section" style="min-height: 60vh; padding-top: 10rem;">
+    <div class="container hero-content-wrapper reveal" style="text-align: center; max-width: 800px; margin: 0 auto;">
+      <span class="wild-badge" style="background: rgba(255,255,255,0.1); color: var(--color-sand);">ENTERPRISE & DISTRIBUTION</span>
+      <h1 class="title-display" style="color: var(--color-ivory); font-size: clamp(3rem, 6vw, 5.5rem); margin: 0.8rem 0;">
+        TALK TO<br>
+        <span class="text-italic-accent" style="color: var(--color-sand);">HUERTALIA.</span>
+      </h1>
+      <p class="text-editorial-sub" style="color: rgba(250, 246, 240, 0.75); margin: 0 auto;">
+        We partner with premium retail chains, supermarkets, fitness clubs and international distributors to deliver peak nutrition.
       </p>
     </div>
   </section>
 
   <!-- Contact Form & Info Grid -->
-  <section class="container" style="margin-bottom: 5rem;">
-    <div class="contact-grid">
+  <section class="container" style="padding: 6rem 0;">
+    <div class="calculator-card-premium" style="grid-template-columns: 1fr 1.2fr; gap: 4rem;">
       
-      <!-- Contact Direct Cards -->
-      <div class="contact-info-card reveal-left">
-        <div>
-          <span class="badge-tag" style="margin-bottom: 0.8rem;">📍 Ubicación Central</span>
-          <h2 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 0.5rem; color: var(--color-primary);">Matriz y Oficinas</h2>
-          <p style="color: var(--color-text-muted); font-size: 0.95rem;">
-            Nuestras oficinas generales y centro operativo se encuentran estratégicamente ubicados en el Bajío mexicano.
-          </p>
-        </div>
+      <!-- Direct Contact Card -->
+      <div class="reveal-left">
+        <span class="badge-tag">HEADQUARTERS</span>
+        <h2 class="title-section" style="color: var(--color-primary); margin-top: 0.5rem;">Direct Channels</h2>
+        <p style="color: var(--color-text-muted); font-size: 0.98rem; margin: 1rem 0 2rem;">
+          Our central logistics hub is located in the Bajío industrial corridor in León, Guanajuato, Mexico.
+        </p>
 
-        <div class="info-item">
-          <div class="info-icon-wrapper"><i class="ri-map-pin-2-line"></i></div>
-          <div class="info-details">
-            <h4>Dirección Matriz:</h4>
-            <p>Colonia Balcones del Campestre</p>
-            <p>León, Guanajuato, México. C.P. 37138</p>
+        <div style="display: flex; flex-direction: column; gap: 1.8rem;">
+          <div style="display: flex; gap: 1.2rem; align-items: flex-start;">
+            <div style="width: 48px; height: 48px; border-radius: 12px; background: var(--color-primary); color: white; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0;"><i class="ri-map-pin-2-line"></i></div>
+            <div>
+              <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--color-primary);">Address:</h4>
+              <p style="color: var(--color-text-muted); font-size: 0.95rem;">Colonia Balcones del Campestre<br>León, Guanajuato, México. C.P. 37138</p>
+            </div>
           </div>
-        </div>
 
-        <div class="info-item">
-          <div class="info-icon-wrapper"><i class="ri-mail-send-line"></i></div>
-          <div class="info-details">
-            <h4>Correo Electrónico:</h4>
-            <a href="mailto:ventas@huertalia.com">ventas@huertalia.com</a>
-            <p style="font-size: 0.85rem; color: var(--color-primary); font-weight: 700; margin-top: 2px;">Respuesta prioritaria en menos de 24 hrs.</p>
+          <div style="display: flex; gap: 1.2rem; align-items: flex-start;">
+            <div style="width: 48px; height: 48px; border-radius: 12px; background: var(--color-primary); color: white; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0;"><i class="ri-mail-send-line"></i></div>
+            <div>
+              <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--color-primary);">Sales Email:</h4>
+              <a href="mailto:ventas@huertalia.com" style="color: var(--color-primary); font-weight: 700; text-decoration: none; font-size: 1.1rem;">ventas@huertalia.com</a>
+              <p style="font-size: 0.82rem; color: var(--color-text-muted); margin-top: 2px;">Priority response under 24 hours.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="info-item">
-          <div class="info-icon-wrapper"><i class="ri-phone-line"></i></div>
-          <div class="info-details">
-            <h4>Teléfono & WhatsApp B2B:</h4>
-            <a href="tel:+5247712301256">+52 477 123 01256</a>
-            <p style="font-size: 0.85rem; color: var(--color-text-muted);">Atención directa de gerencia de ventas.</p>
+          <div style="display: flex; gap: 1.2rem; align-items: flex-start;">
+            <div style="width: 48px; height: 48px; border-radius: 12px; background: var(--color-primary); color: white; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0;"><i class="ri-phone-line"></i></div>
+            <div>
+              <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--color-primary);">Phone & WhatsApp:</h4>
+              <a href="tel:+5247712301256" style="color: var(--color-primary); font-weight: 700; text-decoration: none; font-size: 1.1rem;">+52 477 123 01256</a>
+            </div>
           </div>
-        </div>
-
-        <div style="background: var(--bg-alt); padding: 1.3rem; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
-          <h4 style="font-family: var(--font-serif); font-size: 1rem; color: var(--color-primary); margin-bottom: 0.3rem;"><i class="ri-global-line"></i> Envíos a Todo el Mundo</h4>
-          <p style="font-size: 0.88rem; color: var(--color-text-muted); margin: 0;">Coordinamos logística de exportación terrestre, marítima y aérea.</p>
         </div>
       </div>
 
       <!-- Lead Contact Form -->
-      <div id="formulario" class="form-card reveal-right">
-        <span class="badge-tag" style="margin-bottom: 0.8rem;">📋 Cotizaciones & Consultas</span>
-        <h2 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 1.5rem; color: var(--color-primary);">Formulario de Contacto</h2>
+      <div id="formulario" class="reveal-right">
+        <span class="badge-tag">BUSINESS INQUIRY</span>
+        <h2 class="title-section" style="color: var(--color-primary); margin-top: 0.5rem; margin-bottom: 1.5rem;">Send a Message</h2>
 
-        <form id="lead-form" onsubmit="event.preventDefault(); alert('¡Gracias por comunicarte con Huertalia! Tu mensaje ha sido enviado a ventas@huertalia.com. Un ejecutivo te contactará en breve.'); this.reset();">
-          <div class="form-group">
-            <label for="nombre">Nombre Completo *</label>
-            <input type="text" id="nombre" class="form-control" placeholder="Ej. Ana María Torres" required>
+        <form id="lead-form" onsubmit="event.preventDefault(); alert('Thank you for contacting Huertalia. Your message has been routed to sales@huertalia.com.'); this.reset();">
+          <div style="margin-bottom: 1.2rem;">
+            <label style="display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem;">FULL NAME *</label>
+            <input type="text" class="form-control" placeholder="Jane Doe" required style="width: 100%; padding: 0.9rem; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
           </div>
 
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-            <div class="form-group">
-              <label for="email">Correo Electrónico *</label>
-              <input type="email" id="email" class="form-control" placeholder="contacto@tuempresa.com" required>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.2rem;">
+            <div>
+              <label style="display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem;">EMAIL *</label>
+              <input type="email" class="form-control" placeholder="jane@company.com" required style="width: 100%; padding: 0.9rem; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
             </div>
-            <div class="form-group">
-              <label for="telefono">Teléfono / WhatsApp *</label>
-              <input type="tel" id="telefono" class="form-control" placeholder="+52 477 ..." required>
+            <div>
+              <label style="display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem;">PHONE / WHATSAPP *</label>
+              <input type="tel" class="form-control" placeholder="+52 477 ..." required style="width: 100%; padding: 0.9rem; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
             </div>
           </div>
 
-          <div class="form-group">
-            <label for="interes">Tipo de Interés / Negocio *</label>
-            <select id="interes" class="form-control" required>
-              <option value="">Selecciona una opción...</option>
-              <option value="mayoreo">Distribución Nacional al Mayoreo</option>
-              <option value="exportacion">Exportación Internacional</option>
-              <option value="retail">Supermercado / Tienda Saludable / Gimnasio</option>
-              <option value="maquila">Maquila / Fruta Liofilizada a Granel</option>
-              <option value="particular">Cliente Final / Consulta General</option>
+          <div style="margin-bottom: 1.2rem;">
+            <label style="display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem;">BUSINESS CATEGORY *</label>
+            <select class="form-control" required style="width: 100%; padding: 0.9rem; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
+              <option value="">Select option...</option>
+              <option value="wholesale">National Wholesale Distribution</option>
+              <option value="export">International Export</option>
+              <option value="retail">Supermarket / Health Store / Gym Club</option>
+              <option value="bulk">Bulk Freeze-Dried Fruit Supply</option>
             </select>
           </div>
 
-          <div class="form-group">
-            <label for="mensaje">Mensaje o Detalles de la Solicitud *</label>
-            <textarea id="mensaje" class="form-control" placeholder="Escribe aquí los volumenes estimados o preguntas sobre nuestros productos..." required></textarea>
+          <div style="margin-bottom: 1.5rem;">
+            <label style="display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem;">MESSAGE / INQUIRY DETAILS *</label>
+            <textarea class="form-control" placeholder="Estimated volume, target markets or specific product lines..." required style="width: 100%; padding: 0.9rem; border-radius: var(--radius-sm); border: 1px solid var(--border-light); min-height: 120px;"></textarea>
           </div>
 
-          <button type="submit" class="btn btn-primary" style="width: 100%;">
-            Enviar Mensaje a Ventas <i class="ri-send-plane-fill"></i>
+          <button type="submit" class="btn btn-luxury-dark" style="width: 100%;">
+            SUBMIT INQUIRY <i class="ri-send-plane-fill"></i>
           </button>
         </form>
       </div>
@@ -169,80 +149,66 @@
     </div>
   </section>
 
-  <!-- Hyper-Stylized Interactive Map Section -->
-  <section class="map-section">
+  <!-- Interactive Map Section -->
+  <section style="padding-bottom: 7rem;">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="badge-tag">🗺️ Ubicación Exacta</span>
-        <h2 class="section-title">Encuéntranos en León, Guanajuato</h2>
-        <p class="section-desc">Mapa hiperestilizado interactivo centrado en Colonia Balcones del Campestre.</p>
+      <div style="text-align: center; margin-bottom: 3rem;" class="reveal">
+        <span class="badge-tag">LOCATION</span>
+        <h2 class="title-section" style="color: var(--color-primary); margin-top: 0.5rem;">Balcones del Campestre</h2>
+        <p class="text-editorial-sub">León, Guanajuato, México.</p>
       </div>
 
-      <div class="map-wrapper reveal-scale">
-        <div id="map-container"></div>
-        <div class="map-overlay-badge">
-          <h5><i class="ri-leaf-fill"></i> Huertalia Liofilizados</h5>
-          <p>Colonia Balcones del Campestre<br>León, Guanajuato, México</p>
-          <a href="https://maps.google.com/?q=Balcones+del+Campestre+Leon+Guanajuato" target="_blank" style="color: var(--color-primary); font-size: 0.8rem; font-weight: 700; text-decoration: none; margin-top: 0.4rem; display: inline-block;">
-            Abrir en Google Maps <i class="ri-external-link-line"></i>
-          </a>
-        </div>
+      <div style="height: 480px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid var(--border-light);" class="reveal-scale">
+        <div id="map-container" style="width: 100%; height: 100%;"></div>
       </div>
     </div>
   </section>
 
-  <!-- Warm DTC Footer -->
+  <!-- Minimal Luxury Footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo-brand">
-            <div class="logo-icon"><i class="ri-leaf-line"></i></div>
-            <div class="logo-text-group">
-              <span class="logo-title">HUERTALIA</span>
-              <span class="logo-subtitle">LIOFILIZADOS</span>
-            </div>
-          </a>
-          <p>Nutrición Real Para Tu Día. Fruta 100% liofilizada rica en nutrientes, ligera y crujiente para personas conscientes de su salud.</p>
+          <a href="index.html" class="logo-brand">HUERTALIA</a>
+          <p>Fruit. Reinvented. 100% pure freeze-dried fruit for conscious lifestyle individuals and global wellness brands.</p>
         </div>
 
         <div>
-          <h4 class="footer-title">Navegación</h4>
+          <h4 class="footer-title">NAVIGATION</h4>
           <ul class="footer-links">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="index.html#liofilizacion">¿Qué es Liofilizado?</a></li>
-            <li><a href="index.html#productos">Colección</a></li>
-            <li><a href="index.html#momentos">Estilo de Vida</a></li>
-            <li><a href="index.html#calculadora">Calculadora Healthy</a></li>
-            <li><a href="index.html#distribucion">Distribución Global</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="index.html#collection">Products</a></li>
+            <li><a href="index.html#process">The Process</a></li>
+            <li><a href="index.html#crunch">The Crunch</a></li>
+            <li><a href="index.html#lifestyle">Lifestyle</a></li>
+            <li><a href="index.html#business">For Business</a></li>
+            <li><a href="contacto.html">Contact</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="footer-title">Líneas de Fruta</h4>
+          <h4 class="footer-title">COLLECTION</h4>
           <ul class="footer-links">
-            <li><a href="index.html#productos">Fresas Liofilizadas</a></li>
-            <li><a href="index.html#productos">Manzana Liofilizada</a></li>
-            <li><a href="index.html#productos">Plátano Liofilizado</a></li>
-            <li><a href="index.html#productos">Mango Liofilizado</a></li>
-            <li><a href="index.html#productos">Línea Chamoy Artesanal</a></li>
+            <li><a href="index.html#collection">Fresas Liofilizadas</a></li>
+            <li><a href="index.html#collection">Manzana Liofilizada</a></li>
+            <li><a href="index.html#collection">Plátano Liofilizado</a></li>
+            <li><a href="index.html#collection">Mango Liofilizado</a></li>
+            <li><a href="index.html#wild-chamoy">Wild Chamoy Line</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="footer-title">Contacto Directo</h4>
+          <h4 class="footer-title">CONTACT & HEADQUARTERS</h4>
           <ul class="footer-links">
             <li><i class="ri-mail-line"></i> ventas@huertalia.com</li>
             <li><i class="ri-phone-line"></i> +52 477 123 01256</li>
-            <li><i class="ri-map-pin-line"></i> Col. Balcones del Campestre<br>León, Guanajuato, México</li>
+            <li><i class="ri-map-pin-line"></i> Balcones del Campestre<br>León, Guanajuato, México</li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 Huertalia Liofilizados. Todos los derechos reservados.</p>
-        <p>Dirección de Arte & Diseño Editorial DTC Wellness.</p>
+        <p>&copy; 2026 HUERTALIA. All rights reserved.</p>
+        <p>Aspirational Food & Lifestyle Art Direction.</p>
       </div>
     </div>
   </footer>
