@@ -1,5 +1,12 @@
 /* ==========================================================================
-   HUERTALIA LIOFILIZADOS - V5.5 AUDITED & REFINED ENGINE (ES / EN)
+   HUERTALIA LIOFILIZADOS - V5.6 FINAL QA & POLISHING ENGINE (ES / EN)
+   Audited for:
+   - 100% pure ES / 100% pure EN consistency
+   - Dynamic document.documentElement.lang attribute
+   - Approved nutrient retention claim ("HASTA UN 98% DE RETENCIÓN DE NUTRIENTES")
+   - Removal of "nutrientes vivos" and obsolete regulatory references
+   - Factual & safe lifestyle claims
+   - Refined Calculator ("Compara tu Snack")
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -45,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Process
       process_badge: 'CIENCIA Y TECNOLOGÍA',
       process_title: 'EL PROCESO',
-      process_subhead: 'Sublimación en frío al vacío para preservar hasta un 98% de nutrientes conservados.',
+      process_subhead: 'Sublimación en frío al vacío para lograr hasta un 98% de retención de nutrientes.',
       step1_title: 'FRUTA FRESCA',
       step1_desc: 'Cosecha en punto óptimo',
       step2_title: 'CONGELACIÓN',
@@ -65,46 +72,46 @@ document.addEventListener('DOMContentLoaded', () => {
       filter_chamoy: 'LÍNEA CHAMOY',
       btn_details: 'VER DETALLES',
 
-      // Lifestyle (Corrected Spanish: "naturalmente" & Factual, Safe Claims)
+      // Lifestyle (Refined Factual & Safe Copy)
       lifestyle_badge: 'ESTILO DE VIDA CONSCIENTE',
       lifestyle_title: 'LLEVA HUERTALIA <span class="text-italic-accent">CONTIGO.</span>',
-      lifestyle_subhead: 'Nutrición pura diseñada para integrarse naturalmente en cada momento de tu día.',
+      lifestyle_subhead: 'Nutrición pura diseñada para integrarse naturally en cada momento de tu día.', // Will be audited to naturalmente
       time1_label: 'ENTRENAR',
-      time1_desc: 'Un snack ligero y crujiente para acompañar tu rutina de entrenamiento.',
+      time1_desc: 'Fruta ligera y crujiente para acompañar tu rutina.',
       time2_label: 'TRABAJO',
-      time2_desc: 'Una alternativa práctica y crujiente para tus pausas durante el día.',
+      time2_desc: 'Una pausa crujiente para acompañar tu día.',
       time3_label: 'PAUSA',
-      time3_desc: 'Bocado crujiente de fruta pura listo en cualquier momento.',
+      time3_desc: 'Un pequeño momento de sabor cuando más lo necesitas.',
       time4_label: 'AVENTURA',
-      time4_desc: 'Nutrición ligera y duradera lista para tus viajes y aventuras.',
+      time4_desc: 'Fruta ligera y fácil de llevar allá donde vayas.',
 
-      // Why Huertalia (Factual Nutrient Retention Fix)
+      // Why Huertalia (Exact Approved Claim)
       why_badge: 'BENEFICIOS COMPROBADOS',
       why_title: 'NADA AÑADIDO.<br><span class="text-italic-accent">TODO CONSERVADO.</span>',
-      why_claim1: 'HASTA 98% NUTRIENTES CONSERVADOS',
+      why_claim1: 'HASTA UN 98% DE RETENCIÓN DE NUTRIENTES',
       why_claim2: 'FRUTA REAL',
       why_claim3: 'AZÚCAR AÑADIDA O ACEITES',
       why_claim4: 'VEGANO Y SIN GLUTEN',
 
-      // Calculator
-      calc_badge: 'DIAGNÓSTICO NUTRICIONAL',
-      calc_title: 'Calculadora de Impacto Calórico',
-      calc_subhead: 'Descubre cuántas calorías vacías ahorras a la semana sustituyendo botanas procesadas por Huertalia.',
+      // Calculator (Renamed: COMPARA TU SNACK)
+      calc_badge: 'COMPARATIVA NUTRICIONAL',
+      calc_title: 'Compara tu Snack',
+      calc_subhead: 'Descubre cómo cambia el aporte calórico de tu snack habitual al elegir fruta liofilizada.',
       calc_label_select: 'SELECCIONA TU FRUTA:',
       calc_label_qty: 'FRECUENCIA DE CONSUMO SEMANAL:',
-      calc_label_saved: 'AHORRO ESTIMADO DE CALORÍAS VACÍAS',
+      calc_label_saved: 'DIFERENCIA ESTIMADA DE CALORÍAS',
       calc_bar_junk: 'Snack Procesado Tradicional',
       calc_bar_huertalia: 'Con Huertalia',
       calc_equiv_label: 'Equiv. a:',
 
-      // Business
+      // Business (Regulatory Compliance Fix)
       b2b_badge: 'MAYOREO Y DISTRIBUCIÓN',
       b2b_title: 'HUERTALIA PARA<br><span class="text-italic-accent" style="color: var(--color-accent-mango);">NEGOCIOS.</span>',
       b2b_subhead: 'Suministramos a cadenas retail premium, supermercados gourmet, clubes de salud y distribuidores internacionales en América del Norte y Europa.',
       b2b_f1_title: 'Mayoreo y Cajas Mixtas',
       b2b_f1_desc: 'Esquemas de volumen altamente competitivos y entregas programadas.',
-      b2b_f2_title: 'Logística de Exportación Global',
-      b2b_f2_desc: 'Cumplimiento estricto de normativas FDA, SAGARPA y estándares internacionales.',
+      b2b_f2_title: 'Cumplimiento Regulatorio Global',
+      b2b_f2_desc: 'Cumplimiento de los requisitos regulatorios aplicables y estándares internacionales.',
       b2b_f3_title: 'Vida Útil de +12 Meses',
       b2b_f3_desc: 'Empaque hermético de alta barrera contra luz y oxígeno.',
       b2b_cta: 'CONVERTIRME EN DISTRIBUIDOR',
@@ -142,6 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
       footer_desc: 'Fruta. Reinventada. 100% fruta liofilizada nacida en León, Guanajuato en 2022. Del corazón del Bajío al mundo.',
       footer_col_title: 'COLECCIÓN',
       footer_offices_title: 'OFICINAS MATRIZ',
+      footer_contact_link: 'Contacto',
       footer_rights: '&copy; 2026 HUERTALIA. Todos los derechos reservados.',
       footer_location: 'León, Guanajuato, México · Desde 2022'
     },
@@ -184,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Process
       process_badge: 'SCIENCE & TECHNOLOGY',
       process_title: 'THE PROCESS',
-      process_subhead: 'Cold vacuum sublimation to preserve up to 98% of essential nutrients.',
+      process_subhead: 'Cold vacuum sublimation to achieve up to 98% nutrient retention.',
       step1_title: 'FRESH FRUIT',
       step1_desc: 'Harvested at peak ripeness',
       step2_title: 'FREEZING',
@@ -209,41 +217,41 @@ document.addEventListener('DOMContentLoaded', () => {
       lifestyle_title: 'TAKE HUERTALIA <span class="text-italic-accent">WITH YOU.</span>',
       lifestyle_subhead: 'Pure nutrition designed to fit naturally into every moment of your day.',
       time1_label: 'TRAIN',
-      time1_desc: 'A light, crunchy snack to complement your training routine.',
+      time1_desc: 'Light and crunchy fruit to accompany your routine.',
       time2_label: 'WORK',
-      time2_desc: 'A convenient, crunchy alternative for your breaks throughout the day.',
+      time2_desc: 'A crispy break to accompany your day.',
       time3_label: 'PAUSE',
-      time3_desc: 'Crispy pure fruit bite ready whenever you need it.',
+      time3_desc: 'A small moment of flavor when you need it most.',
       time4_label: 'ADVENTURE',
-      time4_desc: 'Lightweight, durable nutrition ready for your travels and adventures.',
+      time4_desc: 'Lightweight fruit, easy to take wherever you go.',
 
-      // Why Huertalia
+      // Why Huertalia (Exact Approved Claim)
       why_badge: 'PROVEN BENEFITS',
       why_title: 'NOTHING ADDED.<br><span class="text-italic-accent">EVERYTHING PRESERVED.</span>',
-      why_claim1: 'UP TO 98% NUTRIENTS PRESERVED',
+      why_claim1: 'UP TO 98% NUTRIENT RETENTION',
       why_claim2: 'REAL FRUIT',
       why_claim3: 'ADDED SUGARS OR OILS',
       why_claim4: 'VEGAN & GLUTEN FREE',
 
-      // Calculator
-      calc_badge: 'NUTRITIONAL DIAGNOSTIC',
-      calc_title: 'Caloric Impact Calculator',
-      calc_subhead: 'See how much empty calories you save weekly by replacing junk snacks with Huertalia.',
+      // Calculator (Renamed: COMPARE YOUR SNACK)
+      calc_badge: 'NUTRITIONAL COMPARISON',
+      calc_title: 'Compare Your Snack',
+      calc_subhead: 'See how the caloric intake of your usual snack changes when choosing freeze-dried fruit.',
       calc_label_select: 'SELECT YOUR FRUIT:',
       calc_label_qty: 'WEEKLY CONSUMPTION:',
-      calc_label_saved: 'ESTIMATED SAVED EMPTY CALORIES',
+      calc_label_saved: 'ESTIMATED CALORIE DIFFERENCE',
       calc_bar_junk: 'Junk Snack Benchmark',
       calc_bar_huertalia: 'With Huertalia',
       calc_equiv_label: 'Equiv. to:',
 
-      // Business
+      // Business (Regulatory Compliance Fix)
       b2b_badge: 'WHOLESALE & DISTRIBUTION',
       b2b_title: 'HUERTALIA FOR<br><span class="text-italic-accent" style="color: var(--color-accent-mango);">BUSINESS.</span>',
       b2b_subhead: 'Supplying premium retail chains, gourmet supermarkets, fitness clubs and international distributors across North America and Europe.',
       b2b_f1_title: 'Wholesale & Mixed Cases',
       b2b_f1_desc: 'High-margin volume tiers and scheduled deliveries.',
-      b2b_f2_title: 'Global Export Logistics',
-      b2b_f2_desc: 'Strict compliance with FDA, SAGARPA and international standards.',
+      b2b_f2_title: 'Global Regulatory Compliance',
+      b2b_f2_desc: 'Compliance with applicable regulatory requirements and international standards.',
       b2b_f3_title: '12+ Month Shelf-Life',
       b2b_f3_desc: 'High-barrier oxygen protective packaging.',
       b2b_cta: 'BECOME A DISTRIBUTOR',
@@ -281,10 +289,14 @@ document.addEventListener('DOMContentLoaded', () => {
       footer_desc: 'Fruit. Reinvented. 100% freeze-dried fruit born in León, Guanajuato in 2022. From the heart of El Bajío to the world.',
       footer_col_title: 'COLLECTION',
       footer_offices_title: 'HEADQUARTERS',
+      footer_contact_link: 'Contact',
       footer_rights: '&copy; 2026 HUERTALIA. All rights reserved.',
       footer_location: 'León, Guanajuato, Mexico · Since 2022'
     }
   };
+
+  // Ensure Spanish text has no typo
+  translations.es.lifestyle_subhead = 'Nutrición pura diseñada para integrarse naturalmente en cada momento de tu día.';
 
   // Determine initial language: Saved preference OR auto-detect from browser locale
   function detectLanguage() {
@@ -304,6 +316,9 @@ document.addEventListener('DOMContentLoaded', () => {
   function applyLanguage(lang) {
     currentLang = lang;
     localStorage.setItem('huertalia_lang', lang);
+
+    // Update document HTML lang attribute dynamically for accessibility & SEO
+    document.documentElement.lang = lang;
 
     // Update Language Pill Selector active state
     document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -522,7 +537,7 @@ document.addEventListener('DOMContentLoaded', () => {
       calories: 46,
       weight: '15 g',
       equivalence: '10 Fresas Frescas (1 Taza)',
-      desc: 'Fresas seleccionadas en su punto óptimo de madurez, liofilizadas mediante sublimación en frío. Cada bocado crujiente conserva la intensidad de sabor natural y hasta el 98% de los nutrientes intactos.',
+      desc: 'Fresas seleccionadas en su punto óptimo de madurez, liofilizadas mediante sublimación en frío. Cada bocado crujiente conserva la intensidad de sabor natural y hasta un 98% de los nutrientes intactos.',
       benefits: ['Solo fresa. Nada más.', 'Sin azúcar añadida', 'Sin conservadores ni colorantes', '46 kcal por empaque completo'],
       image: 'assets/images/products/packshot_fresas.jpg'
     },
@@ -594,7 +609,7 @@ document.addEventListener('DOMContentLoaded', () => {
       calories: 93,
       weight: '22 g',
       equivalence: '1 Taza de Piña Tropical Picosita',
-      desc: 'Bocado tropical agridulce con el nivel exacto de piña natural liofilizada y sazón chamoy. Aporta fibra natural y enzimas naturales para una digestión ágil.',
+      desc: 'Bocado tropical agridulce con el nivel exacto de piña natural liofilizada y sazón chamoy. Aporta fibra natural para una digestión ágil.',
       benefits: ['Piña natural seleccionada', 'Sabor agridulce explosivo', 'Libre de glutamato monosódico', 'Equivale a 1 taza completa de fruta'],
       image: 'assets/images/products/packshot_pina_chamoy.jpg'
     }
@@ -711,7 +726,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================================
-  // 5. CALCULATOR LOGIC
+  // 5. CALCULATOR LOGIC ("COMPARA TU SNACK")
   // ==========================================================================
   const calcSelect = document.getElementById('calc-fruit');
   const calcQty = document.getElementById('calc-qty');
