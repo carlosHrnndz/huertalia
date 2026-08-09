@@ -1,0 +1,110 @@
+import os
+
+output_dir = '/Users/carlos/Documents/Antigravity/huertalia/assets/images/logo'
+os.makedirs(output_dir, exist_ok=True)
+
+# SVG Logo for Dark Header Background (White text + Amber/Green leaves)
+svg_light = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 110" width="100%" height="100%">
+  <defs>
+    <style>
+      .logo-arc-text {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.35em;
+        fill: #E38833;
+        text-transform: uppercase;
+      }
+      .logo-serif-title {
+        font-family: 'Fraunces', Georgia, serif;
+        font-size: 48px;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        fill: #FAF6F0;
+      }
+      .logo-sub-spaced {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.48em;
+        fill: rgba(250, 246, 240, 0.75);
+      }
+    </style>
+  </defs>
+
+  <g id="huertalia-logo-brand">
+    <!-- Curved/Arc Arc Subtitle -->
+    <text x="230" y="20" text-anchor="middle" class="logo-arc-text">NUTRICIÓN REAL PARA TU DÍA</text>
+    
+    <!-- Main Serif Wordmark -->
+    <text x="230" y="68" text-anchor="middle" class="logo-serif-title">HUERTALIA</text>
+    
+    <!-- Two Leaves Accent Emblem over the I in HUERTALIA (approx X=372, Y=34) -->
+    <g transform="translate(366, 16) scale(0.85)">
+      <!-- Left Leaf -->
+      <path d="M 12 18 C 3 10 2 0 14 2 C 22 4 22 18 12 18 Z" fill="#7A9A7E"/>
+      <!-- Right Leaf -->
+      <path d="M 16 18 C 24 8 28 0 36 6 C 42 12 30 22 16 18 Z" fill="#E38833"/>
+    </g>
+    
+    <!-- Subtitle L I O F I L I Z A D O S -->
+    <text x="230" y="98" text-anchor="middle" class="logo-sub-spaced">L I O F I L I Z A D O S</text>
+  </g>
+</svg>'''
+
+# SVG Logo for Light Background (Dark Green text + Amber/Green leaves)
+svg_dark = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 110" width="100%" height="100%">
+  <defs>
+    <style>
+      .logo-arc-text-d {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.35em;
+        fill: #8C6D53;
+        text-transform: uppercase;
+      }
+      .logo-serif-title-d {
+        font-family: 'Fraunces', Georgia, serif;
+        font-size: 48px;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        fill: #122317;
+      }
+      .logo-sub-spaced-d {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.48em;
+        fill: #2C3E31;
+      }
+    </style>
+  </defs>
+
+  <g id="huertalia-logo-brand-dark">
+    <!-- Curved/Arc Arc Subtitle -->
+    <text x="230" y="20" text-anchor="middle" class="logo-arc-text-d">NUTRICIÓN REAL PARA TU DÍA</text>
+    
+    <!-- Main Serif Wordmark -->
+    <text x="230" y="68" text-anchor="middle" class="logo-serif-title-d">HUERTALIA</text>
+    
+    <!-- Two Leaves Accent Emblem over the I in HUERTALIA -->
+    <g transform="translate(366, 16) scale(0.85)">
+      <!-- Left Leaf -->
+      <path d="M 12 18 C 3 10 2 0 14 2 C 22 4 22 18 12 18 Z" fill="#2C3E31"/>
+      <!-- Right Leaf -->
+      <path d="M 16 18 C 24 8 28 0 36 6 C 42 12 30 22 16 18 Z" fill="#E38833"/>
+    </g>
+    
+    <!-- Subtitle L I O F I L I Z A D O S -->
+    <text x="230" y="98" text-anchor="middle" class="logo-sub-spaced-d">L I O F I L I Z A D O S</text>
+  </g>
+</svg>'''
+
+with open(os.path.join(output_dir, 'logo_huertalia_light.svg'), 'w', encoding='utf-8') as f:
+    f.write(svg_light)
+
+with open(os.path.join(output_dir, 'logo_huertalia_dark.svg'), 'w', encoding='utf-8') as f:
+    f.write(svg_dark)
+
+print('Refined SVG logos generated successfully!')
