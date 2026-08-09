@@ -1,5 +1,5 @@
 /* ==========================================================================
-   HUERTALIA LIOFILIZADOS - FINAL QA & BILINGUAL SYSTEM ENGINE
+   HUERTALIA LIOFILIZADOS - FINAL QA, BILINGUAL SYSTEM & CAMPAIGN ENGINE
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
       claim_3: 'SIN CONSERVADORES',
       claim_4: 'LIOFILIZACIÓN EN FRÍO',
 
-      // History
+      // History & Map Structural Component (01.png)
       history_badge: 'ORIGEN & AUTENTICIDAD',
       history_title: 'NACIMOS EN EL <span class="text-italic-accent">BAJÍO.</span>',
       history_origin: 'LEÓN, GUANAJUATO · 2022',
@@ -51,11 +51,22 @@ document.addEventListener('DOMContentLoaded', () => {
       manifesto_badge: 'MANIFIESTO HUERTALIA',
       manifesto_title: 'DE LA TIERRA. AL CRUNCH.',
       manifesto_text: 'Creemos que la naturaleza ya hizo el trabajo difícil: crear una fruta perfecta.<br>Nosotros solo encontramos una manera de conservarla.<br>Sin añadir. Sin disfrazar. Sin complicarla.<br><strong style="color: #FFFFFF; font-size: 1.3rem;">Solo fruta. Solo Huertalia.</strong>',
+      
+      map_section_tag: 'NUESTRO TERRITORIO',
+      map_section_title: 'DEL CORAZÓN DEL BAJÍO. <span class="text-italic-accent">PARA EL MUNDO.</span>',
+      map_section_desc: 'Nacidos en León, Guanajuato en 2022. Una ubicación estratégica en el corazón agrícola de México que conecta el cultivo fresco con mercados globales.',
 
-      // Process
+      // Territorio Banner (02.png)
+      banner_bajio_tag: 'DESDE EL BAJÍO',
+      banner_bajio_title: 'FRUTA CON ORIGEN. DE NUESTRA TIERRA AL MUNDO.',
+
+      // Process & Intro (03.png)
       process_badge: 'CIENCIA Y TECNOLOGÍA',
       process_title: 'EL PROCESO',
       process_subhead: 'Sublimación en frío al vacío para lograr hasta un 98% de retención de nutrientes.',
+      process_intro_tag: 'LA MATERIA PRIMA',
+      process_intro_title: 'DE LA FRUTA FRESCA AL CRUNCH PERFECTO.',
+      process_intro_desc: 'Seleccionamos únicamente fruta de la más alta calidad en su punto idóneo de madurez antes de iniciar la sublimación en frío.',
       step1_title: 'FRUTA FRESCA',
       step1_desc: 'Cosecha en punto óptimo',
       step2_title: 'CONGELACIÓN',
@@ -67,13 +78,16 @@ document.addEventListener('DOMContentLoaded', () => {
       step5_title: 'CRUNCH',
       step5_desc: 'Textura crujiente inolvidable',
 
-      // Products
+      // Products & Crunch Moment (04.png)
       collection_badge: 'LA COLECCIÓN',
       collection_title: 'ELIGE TU <span class="text-italic-accent">CRUNCH.</span>',
       filter_all: 'TODOS',
       filter_pure: 'FRUTA PURA',
       filter_chamoy: 'LÍNEA CHAMOY',
       btn_details: 'VER DETALLES',
+      crunch_moment_tag: 'EXPERIENCIA HUERTALIA',
+      crunch_moment_title: 'EL CRUNCH DE LA <span class="text-italic-accent">FRUTA REAL.</span>',
+      crunch_moment_subhead: 'Imposiblemente crujiente. 100% fruta natural.',
 
       // Modal Details
       modal_chamoy_badge: '🌶️ EDICIÓN CHAMOY',
@@ -83,10 +97,16 @@ document.addEventListener('DOMContentLoaded', () => {
       modal_weight_label: 'Contenido Neto',
       modal_b2b_btn: 'SOLICITAR COTIZACIÓN B2B',
 
-      // Lifestyle
+      // Lifestyle Campaign (05.png & 06.png)
       lifestyle_badge: 'ESTILO DE VIDA CONSCIENTE',
       lifestyle_title: 'LLEVA HUERTALIA <span class="text-italic-accent">CONTIGO.</span>',
       lifestyle_subhead: 'Nutrición pura diseñada para integrarse naturalmente en cada momento de tu día.',
+      lifestyle_work_tag: '11:45 · TRABAJO',
+      lifestyle_work_title: 'UNA PAUSA CRUJIENTE <span class="text-italic-accent">PARA TU DÍA.</span>',
+      lifestyle_work_desc: 'Nutrición pura para mantener tu enfoque diario sin caídas de energía ni pesadez.',
+      lifestyle_adv_tag: '19:20 · AVENTURA',
+      lifestyle_adv_title: 'FRUTA LIGERA <span class="text-italic-accent">ALLÁ DONDE VAYAS.</span>',
+      lifestyle_adv_desc: 'Empaque ultraligero de alta barrera listo para cualquier trayecto o actividad al aire libre.',
       time1_label: 'ENTRENAR',
       time1_desc: 'Fruta ligera y crujiente para acompañar tu rutina.',
       time2_label: 'TRABAJO',
@@ -209,7 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
       claim_3: 'NO PRESERVATIVES',
       claim_4: 'COLD FREEZE-DRIED',
 
-      // History
+      // History & Map Structural Component (01.png)
       history_badge: 'ORIGIN & AUTHENTICITY',
       history_title: 'BORN IN <span class="text-italic-accent">EL BAJÍO.</span>',
       history_origin: 'LEÓN, GUANAJUATO · 2022',
@@ -221,11 +241,22 @@ document.addEventListener('DOMContentLoaded', () => {
       manifesto_badge: 'HUERTALIA MANIFESTO',
       manifesto_title: 'FROM THE EARTH. TO THE CRUNCH.',
       manifesto_text: 'We believe nature already did the hard work: creating perfect fruit.<br>We just found a way to preserve it.<br>Nothing added. Nothing disguised. Nothing complicated.<br><strong style="color: #FFFFFF; font-size: 1.3rem;">Just fruit. Just Huertalia.</strong>',
+      
+      map_section_tag: 'OUR TERRITORY',
+      map_section_title: 'FROM THE HEART OF EL BAJÍO. <span class="text-italic-accent">TO THE WORLD.</span>',
+      map_section_desc: 'Born in León, Guanajuato in 2022. A strategic location in Mexico\'s agricultural heartland connecting fresh harvests to global markets.',
 
-      // Process
+      // Territorio Banner (02.png)
+      banner_bajio_tag: 'FROM EL BAJÍO',
+      banner_bajio_title: 'FRUIT WITH ORIGIN. FROM OUR LAND TO THE WORLD.',
+
+      // Process & Intro (03.png)
       process_badge: 'SCIENCE & TECHNOLOGY',
       process_title: 'THE PROCESS',
       process_subhead: 'Cold vacuum sublimation to achieve up to 98% nutrient retention.',
+      process_intro_tag: 'RAW INGREDIENTS',
+      process_intro_title: 'FROM FRESH FRUIT TO THE PERFECT CRUNCH.',
+      process_intro_desc: 'We select only top-tier fruit at peak ripeness before entering cold vacuum sublimation.',
       step1_title: 'FRESH FRUIT',
       step1_desc: 'Harvested at peak ripeness',
       step2_title: 'FREEZING',
@@ -237,13 +268,16 @@ document.addEventListener('DOMContentLoaded', () => {
       step5_title: 'CRUNCH',
       step5_desc: 'Unforgettable crispy texture',
 
-      // Products
+      // Products & Crunch Moment (04.png)
       collection_badge: 'THE COLLECTION',
       collection_title: 'CHOOSE YOUR <span class="text-italic-accent">CRUNCH.</span>',
       filter_all: 'ALL',
       filter_pure: 'PURE FRUIT',
       filter_chamoy: 'CHAMOY LINE',
       btn_details: 'VIEW DETAILS',
+      crunch_moment_tag: 'HUERTALIA EXPERIENCE',
+      crunch_moment_title: 'THE CRUNCH OF <span class="text-italic-accent">REAL FRUIT.</span>',
+      crunch_moment_subhead: 'Incredibly crunchy. 100% natural fruit.',
 
       // Modal Details
       modal_chamoy_badge: '🌶️ CHAMOY COLLECTION',
@@ -253,10 +287,16 @@ document.addEventListener('DOMContentLoaded', () => {
       modal_weight_label: 'Net Weight',
       modal_b2b_btn: 'REQUEST B2B QUOTE',
 
-      // Lifestyle
+      // Lifestyle Campaign (05.png & 06.png)
       lifestyle_badge: 'CONSCIOUS LIFESTYLE',
       lifestyle_title: 'TAKE HUERTALIA <span class="text-italic-accent">WITH YOU.</span>',
       lifestyle_subhead: 'Pure nutrition designed to fit naturally into every moment of your day.',
+      lifestyle_work_tag: '11:45 · WORK',
+      lifestyle_work_title: 'A CRISPY BREAK <span class="text-italic-accent">FOR YOUR DAY.</span>',
+      lifestyle_work_desc: 'Pure nutrition to maintain your daily focus without energy crashes or sluggishness.',
+      lifestyle_adv_tag: '19:20 · ADVENTURE',
+      lifestyle_adv_title: 'LIGHTWEIGHT FRUIT <span class="text-italic-accent">WHEREVER YOU GO.</span>',
+      lifestyle_adv_desc: 'Ultra-lightweight high-barrier pouch ready for any trail or outdoor activity.',
       time1_label: 'WORKOUT',
       time1_desc: 'Light and crunchy fruit to accompany your workout routine.',
       time2_label: 'WORK',
@@ -624,7 +664,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // 10. Image Alt Text Update across page
+    // 10. Image Alt Text Update across page (including new campaign banners)
     const processImgs = document.querySelectorAll('.process-card-imgbox img');
     const processAltTexts = {
       es: [
@@ -648,25 +688,46 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    const heroImg = document.querySelector('.hero-bg-media');
-    if (heroImg) {
-      heroImg.alt = lang === 'en' 
-        ? 'Huertalia Freeze-Dried Fruit León Guanajuato'
-        : 'Fruta Liofilizada Huertalia León Guanajuato';
+    const mapBannerImg = document.querySelector('.map-img-container img');
+    if (mapBannerImg) {
+      mapBannerImg.alt = lang === 'en'
+        ? 'Huertalia Territory Map León Guanajuato El Bajío to the World'
+        : 'Mapa de Territorio Huertalia León Guanajuato El Bajío al Mundo';
     }
 
-    const historyImg = document.querySelector('.history-img-box img');
-    if (historyImg) {
-      historyImg.alt = lang === 'en'
-        ? 'Huertalia Agricultural Heritage León Guanajuato'
-        : 'Origen agrícola Huertalia León Guanajuato';
+    const territorioBannerImg = document.querySelector('.campaign-banner-fullwidth img');
+    if (territorioBannerImg) {
+      territorioBannerImg.alt = lang === 'en'
+        ? 'El Bajío Agricultural Harvest Huertalia'
+        : 'Territorio agrícola El Bajío Huertalia';
     }
 
-    const b2bImg = document.querySelector('.b2b-img-box img');
-    if (b2bImg) {
-      b2bImg.alt = lang === 'en'
-        ? 'Huertalia Global Wholesale Distribution'
-        : 'Distribución Global Huertalia';
+    const processIntroImg = document.querySelector('.process-intro-imgbox img');
+    if (processIntroImg) {
+      processIntroImg.alt = lang === 'en'
+        ? 'Fresh Fruit Selection Huertalia Raw Harvest'
+        : 'Selección de fruta fresca de origen Huertalia';
+    }
+
+    const crunchMomentImg = document.querySelector('.crunch-img-container img');
+    if (crunchMomentImg) {
+      crunchMomentImg.alt = lang === 'en'
+        ? 'Huertalia Real Fruit Crunch Consumption Moment'
+        : 'Momento de consumo El Crunch de la fruta real Huertalia';
+    }
+
+    const lifestyleWorkImg = document.querySelector('#work-spread .lifestyle-campaign-imgbox img');
+    if (lifestyleWorkImg) {
+      lifestyleWorkImg.alt = lang === 'en'
+        ? 'Huertalia Conscious Lifestyle Work Break'
+        : 'Estilo de Vida Huertalia Pausa de Trabajo';
+    }
+
+    const lifestyleAdvImg = document.querySelector('#adv-spread .lifestyle-campaign-imgbox img');
+    if (lifestyleAdvImg) {
+      lifestyleAdvImg.alt = lang === 'en'
+        ? 'Huertalia Conscious Lifestyle Outdoor Adventure'
+        : 'Estilo de Vida Huertalia Aventura al Aire Libre';
     }
 
     // 11. Re-render Products & Calculator in Active Language

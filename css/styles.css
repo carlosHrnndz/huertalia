@@ -1258,3 +1258,218 @@ h1, h2, h3, h4, h5, h6 {
   .process-flow-grid { grid-template-columns: 1fr; }
   .process-card-imgbox { aspect-ratio: 16 / 11; }
 }
+
+/* ==========================================================================
+   CAMPAIGN EDITORIAL BANNERS & LAYOUT SYSTEM (6 NEW HERO/MAGAZINE IMAGES)
+   ========================================================================== */
+
+/* 01.png MAPA STRUCTURAL FEATURE IN NUESTRA HISTORIA */
+.map-editorial-block {
+  margin-top: 4.5rem;
+  background-color: #0E1611;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: var(--shadow-dark);
+}
+
+.map-img-container {
+  width: 100%;
+  min-height: 500px;
+  max-height: 680px;
+  position: relative;
+  background: #0E1611;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.map-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* MAP LEGIBILITY IS PRIORITIZED: NO AGGRESSIVE CROPPING */
+  object-position: center center;
+  display: block;
+}
+
+.map-overlay-content {
+  padding: 3rem 3.5rem;
+  background: linear-gradient(180deg, rgba(14, 22, 17, 0.95) 0%, rgba(14, 22, 17, 0.98) 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+/* 02.png TERRITORIO / AGRICULTURA FULL-WIDTH VISUAL BREAK */
+.campaign-banner-fullwidth {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 60vh;
+  min-height: 480px;
+  max-height: 680px;
+  background-color: var(--bg-dark);
+}
+
+.campaign-banner-fullwidth img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+.campaign-banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(17, 20, 18, 0.25) 0%, rgba(17, 20, 18, 0.75) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 5rem;
+}
+
+/* 03.png ORIGEN / FRUTA FRESCA INTRODUCING PROCESO */
+.process-intro-editorial {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 4.5rem;
+  align-items: center;
+  margin-bottom: 5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.process-intro-imgbox {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-dark);
+}
+
+.process-intro-imgbox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+/* 04.png CRUNCH / CONSUMO DEL PRODUCTO IN PRODUCTOS */
+.crunch-editorial-moment {
+  margin-top: 7rem;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: center;
+  background-color: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-md);
+}
+
+.crunch-img-container {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  position: relative;
+  overflow: hidden;
+}
+
+.crunch-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+.crunch-content-box {
+  padding: 4rem 3.5rem;
+}
+
+/* 05.png & 06.png LIFESTYLE MAGAZINE CAMPAIGN LAYOUT */
+.lifestyle-campaign-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  margin-top: 5rem;
+}
+
+.lifestyle-campaign-spread {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 4.5rem;
+  align-items: center;
+}
+
+.lifestyle-campaign-spread.reverse {
+  grid-template-columns: 0.85fr 1.15fr;
+}
+
+.lifestyle-campaign-imgbox {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.lifestyle-campaign-imgbox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+.lifestyle-campaign-textbox {
+  padding: 2rem 0;
+}
+
+/* RESPONSIVE STYLES FOR BANNERS */
+@media (max-width: 1024px) {
+  .map-overlay-content,
+  .process-intro-editorial,
+  .crunch-editorial-moment,
+  .lifestyle-campaign-spread,
+  .lifestyle-campaign-spread.reverse {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .crunch-content-box {
+    padding: 3rem 2.5rem;
+  }
+  .map-img-container {
+    min-height: 380px;
+  }
+  .campaign-banner-fullwidth {
+    height: 45vh;
+    min-height: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-overlay-content {
+    padding: 2rem 1.8rem;
+  }
+  .process-intro-editorial {
+    padding: 1.8rem;
+  }
+  .crunch-content-box {
+    padding: 2rem 1.5rem;
+  }
+  .map-img-container {
+    min-height: 280px;
+  }
+}
+
