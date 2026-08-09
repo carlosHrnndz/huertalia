@@ -1,6 +1,6 @@
 /* ==========================================================================
-   HUERTALIA LIOFILIZADOS - INTERACTIVE JAVASCRIPT LOGIC (V2)
-   Senior Healthy Food Marketing & Web Design Standard
+   HUERTALIA LIOFILIZADOS - INTERACTIVE JAVASCRIPT LOGIC (V3)
+   Aspirational DTC Wellness Standard
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -31,40 +31,93 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Scroll Reveal Observer with IntersectionObserver
+  // 3. Scroll Reveal & Number Counter Observer
   const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+  const countElements = document.querySelectorAll('.count-number');
+
+  function animateCount(el) {
+    const target = parseInt(el.getAttribute('data-target'), 10);
+    const suffix = el.getAttribute('data-suffix') || '';
+    const prefix = el.getAttribute('data-prefix') || '';
+    const duration = 1600; // ms
+    const startTime = performance.now();
+
+    function step(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      // Ease out cubic
+      const easeProgress = 1 - Math.pow(1 - progress, 3);
+      const currentVal = Math.floor(easeProgress * target);
+
+      el.textContent = `${prefix}${currentVal}${suffix}`;
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        el.textContent = `${prefix}${target}${suffix}`;
+      }
+    }
+
+    requestAnimationFrame(step);
+  }
+
   const observerOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.12
+    threshold: 0.15
   };
 
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('active');
+
+        // Check if element has count-number child or is count-number
+        const counts = entry.target.querySelectorAll('.count-number');
+        counts.forEach(c => {
+          if (!c.classList.contains('counted')) {
+            c.classList.add('counted');
+            animateCount(c);
+          }
+        });
+
+        if (entry.target.classList.contains('count-number') && !entry.target.classList.contains('counted')) {
+          entry.target.classList.add('counted');
+          animateCount(entry.target);
+        }
+
         observer.unobserve(entry.target);
       }
     });
   }, observerOptions);
 
   revealElements.forEach(el => revealObserver.observe(el));
+  countElements.forEach(el => revealObserver.observe(el));
 
-  // Parallax subtle movement for floating fruits
+  // 4. Parallax Scroll Effect on Floating Fruits
   const floatingFruits = document.querySelectorAll('.floating-fruit');
   if (floatingFruits.length > 0) {
+    window.addEventListener('scroll', () => {
+      const scrolled = window.scrollY;
+      floatingFruits.forEach((fruit, idx) => {
+        const factor = (idx % 2 === 0 ? 1 : -1) * (0.04 + (idx * 0.02));
+        fruit.style.transform = `translateY(${scrolled * factor}px) rotate(${scrolled * 0.03}deg)`;
+      });
+    });
+
     window.addEventListener('mousemove', (e) => {
-      const mouseX = e.clientX / window.innerWidth - 0.5;
-      const mouseY = e.clientY / window.innerHeight - 0.5;
+      const mouseX = (e.clientX / window.innerWidth - 0.5) * 20;
+      const mouseY = (e.clientY / window.innerHeight - 0.5) * 20;
 
       floatingFruits.forEach((fruit, idx) => {
-        const speed = (idx + 1) * 15;
-        fruit.style.transform = `translate(${mouseX * speed}px, ${mouseY * speed}px)`;
+        const speed = (idx + 1) * 0.8;
+        fruit.style.marginLeft = `${mouseX * speed}px`;
+        fruit.style.marginTop = `${mouseY * speed}px`;
       });
     });
   }
 
-  // 4. Products Data & Ultra-Clean Packshots
+  // 5. Products Data & Ultra-Clean Packshots
   const productsData = [
     {
       id: 'fresas-natural',
@@ -234,7 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <span class="badge-tag" style="margin-bottom: 0.8rem;">
             ${product.category === 'chamoy' ? '🌶️ Edición Chamoy' : '🌿 Fruta 100% Pura'}
           </span>
-          <h2 style="font-size: 2rem; margin-bottom: 0.4rem;">${product.name}</h2>
+          <h2 style="font-family: var(--font-serif); font-size: 2.2rem; margin-bottom: 0.4rem; color: var(--color-primary);">${product.name}</h2>
           <p style="color: var(--color-primary); font-weight: 700; margin-bottom: 1.2rem;">Equivale a ${product.equivalence}</p>
           <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6;">${product.desc}</p>
 
@@ -249,13 +302,13 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
           </div>
 
-          <h4 style="font-size: 1rem; margin-bottom: 0.6rem;">Beneficios Destacados:</h4>
-          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 2rem;">
-            ${product.benefits.map(b => `<li style="font-size: 0.88rem; color: var(--color-text-muted);"><i class="ri-checkbox-circle-fill" style="color: var(--color-primary); margin-right: 0.4rem;"></i>${b}</li>`).join('')}
+          <h4 style="font-family: var(--font-serif); font-size: 1.1rem; margin-bottom: 0.6rem; color: var(--color-primary);">Beneficios Destacados:</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 2rem;">
+            ${product.benefits.map(b => `<li style="font-size: 0.9rem; color: var(--color-text-muted);"><i class="ri-checkbox-circle-fill" style="color: var(--color-primary); margin-right: 0.5rem;"></i>${b}</li>`).join('')}
           </ul>
 
           <a href="contacto.html" class="btn btn-primary" style="width: 100%;">
-            Solicitar Cotización de Mayoreo / Distribución <i class="ri-mail-send-line"></i>
+            Solicitar Cotización de Mayoreo <i class="ri-mail-send-line"></i>
           </a>
         </div>
       </div>
@@ -279,19 +332,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 5. Interactive Snack Calculator Logic
+  // 6. Interactive Premium Calculator Widget Logic
   const calcSelect = document.getElementById('calc-fruit');
   const calcQty = document.getElementById('calc-qty');
   const qtyValDisplay = document.getElementById('qty-val');
   const calSavedDisplay = document.getElementById('cal-saved');
   const fruitEquivDisplay = document.getElementById('fruit-equiv');
+  const barJunk = document.getElementById('bar-junk');
+  const barHuertalia = document.getElementById('bar-huertalia');
+  const valJunk = document.getElementById('val-junk');
+  const valHuertalia = document.getElementById('val-huertalia');
 
   function updateCalculator() {
     if (!calcSelect || !calcQty) return;
     const selectedProd = productsData.find(p => p.id === calcSelect.value) || productsData[0];
     const qty = parseInt(calcQty.value, 10) || 1;
 
-    if (qtyValDisplay) qtyValDisplay.textContent = `${qty} paquete${qty > 1 ? 's' : ''}`;
+    if (qtyValDisplay) qtyValDisplay.textContent = `${qty} paquete${qty > 1 ? 's' : ''}/sem`;
     
     const junkCal = 280 * qty;
     const huertaliaCal = selectedProd.calories * qty;
@@ -299,6 +356,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (calSavedDisplay) calSavedDisplay.textContent = `-${calSaved} kcal`;
     if (fruitEquivDisplay) fruitEquivDisplay.textContent = `${qty}x de ${selectedProd.name}`;
+
+    // Update Progress Bars Ratio
+    if (barJunk && barHuertalia) {
+      const huertaliaPct = Math.round((huertaliaCal / junkCal) * 100);
+      barJunk.style.width = '100%';
+      barHuertalia.style.width = `${huertaliaPct}%`;
+
+      if (valJunk) valJunk.textContent = `${junkCal} kcal`;
+      if (valHuertalia) valHuertalia.textContent = `${huertaliaCal} kcal (${huertaliaPct}%)`;
+    }
   }
 
   if (calcSelect && calcQty) {
@@ -307,7 +374,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCalculator();
   }
 
-  // 6. Hyper-Stylized Interactive Map (Leaflet.js)
+  // 7. Hyper-Stylized Interactive Map (Leaflet.js)
   const mapContainer = document.getElementById('map-container');
   if (mapContainer && typeof L !== 'undefined') {
     const leonCoords = [21.1683, -101.6912];
@@ -329,32 +396,32 @@ document.addEventListener('DOMContentLoaded', () => {
       className: 'custom-map-pin',
       html: `
         <div style="
-          width: 44px;
-          height: 44px;
-          background: linear-gradient(135deg, #2D5A27, #386641);
+          width: 46px;
+          height: 46px;
+          background-color: #1B3624;
           border-radius: 50% 50% 50% 0;
           transform: rotate(-45deg);
           display: flex;
           align-items: center;
           justify-content: center;
-          box-shadow: 0 8px 20px rgba(45, 90, 39, 0.4);
+          box-shadow: 0 10px 25px rgba(27, 54, 36, 0.35);
           border: 3px solid #FFFFFF;
         ">
           <span style="transform: rotate(45deg); color: white; font-weight: bold; font-size: 1.2rem;">🌿</span>
         </div>
       `,
-      iconSize: [44, 44],
-      iconAnchor: [22, 44],
-      popupAnchor: [0, -44]
+      iconSize: [46, 46],
+      iconAnchor: [23, 46],
+      popupAnchor: [0, -46]
     });
 
     L.marker(leonCoords, { icon: customIcon })
       .addTo(map)
       .bindPopup(`
         <div style="font-family: 'Plus Jakarta Sans', sans-serif; padding: 5px; text-align: center;">
-          <h4 style="color: #2D5A27; margin-bottom: 4px; font-weight: 700;">Huertalia Liofilizados</h4>
-          <p style="font-size: 0.85rem; color: #57685D; margin: 0;">Colonia Balcones del Campestre</p>
-          <p style="font-size: 0.8rem; font-weight: bold; color: #2D5A27; margin-top: 4px;">León, Guanajuato, México 🇲🇽</p>
+          <h4 style="color: #1B3624; margin-bottom: 4px; font-weight: 700; font-family: 'Fraunces', serif;">Huertalia Liofilizados</h4>
+          <p style="font-size: 0.85rem; color: #5C6660; margin: 0;">Colonia Balcones del Campestre</p>
+          <p style="font-size: 0.8rem; font-weight: bold; color: #1B3624; margin-top: 4px;">León, Guanajuato, México 🇲🇽</p>
         </div>
       `)
       .openPopup();
