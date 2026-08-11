@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const translations = {
     es: {
       seo_title: 'HUERTALIA | Fruta Liofilizada del Corazón del Bajío (León, GTO)',
-      seo_meta: 'Huertalia: Fruta real liofilizada nacida en León, Guanajuato en 2022. Conservada mediante sublimación en frío. 100% fruta real, imposiblemente crujiente.',
+      seo_meta: 'Huertalia: Fruta real liofilizada nacida en León, Guanajuato en 2023. Conservada mediante sublimación en frío. 100% fruta real, imposiblemente crujiente.',
       
       // Accessibility ARIA labels
       aria_logo_home: 'HUERTALIA Liofilizados Inicio',
@@ -25,14 +25,13 @@ document.addEventListener('DOMContentLoaded', () => {
       nav_process: 'EL PROCESO',
       nav_products: 'PRODUCTOS',
       nav_lifestyle: 'ESTILO DE VIDA',
-      nav_business: 'PARA NEGOCIOS',
       nav_contact: 'CONTACTO',
       nav_quote: 'COTIZAR',
 
       // Hero
-      hero_tag: 'LEÓN · GUANAJUATO · DESDE 2022',
+      hero_tag: 'LEÓN · GUANAJUATO · DESDE 2023',
       hero_title_level1: 'DEL CORAZÓN DEL BAJÍO.',
-      hero_title_level2: 'FRUTA LIOFILIZADA PARA EL MUNDO.',
+      hero_title_level2: 'FRUTA LIOFILIZADA PARA MÉXICO.',
       hero_subhead: '100% fruta real liofilizada para conservar su sabor natural, color vivo y un crujido increíble — sin azúcar añadida ni conservadores.',
       hero_cta_discover: 'DESCUBRE HUERTALIA',
       hero_cta_history: 'NUESTRA HISTORIA',
@@ -44,29 +43,32 @@ document.addEventListener('DOMContentLoaded', () => {
       // History & Accordion
       history_badge: 'ORIGEN & AUTENTICIDAD',
       history_title: 'NACIMOS EN EL <span class="text-italic-accent">BAJÍO.</span>',
-      history_origin: 'LEÓN, GUANAJUATO · 2022',
+      history_origin: 'LEÓN, GUANAJUATO · 2023',
       history_quote: '"Nacimos de una tierra que sabe a fruta."',
-      history_p1: 'En el corazón del Bajío, donde la tierra fértil alimenta generaciones y la agricultura es orgullo cultural, nació <strong>Huertalia en 2022</strong>.',
+      history_p1: 'En el corazón del Bajío, donde la tierra fértil alimenta generaciones y la agricultura es orgullo cultural, nació <strong>Huertalia en 2023</strong>.',
       history_p2: 'Nuestra búsqueda comenzó con una pregunta sencilla: <em>¿Y si pudiéramos llevarnos lo mejor de la fruta con nosotros, conservando intactos su sabor, aroma y nutrición?</em>',
       history_p3: 'La liofilización nos permitió encontrar una nueva forma de conservarla: congelar en frío, extraer la humedad bajo vacío y preservar lo esencial. Su textura ligera y su crujido inconfundible.',
       history_p4: 'DE NUESTRA TIERRA. PARA CUALQUIER LUGAR.',
+      history_gto: 'En abril de 2026, fuimos honrados con el prestigioso <strong>Distintivo Marca Guanajuato</strong>, el sello oficial de calidad, origen y orgullo de nuestro estado. Un reconocimiento que avala nuestro compromiso inquebrantable con la excelencia agrícola y la nutrición pura.',
+      gto_seal_label: 'MARCA GUANAJUATO',
+      gto_seal_sub: 'Sello Oficial de Calidad & Origen',
       manifesto_badge: 'MANIFIESTO HUERTALIA',
       manifesto_title: 'DE LA TIERRA. AL CRUNCH.',
       manifesto_text: 'Creemos que la naturaleza ya hizo el trabajo difícil: crear una fruta perfecta.<br>Nosotros solo encontramos una manera de conservarla.<br>Sin añadir. Sin disfrazar. Sin complicarla.<br><strong style="color: #FFFFFF; font-size: 1.3rem;">Solo fruta. Solo Huertalia.</strong>',
       story_accordion_btn: 'CONOCE NUESTRA HISTORIA COMPLETA',
       
       map_section_tag: 'NUESTRO TERRITORIO',
-      map_section_title: 'DEL CORAZÓN DEL BAJÍO. <span class="text-italic-accent">PARA EL MUNDO.</span>',
-      map_section_desc: 'Nacidos en León, Guanajuato en 2022. Una ubicación estratégica en el corazón agrícola de México que conecta el cultivo fresco con mercados globales.',
+      map_section_title: 'DEL CORAZÓN DEL BAJÍO. <span class="text-italic-accent">PARA MÉXICO.</span>',
+      map_section_desc: 'Nacidos en León, Guanajuato en 2023. Una ubicación estratégica en el corazón agrícola de México que conecta el cultivo fresco con mercados nacionales.',
 
       // Territorio Banner (02.png)
       banner_bajio_tag: 'DESDE EL BAJÍO',
-      banner_bajio_title: 'FRUTA CON ORIGEN. DE NUESTRA TIERRA AL MUNDO.',
+      banner_bajio_title: 'FRUTA CON ORIGEN. DE NUESTRA TIERRA PARA MÉXICO.',
 
       // Process & Accordion (03.png)
       process_badge: 'CIENCIA Y TECNOLOGÍA',
       process_title: 'EL PROCESO',
-      process_subhead: 'Sublimación en frío al vacío para lograr hasta un 98% de retención de nutrientes.',
+      process_subhead: 'Sublimación en frío al vacío para conservar el máximo de nutrientes — la misma tecnología de vanguardia elegida por la NASA para nutrir a los astronautas en las misiones espaciales.',
       process_intro_tag: 'LA MATERIA PRIMA',
       process_intro_title: 'DE LA FRUTA FRESCA AL CRUNCH PERFECTO.',
       process_intro_desc: 'Seleccionamos únicamente fruta de la más alta calidad en su punto idóneo de madurez antes de iniciar la sublimación en frío.',
@@ -98,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
       modal_equals: 'Equivale a ',
       modal_cal_label: 'Calorías / Sobre',
       modal_weight_label: 'Contenido Neto',
-      modal_b2b_btn: 'SOLICITAR COTIZACIÓN B2B',
+      modal_b2b_btn: 'COTIZAR',
 
       // Lifestyle Campaign (05.png & 06.png)
       lifestyle_badge: 'ESTILO DE VIDA CONSCIENTE',
@@ -123,54 +125,30 @@ document.addEventListener('DOMContentLoaded', () => {
       // Why Huertalia & Accordion
       why_badge: 'BENEFICIOS COMPROBADOS',
       why_title: 'NADA AÑADIDO.<br><span class="text-italic-accent">TODO CONSERVADO.</span>',
-      why_claim1: 'HASTA UN 98% DE RETENCIÓN DE NUTRIENTES',
-      why_claim2: 'FRUTA REAL',
-      why_claim3: 'AZÚCAR AÑADIDA',
-      why_claim4: 'ACEITES AÑADIDOS',
+      why_claim1: '100% FRUTA REAL',
+      why_claim2: '0% AZÚCAR AÑADIDA',
+      why_claim3: '0% CONSERVADORES AÑADIDOS',
+      why_claim4: '0% ACEITES AÑADIDOS',
       benefits_accordion_btn: 'VER DETALLES DE NUTRICIÓN Y CALIDAD',
-
-      // Calculator
-      calc_badge: 'COMPARATIVA NUTRICIONAL',
-      calc_title: 'Compara tu Snack',
-      calc_subhead: 'Descubre cómo cambia el aporte calórico de tu snack habitual (referencia: botana procesada ~280 kcal) al elegir fruta liofilizada Huertalia.',
-      calc_label_select: 'SELECCIONA TU FRUTA:',
-      calc_label_qty: 'FRECUENCIA DE CONSUMO SEMANAL:',
-      calc_unit_min: '1 porción',
-      calc_unit_max: '14 porciones',
-      calc_label_saved: 'DIFERENCIA ESTIMADA DE CALORÍAS',
-      calc_bar_junk: 'Snack Procesado Tradicional',
-      calc_bar_huertalia: 'Con Huertalia',
-      calc_equiv_label: 'Equiv. a:',
-
-      // Business & Accordion
-      b2b_badge: 'MAYOREO Y DISTRIBUCIÓN',
-      b2b_title: 'HUERTALIA PARA<br><span class="text-italic-accent" style="color: var(--color-accent-mango);">NEGOCIOS.</span>',
-      b2b_subhead: 'Suministramos a cadenas retail premium, supermercados gourmet, clubes de salud y distribuidores internacionales en América del Norte y Europa.',
-      b2b_f1_title: 'Mayoreo y Cajas Mixtas',
-      b2b_f1_desc: 'Esquemas de volumen altamente competitivos y entregas programadas.',
-      b2b_f2_title: 'Cumplimiento Regulatorio Global',
-      b2b_f2_desc: 'Cumplimiento de los requisitos regulatorios aplicables y estándares internacionales.',
-      b2b_f3_title: 'Vida Útil de +12 Meses',
-      b2b_f3_desc: 'Empaque hermético de alta barrera contra luz y oxígeno.',
-      b2b_cta: 'CONVERTIRME EN DISTRIBUIDOR',
-      b2b_accordion_btn: 'VER VENTAJAS PARA DISTRIBUIDORES',
 
       // Final CTA
       final_badge: '¿LISTO PARA EL CRUNCH?',
       final_title: 'READY TO<br><span class="text-italic-accent" style="color: var(--color-accent-mango);">CRUNCH?</span>',
       final_subhead: 'Descubre la fruta liofilizada nacida en el corazón del Bajío. Calidad excepcional para tu estilo de vida o tu negocio.',
       final_cta1: 'DESCUBRE HUERTALIA',
-      final_cta2: 'COTIZAR MAYOREO',
+      final_cta2: 'COTIZAR',
 
       // Contact Page
+      b2b_badge: 'CONTACTO & DISTRIBUCIÓN',
+      b2b_subhead: 'Suministramos a cadenas retail premium, supermercados gourmet y clubes de salud.',
       contact_hero_title: 'HABLA CON<br><span class="text-italic-accent" style="color: var(--color-sand);">HUERTALIA.</span>',
       contact_direct_title: 'Canales Directos',
-      contact_direct_sub: 'Nuestro centro operativo y logístico se ubica en el corazón del Bajío en León, Guanajuato, México.',
+      contact_direct_sub: 'Suministramos a cadenas retail premium, supermercados gourmet y clubes de salud. Nuestro centro operativo y logístico se ubica en León, Guanajuato, México.',
       contact_lbl_address: 'Dirección Matriz:',
-      contact_address_val: 'Colonia Balcones del Campestre<br>León, Guanajuato, México. C.P. 37138',
+      contact_address_val: 'Calle Valle de Señora 601 B.<br>Col. Valles del Campestre.<br>C.P. 37150, León, Guanajuato.',
       contact_lbl_email: 'Correo Electrónico:',
       contact_lbl_email_sub: 'Respuesta prioritaria en menos de 24 horas.',
-      contact_lbl_phone: 'Teléfono & WhatsApp B2B:',
+      contact_lbl_phone: 'Teléfono & WhatsApp:',
       contact_form_title: 'Enviar Mensaje',
       form_name: 'NOMBRE COMPLETO *',
       form_email: 'CORREO ELECTRÓNICO *',
@@ -178,18 +156,22 @@ document.addEventListener('DOMContentLoaded', () => {
       form_type: 'TIPO DE NEGOCIO / INTERÉS *',
       form_message: 'MENSAJE O DETALLES DE LA SOLICITUD *',
       form_select_default: 'Selecciona una opción...',
-      form_opt_wholesale: 'Distribución Nacional al Mayoreo',
-      form_opt_export: 'Exportación Internacional',
-      form_opt_retail: 'Supermercado / Tienda Saludable / Gimnasio',
-      form_opt_bulk: 'Suministro de Fruta Liofilizada a Granel',
-      form_btn_submit: 'ENVIAR SOLICITUD A VENTAS',
-      form_alert_success: '¡Gracias por comunicarte con Huertalia! Tu mensaje ha sido enviado a ventas@huertalia.com.',
+      form_opt_1: 'Tienda saludable / Productos naturales',
+      form_opt_2: 'Gimnasio / Estudio fitness',
+      form_opt_3: 'Cafetería / Restaurante / Hotel',
+      form_opt_4: 'Clínica / Consultorio / Centro de bienestar',
+      form_opt_5: 'Tienda boutique / Concept store',
+      form_opt_6: 'Emprendimiento / Reventa',
+      form_opt_7: 'Consumo personal',
+      form_opt_8: 'Compra para regalo / Evento',
+      form_btn_submit: 'ENVIAR SOLICITUD',
+      form_alert_success: '¡Gracias por comunicarte con Huertalia! Tu mensaje ha sido enviado a contacto@huertalia.com.mx.',
       map_badge: 'UBICACIÓN MATRIZ',
-      map_title: 'Balcones del Campestre',
+      map_title: 'Valles del Campestre',
       map_sub: 'León, Guanajuato, México.',
 
       // Footer
-      footer_desc: 'Fruta. Reinventada. 100% fruta liofilizada nacida en León, Guanajuato en 2022. Del corazón del Bajío al mundo.',
+      footer_desc: 'Fruta. Reinventada. 100% fruta liofilizada nacida en León, Guanajuato en 2023. Del corazón del Bajío para México.',
       footer_col_title: 'COLECCIÓN',
       footer_offices_title: 'OFICINAS MATRIZ',
       footer_contact_link: 'Contacto',
@@ -198,14 +180,14 @@ document.addEventListener('DOMContentLoaded', () => {
       footer_item_platano: 'Plátano Liofilizado',
       footer_item_mango: 'Mango Liofilizado',
       footer_item_chamoy: 'Línea Chamoy Salvaje',
-      footer_address: 'Balcones del Campestre<br>León, Guanajuato, México (C.P. 37138)',
+      footer_address: 'Calle Valle de Señora 601 B.<br>Col. Valles del Campestre.<br>C.P. 37150, León, Guanajuato.',
       footer_rights: '&copy; 2026 HUERTALIA. Todos los derechos reservados.',
-      footer_location: 'León, Guanajuato, México · Desde 2022'
+      footer_location: 'León, Guanajuato, México · Desde 2023'
     },
 
     en: {
       seo_title: 'HUERTALIA | Freeze-Dried Fruit from El Bajío (León, GTO)',
-      seo_meta: 'Huertalia: 100% real freeze-dried fruit born in León, Guanajuato in 2022. Preserved through cold vacuum sublimation. Unforgettably crunchy.',
+      seo_meta: 'Huertalia: 100% real freeze-dried fruit born in León, Guanajuato in 2023. Preserved through cold vacuum sublimation. Unforgettably crunchy.',
       
       // Accessibility ARIA labels
       aria_logo_home: 'HUERTALIA Freeze-Dried Home',
@@ -221,14 +203,13 @@ document.addEventListener('DOMContentLoaded', () => {
       nav_process: 'THE PROCESS',
       nav_products: 'PRODUCTS',
       nav_lifestyle: 'LIFESTYLE',
-      nav_business: 'FOR BUSINESS',
       nav_contact: 'CONTACT',
       nav_quote: 'GET A QUOTE',
 
       // Hero
-      hero_tag: 'LEÓN · GUANAJUATO · SINCE 2022',
+      hero_tag: 'LEÓN · GUANAJUATO · SINCE 2023',
       hero_title_level1: 'FROM THE HEART OF EL BAJÍO.',
-      hero_title_level2: 'FREEZE-DRIED FRUIT FOR THE WORLD.',
+      hero_title_level2: 'FREEZE-DRIED FRUIT FOR MEXICO.',
       hero_subhead: '100% real fruit, freeze-dried to preserve its natural flavor, vibrant color and incredible crunch — with no added sugar or preservatives.',
       hero_cta_discover: 'DISCOVER HUERTALIA',
       hero_cta_history: 'OUR STORY',
@@ -240,29 +221,32 @@ document.addEventListener('DOMContentLoaded', () => {
       // History & Accordion
       history_badge: 'ORIGIN & AUTHENTICITY',
       history_title: 'BORN IN <span class="text-italic-accent">EL BAJÍO.</span>',
-      history_origin: 'LEÓN, GUANAJUATO · 2022',
+      history_origin: 'LEÓN, GUANAJUATO · 2023',
       history_quote: '"We were born from a land that knows fruit."',
-      history_p1: 'In the heart of El Bajío, where fertile land nourishes generations and agriculture is cultural pride, <strong>Huertalia was born in 2022</strong>.',
+      history_p1: 'In the heart of El Bajío, where fertile land nourishes generations and agriculture is cultural pride, <strong>Huertalia was born in 2023</strong>.',
       history_p2: 'Our journey began with a simple question: <em>What if we could take the best of fruit with us while keeping its flavor and nutrition intact?</em>',
       history_p3: 'Freeze-drying allowed us to find a new way to preserve it: flash freezing, vacuum water extraction, and locking in the essential. Light texture and unforgettable crunch.',
       history_p4: 'FROM OUR LAND. TO EVERYWHERE.',
+      history_gto: 'In April 2026, we were honored with the prestigious <strong>Marca Guanajuato Distinction</strong>, the official seal of quality, origin, and state pride. A recognition of our unwavering commitment to agricultural excellence and pure nutrition.',
+      gto_seal_label: 'MARCA GUANAJUATO',
+      gto_seal_sub: 'Official Seal of Quality & Origin',
       manifesto_badge: 'HUERTALIA MANIFESTO',
       manifesto_title: 'FROM THE EARTH. TO THE CRUNCH.',
       manifesto_text: 'We believe nature already did the hard work: creating perfect fruit.<br>We just found a way to preserve it.<br>Nothing added. Nothing disguised. Nothing complicated.<br><strong style="color: #FFFFFF; font-size: 1.3rem;">Just fruit. Just Huertalia.</strong>',
       story_accordion_btn: 'READ OUR FULL STORY',
 
       map_section_tag: 'OUR TERRITORY',
-      map_section_title: 'FROM THE HEART OF EL BAJÍO. <span class="text-italic-accent">TO THE WORLD.</span>',
-      map_section_desc: 'Born in León, Guanajuato in 2022. A strategic location in Mexico\'s agricultural heartland connecting fresh harvests to global markets.',
+      map_section_title: 'FROM THE HEART OF EL BAJÍO. <span class="text-italic-accent">FOR MEXICO.</span>',
+      map_section_desc: 'Born in León, Guanajuato in 2023. A strategic location in Mexico\'s agricultural heartland connecting fresh harvests across the country.',
 
       // Territorio Banner (02.png)
       banner_bajio_tag: 'FROM EL BAJÍO',
-      banner_bajio_title: 'FRUIT WITH ORIGIN. FROM OUR LAND TO THE WORLD.',
+      banner_bajio_title: 'FRUIT WITH ORIGIN. FROM OUR LAND FOR MEXICO.',
 
       // Process & Accordion (03.png)
       process_badge: 'SCIENCE & TECHNOLOGY',
       process_title: 'THE PROCESS',
-      process_subhead: 'Cold vacuum sublimation to achieve up to 98% nutrient retention.',
+      process_subhead: 'Cold vacuum sublimation to preserve maximum nutrients — the very same cutting-edge technology chosen by NASA to nourish astronauts on space missions.',
       process_intro_tag: 'RAW INGREDIENTS',
       process_intro_title: 'FROM FRESH FRUIT TO THE PERFECT CRUNCH.',
       process_intro_desc: 'We select only top-tier fruit at peak ripeness before entering cold vacuum sublimation.',
@@ -294,7 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
       modal_equals: 'Equals ',
       modal_cal_label: 'Calories / Pack',
       modal_weight_label: 'Net Weight',
-      modal_b2b_btn: 'REQUEST B2B QUOTE',
+      modal_b2b_btn: 'GET A QUOTE',
 
       // Lifestyle Campaign (05.png & 06.png)
       lifestyle_badge: 'CONSCIOUS LIFESTYLE',
@@ -319,54 +303,30 @@ document.addEventListener('DOMContentLoaded', () => {
       // Why Huertalia & Accordion
       why_badge: 'PROVEN BENEFITS',
       why_title: 'NOTHING ADDED.<br><span class="text-italic-accent">EVERYTHING PRESERVED.</span>',
-      why_claim1: 'UP TO 98% NUTRIENT RETENTION',
-      why_claim2: 'REAL FRUIT',
-      why_claim3: 'ADDED SUGAR',
-      why_claim4: 'ADDED OILS',
+      why_claim1: '100% REAL FRUIT',
+      why_claim2: '0% ADDED SUGAR',
+      why_claim3: '0% ADDED PRESERVATIVES',
+      why_claim4: '0% ADDED OILS',
       benefits_accordion_btn: 'VIEW NUTRITION & QUALITY DETAILS',
-
-      // Calculator
-      calc_badge: 'NUTRITIONAL COMPARISON',
-      calc_title: 'Compare Your Snack',
-      calc_subhead: 'See how the caloric intake of your usual snack (benchmark: processed snack ~280 kcal) changes when choosing Huertalia freeze-dried fruit.',
-      calc_label_select: 'SELECT YOUR FRUIT:',
-      calc_label_qty: 'WEEKLY CONSUMPTION:',
-      calc_unit_min: '1 serving',
-      calc_unit_max: '14 servings',
-      calc_label_saved: 'ESTIMATED CALORIE DIFFERENCE',
-      calc_bar_junk: 'Junk Snack Benchmark',
-      calc_bar_huertalia: 'With Huertalia',
-      calc_equiv_label: 'Equiv. to:',
-
-      // Business & Accordion
-      b2b_badge: 'WHOLESALE & DISTRIBUTION',
-      b2b_title: 'HUERTALIA FOR<br><span class="text-italic-accent" style="color: var(--color-accent-mango);">BUSINESS.</span>',
-      b2b_subhead: 'Supplying premium retail chains, gourmet supermarkets, fitness clubs and international distributors across North America and Europe.',
-      b2b_f1_title: 'Wholesale & Mixed Cases',
-      b2b_f1_desc: 'High-margin volume tiers and scheduled deliveries.',
-      b2b_f2_title: 'Global Regulatory Compliance',
-      b2b_f2_desc: 'Compliance with applicable regulatory requirements and international standards.',
-      b2b_f3_title: '12+ Month Shelf-Life',
-      b2b_f3_desc: 'High-barrier oxygen protective packaging.',
-      b2b_cta: 'BECOME A DISTRIBUTOR',
-      b2b_accordion_btn: 'VIEW DISTRIBUTOR ADVANTAGES',
 
       // Final CTA
       final_badge: 'READY TO CRUNCH?',
       final_title: 'READY TO<br><span class="text-italic-accent" style="color: var(--color-accent-mango);">CRUNCH?</span>',
       final_subhead: 'Discover the freeze-dried fruit born in the heart of El Bajío. Exceptional quality for your lifestyle or your business.',
       final_cta1: 'DISCOVER HUERTALIA',
-      final_cta2: 'WHOLESALE QUOTE',
+      final_cta2: 'GET A QUOTE',
 
       // Contact Page
+      b2b_badge: 'CONTACT & DISTRIBUTION',
+      b2b_subhead: 'We supply premium retail chains, gourmet supermarkets, and health clubs.',
       contact_hero_title: 'TALK TO<br><span class="text-italic-accent" style="color: var(--color-sand);">HUERTALIA.</span>',
       contact_direct_title: 'Direct Channels',
-      contact_direct_sub: 'Our central logistics hub is located in the heart of El Bajío in León, Guanajuato, Mexico.',
+      contact_direct_sub: 'We supply premium retail chains, gourmet supermarkets, and health clubs. Our central operational hub is located in León, Guanajuato, Mexico.',
       contact_lbl_address: 'Headquarters:',
-      contact_address_val: 'Balcones del Campestre Neighborhood<br>León, Guanajuato, Mexico. ZIP 37138',
-      contact_lbl_email: 'Sales Email:',
+      contact_address_val: 'Calle Valle de Señora 601 B.<br>Col. Valles del Campestre.<br>ZIP 37150, León, Guanajuato, Mexico.',
+      contact_lbl_email: 'Contact Email:',
       contact_lbl_email_sub: 'Priority response under 24 hours.',
-      contact_lbl_phone: 'Phone & WhatsApp B2B:',
+      contact_lbl_phone: 'Phone & WhatsApp:',
       contact_form_title: 'Send a Message',
       form_name: 'FULL NAME *',
       form_email: 'EMAIL *',
@@ -374,18 +334,22 @@ document.addEventListener('DOMContentLoaded', () => {
       form_type: 'BUSINESS TYPE / INTEREST *',
       form_message: 'MESSAGE / REQUEST DETAILS *',
       form_select_default: 'Select an option...',
-      form_opt_wholesale: 'National Wholesale Distribution',
-      form_opt_export: 'International Export',
-      form_opt_retail: 'Supermarket / Health Store / Gym',
-      form_opt_bulk: 'Bulk Freeze-Dried Fruit Supply',
-      form_btn_submit: 'SUBMIT INQUIRY TO SALES',
-      form_alert_success: 'Thank you for reaching out to Huertalia! Your message has been sent to ventas@huertalia.com.',
+      form_opt_1: 'Health Store / Natural Products',
+      form_opt_2: 'Gym / Fitness Studio',
+      form_opt_3: 'Coffee Shop / Restaurant / Hotel',
+      form_opt_4: 'Wellness Clinic / Center',
+      form_opt_5: 'Boutique / Concept Store',
+      form_opt_6: 'Reseller / Entrepreneur',
+      form_opt_7: 'Personal Consumption',
+      form_opt_8: 'Gift / Event Purchase',
+      form_btn_submit: 'SUBMIT INQUIRY',
+      form_alert_success: 'Thank you for reaching out to Huertalia! Your message has been sent to contacto@huertalia.com.mx.',
       map_badge: 'HEADQUARTERS LOCATION',
-      map_title: 'Balcones del Campestre',
+      map_title: 'Valles del Campestre',
       map_sub: 'León, Guanajuato, Mexico.',
 
       // Footer
-      footer_desc: 'Fruit. Reinvented. 100% freeze-dried fruit born in León, Guanajuato in 2022. From the heart of El Bajío to the world.',
+      footer_desc: 'Fruit. Reinvented. 100% freeze-dried fruit born in León, Guanajuato in 2023. From the heart of El Bajío for Mexico.',
       footer_col_title: 'COLLECTION',
       footer_offices_title: 'HEADQUARTERS',
       footer_contact_link: 'Contact',
@@ -394,9 +358,9 @@ document.addEventListener('DOMContentLoaded', () => {
       footer_item_platano: 'Freeze-Dried Banana',
       footer_item_mango: 'Freeze-Dried Mango',
       footer_item_chamoy: 'Wild Chamoy Collection',
-      footer_address: 'Balcones del Campestre<br>León, Guanajuato, Mexico (ZIP 37138)',
+      footer_address: 'Calle Valle de Señora 601 B.<br>Col. Valles del Campestre.<br>ZIP 37150, León, Guanajuato, Mexico.',
       footer_rights: '&copy; 2026 HUERTALIA. All rights reserved.',
-      footer_location: 'León, Guanajuato, Mexico · Since 2022'
+      footer_location: 'León, Guanajuato, Mexico · Since 2023'
     }
   };
 
@@ -411,7 +375,7 @@ document.addEventListener('DOMContentLoaded', () => {
         calories: 46,
         weight: '15 g',
         equivalence: '10 Fresas Frescas (1 Taza)',
-        desc: 'Fresas seleccionadas en su punto óptimo de madurez, liofilizadas mediante sublimación en frío. Cada bocado crujiente conserva la intensidad de sabor natural y hasta un 98% de los nutrientes intactos.',
+        desc: 'Fresas seleccionadas en su punto óptimo de madurez, liofilizadas mediante sublimación en frío. Este proceso elimina el agua sin someter la fruta a altas temperaturas, ayudando a conservar gran parte de sus nutrientes, antioxidantes, sabor y color natural.',
         benefits: ['Solo fresa. Nada más.', 'Sin azúcar añadida', 'Sin conservadores ni colorantes', '46 kcal por empaque completo'],
         image: 'assets/images/products/packshot_fresas.jpg'
       },
@@ -422,8 +386,8 @@ document.addEventListener('DOMContentLoaded', () => {
         sub: 'Crujiente. Limpia. Pura.',
         calories: 67,
         weight: '20 g',
-        equivalence: '1 Manzana Entera (3/4 Taza)',
-        desc: 'Láminas crujientes de manzana natural sin cáscara ni ceras añadidas. Una fuente pura de fibra dietética ideal para mantener tus niveles de energía estables durante el día.',
+        equivalence: '1 Manzana Entera',
+        desc: 'Láminas crujientes de manzana natural, sin cáscara ni ceras añadidas. Liofilizadas para conservar el sabor y las características naturales de la fruta. Utilizamos antioxidantes de origen natural para preservar su color y textura crujiente.',
         benefits: ['100% Manzana seleccionada', 'Súper ligera y crujiente', 'Rica en fibra soluble', 'Excelente snack diario'],
         image: 'assets/images/products/packshot_manzana.jpg'
       },
@@ -435,8 +399,8 @@ document.addEventListener('DOMContentLoaded', () => {
         calories: 98,
         weight: '28 g',
         equivalence: '1 Plátano Entero',
-        desc: 'Rodajas de plátano dulce sin aceites ni azúcares añadidos. A diferencia de las fichas de plátano frito tradicional, nuestro proceso mantiene cero grasas y 100% del potasio.',
-        benefits: ['Sin aceites ni fritos', 'Energía limpia y portátil', 'Rico en potasio y vitamina B6', '98 kcal de nutrición pura'],
+        desc: 'Rodajas de plátano dulce, sin aceites ni azúcares añadidos. Utilizamos antioxidantes de origen natural para preservar su color y textura crujiente. Aporta electrolitos naturales como potasio y magnesio, que apoyan tu energía y rendimiento.',
+        benefits: ['Sin aceites ni fritos', 'Energía limpia y portátil', 'Rico en potasio y magnesio', '98 kcal de nutrición pura'],
         image: 'assets/images/products/packshot_platano.jpg'
       },
       {
@@ -447,7 +411,7 @@ document.addEventListener('DOMContentLoaded', () => {
         calories: 80,
         weight: '24 g',
         equivalence: '1 Mango de la Huerta (1 Taza)',
-        desc: 'Lajas del más jugoso mango tropical transformadas en un snack super crujiente. Retiene beta-carotenos y todo el sabor vibrante sin una sola gota de almíbar.',
+        desc: 'Lajas del más jugoso mango tropical, transformadas en un snack súper crujiente. El mango aporta naturalmente fibra y beta-carotenos, con todo su sabor vibrante y sin una sola gota de almíbar.',
         benefits: ['Solo mango. Nada más.', 'Alto en Vitamina A y C', 'Textura crujiente irresistible', 'Empaque listo para llevar'],
         image: 'assets/images/products/packshot_mango.jpg'
       },
@@ -459,8 +423,8 @@ document.addEventListener('DOMContentLoaded', () => {
         calories: 76,
         weight: '24 g',
         equivalence: '1 Mango entero con Toque Picosito',
-        desc: 'La combinación perfecta entre la dulzura tropical del mango liofilizado y una receta artesanal de chamoy sin colorantes ni saborizantes artificiales. Picor suave y adictivo.',
-        benefits: ['Chamoy sin azúcar refinada', 'Sabor mexicano auténtico', 'Solo 76 kcal por paquete', '100% Vegano y libre de gluten'],
+        desc: 'La combinación perfecta entre la dulzura tropical del mango liofilizado y nuestro chamoy artesanal, elaborado con ingredientes cuidadosamente seleccionados y flor de sal Gourmet, sin conservadores ni saborizantes artificiales. Un picor suave y equilibrado que complementa el sabor del mango.',
+        benefits: ['Chamoy con Flor de Sal Gourmet', 'Sabor mexicano auténtico', 'Solo 76 kcal por paquete', '100% Vegano y libre de gluten'],
         image: 'assets/images/products/packshot_mango_chamoy.jpg'
       },
       {
@@ -471,7 +435,7 @@ document.addEventListener('DOMContentLoaded', () => {
         calories: 60,
         weight: '20 g',
         equivalence: '1 Manzana crujiente picosita',
-        desc: 'Crujientes trozos de manzana natural cubiertos con una sazón ligera de chile en polvo y chamoy natural. La alternativa saludable perfecta para tus antojos.',
+        desc: 'Crujientes trozos de manzana natural, cubiertos con nuestro chamoy artesanal y una ligera sazón de chile en polvo. Elaborado con ingredientes cuidadosamente seleccionados y flor de sal gourmet, sin conservadores ni saborizantes artificiales. Un picor suave y equilibrado que realza el sabor de la manzana.',
         benefits: ['Bajo en calorías (solo 60 kcal)', 'Crujido intenso agridulce', 'Sin conservadores químicos', 'Perfecto snack portátil'],
         image: 'assets/images/products/packshot_manzana_chamoy.jpg'
       },
@@ -483,7 +447,7 @@ document.addEventListener('DOMContentLoaded', () => {
         calories: 93,
         weight: '22 g',
         equivalence: '1 Taza de Piña Tropical Picosita',
-        desc: 'Bocado tropical agridulce con el nivel exacto de piña natural liofilizada y sazón chamoy. Aporta fibra natural para una digestión ágil.',
+        desc: 'Bocados de piña tropical, dulces y ligeramente ácidos, cubiertos con nuestro chamoy artesanal para crear un contraste irresistible entre lo dulce, lo ácido y lo picosito. Elaborado con ingredientes cuidadosamente seleccionados, flor de sal Gourmet, sin conservadores ni saborizantes artificiales.',
         benefits: ['Piña natural seleccionada', 'Sabor agridulce explosivo', 'Libre de glutamato monosódico', 'Equivale a 1 taza completa de fruta'],
         image: 'assets/images/products/packshot_pina_chamoy.jpg'
       }
@@ -497,7 +461,7 @@ document.addEventListener('DOMContentLoaded', () => {
         calories: 46,
         weight: '15 g',
         equivalence: '10 Fresh Strawberries (1 Cup)',
-        desc: 'Selected strawberries picked at peak ripeness, freeze-dried through cold sublimation. Each crunchy bite preserves intense natural flavor and up to 98% of intact nutrients.',
+        desc: 'Selected strawberries at peak ripeness, freeze-dried through cold sublimation. This process removes water without subjecting fruit to high temperatures, preserving most of its nutrients, antioxidants, natural flavor, and color.',
         benefits: ['Just strawberry. Nothing else.', 'No added sugar', 'No preservatives or dyes', '46 kcal per full pack'],
         image: 'assets/images/products/packshot_fresas.jpg'
       },
@@ -508,8 +472,8 @@ document.addEventListener('DOMContentLoaded', () => {
         sub: 'Crispy. Clean. Pure.',
         calories: 67,
         weight: '20 g',
-        equivalence: '1 Whole Apple (3/4 Cup)',
-        desc: 'Crispy slices of unpeeled natural apple with zero added waxes. A pure source of dietary fiber ideal for keeping your energy levels steady throughout your day.',
+        equivalence: '1 Whole Apple',
+        desc: 'Crispy slices of natural apple, unpeeled with no added waxes. Freeze-dried to preserve natural flavor and fruit characteristics. We use natural-origin antioxidants to preserve color and crispy texture.',
         benefits: ['100% Selected apple', 'Super light and crispy', 'Rich in soluble fiber', 'Great daily snack'],
         image: 'assets/images/products/packshot_manzana.jpg'
       },
@@ -521,8 +485,8 @@ document.addEventListener('DOMContentLoaded', () => {
         calories: 98,
         weight: '28 g',
         equivalence: '1 Whole Banana',
-        desc: 'Sweet banana slices with no added oils or sugars. Unlike traditional fried banana chips, our process retains zero fat and 100% of potassium.',
-        benefits: ['No oils or frying', 'Clean portable energy', 'Rich in potassium & Vitamin B6', '98 kcal of pure nutrition'],
+        desc: 'Sweet banana slices, with no added oils or sugars. We use natural-origin antioxidants to preserve color and crispy texture. Provides natural electrolytes like potassium and magnesium to support energy and performance.',
+        benefits: ['No oils or frying', 'Clean portable energy', 'Rich in potassium & magnesium', '98 kcal of pure nutrition'],
         image: 'assets/images/products/packshot_platano.jpg'
       },
       {
@@ -533,7 +497,7 @@ document.addEventListener('DOMContentLoaded', () => {
         calories: 80,
         weight: '24 g',
         equivalence: '1 Orchard Mango (1 Cup)',
-        desc: 'Juicy tropical mango slices turned into a super crispy snack. Retains beta-carotenes and full vibrant flavor without a single drop of syrup.',
+        desc: 'Slices of the juiciest tropical mango, transformed into a super crunchy snack. Mango naturally provides fiber and beta-carotenes, with all its vibrant flavor and not a single drop of syrup.',
         benefits: ['Just mango. Nothing else.', 'High in Vitamin A & C', 'Irresistible crunchy texture', 'Ready-to-go pouch'],
         image: 'assets/images/products/packshot_mango.jpg'
       },
@@ -545,8 +509,8 @@ document.addEventListener('DOMContentLoaded', () => {
         calories: 76,
         weight: '24 g',
         equivalence: '1 Whole Mango with Tangy Twist',
-        desc: 'The perfect match between freeze-dried mango sweetness and an artisanal chamoy blend with zero artificial colors or flavorings. Smooth addicting kick.',
-        benefits: ['Refined sugar-free chamoy', 'Authentic Mexican flavor', 'Only 76 kcal per pouch', '100% Vegan & Gluten-free'],
+        desc: 'The perfect match between freeze-dried tropical mango sweetness and our artisanal chamoy, crafted with carefully selected ingredients and Gourmet fleur de sel, free of artificial preservatives or flavorings. A smooth, balanced tang that complements the mango flavor.',
+        benefits: ['Chamoy with Gourmet Fleur de Sel', 'Authentic Mexican flavor', 'Only 76 kcal per pouch', '100% Vegan & Gluten-free'],
         image: 'assets/images/products/packshot_mango_chamoy.jpg'
       },
       {
@@ -557,7 +521,7 @@ document.addEventListener('DOMContentLoaded', () => {
         calories: 60,
         weight: '20 g',
         equivalence: '1 Tangy Crispy Apple',
-        desc: 'Crispy natural apple bites coated with a light blend of chili powder and natural chamoy. The ultimate healthy swap for your cravings.',
+        desc: 'Crispy natural apple bites coated with our artisanal chamoy and a light chili powder seasoning. Crafted with carefully selected ingredients and gourmet fleur de sel, free of artificial preservatives or flavorings. A smooth, balanced tang that enhances the apple flavor.',
         benefits: ['Low calorie (only 60 kcal)', 'Intense sweet & sour crunch', 'No chemical preservatives', 'Perfect portable snack'],
         image: 'assets/images/products/packshot_manzana_chamoy.jpg'
       },
@@ -569,7 +533,7 @@ document.addEventListener('DOMContentLoaded', () => {
         calories: 93,
         weight: '22 g',
         equivalence: '1 Cup of Tangy Tropical Pineapple',
-        desc: 'Sweet & sour tropical bite with the exact level of natural freeze-dried pineapple and chamoy seasoning. Provides natural fiber for agile digestion.',
+        desc: 'Sweet and lightly tangy tropical pineapple bites coated with our artisanal chamoy to create an irresistible contrast of sweet, sour, and spicy. Crafted with carefully selected ingredients and Gourmet fleur de sel, free of artificial preservatives or flavorings.',
         benefits: ['Selected natural pineapple', 'Explosive sweet-and-sour punch', 'MSG free', 'Equals 1 full cup of fruit'],
         image: 'assets/images/products/packshot_pina_chamoy.jpg'
       }
@@ -633,16 +597,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // 6. Benefits Counter Prefix Update (HASTA / UP TO)
-    const retentionCounter = document.querySelector('.claim-item-large .count-number');
-    if (retentionCounter) {
-      retentionCounter.setAttribute('data-prefix', lang === 'en' ? 'UP TO ' : 'HASTA ');
-      if (retentionCounter.classList.contains('counted')) {
-        retentionCounter.textContent = (lang === 'en' ? 'UP TO ' : 'HASTA ') + '98%';
-      }
-    }
-
-    // 7. Dynamic Form Placeholders
+    // 6. Dynamic Form Placeholders
     document.querySelectorAll('input[placeholder*="Ana"], input[placeholder*="Jane"]').forEach(input => {
       input.placeholder = lang === 'en' ? 'e.g. Jane Doe' : 'Ej. Ana María Torres';
     });
@@ -653,7 +608,7 @@ document.addEventListener('DOMContentLoaded', () => {
       input.placeholder = lang === 'en' ? 'Estimated volumes, target markets or specific product lines...' : 'Volúmenes estimados, mercados de interés o líneas de productos específicas...';
     });
 
-    // 8. Filter Buttons Re-render
+    // 7. Filter Buttons Re-render
     const filterAll = document.querySelector('[data-filter="all"]');
     const filterPure = document.querySelector('[data-filter="natural"]');
     const filterChamoy = document.querySelector('[data-filter="chamoy"]');
@@ -661,24 +616,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (filterPure) filterPure.textContent = translations[lang].filter_pure;
     if (filterChamoy) filterChamoy.textContent = translations[lang].filter_chamoy;
 
-    // 9. Calculator Select Options Re-render
-    const calcSelect = document.getElementById('calc-fruit');
-    if (calcSelect) {
-      const currentSelectedVal = calcSelect.value || 'fresas-natural';
-      calcSelect.innerHTML = '';
-      const rawList = productsData[lang] || productsData.es;
-      rawList.forEach(p => {
-        const opt = document.createElement('option');
-        opt.value = p.id;
-        opt.textContent = `${p.name} (${p.calories} kcal)`;
-        if (p.id === currentSelectedVal) opt.selected = true;
-        calcSelect.appendChild(opt);
-      });
-    }
-
-    // 10. Re-render Products & Calculator in Active Language
+    // 8. Re-render Products in Active Language
     renderProducts(currentFilter);
-    updateCalculator();
   }
 
   // Attach click listeners to language toggle buttons
@@ -760,7 +699,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Process Card Click Handling on Mobile (Collapses all other process steps so only 1 is open at a time!)
+  // Process Card Click Handling on Mobile
   const processCards = document.querySelectorAll('.process-card-imageled');
   processCards.forEach(card => {
     card.addEventListener('click', () => {
@@ -984,55 +923,6 @@ document.addEventListener('DOMContentLoaded', () => {
     modalOverlay.addEventListener('click', (e) => {
       if (e.target === modalOverlay) closeModal();
     });
-  }
-
-  // ==========================================================================
-  // 7. CALCULATOR LOGIC ("COMPARA TU SNACK" BILINGUAL)
-  // ==========================================================================
-  const calcSelect = document.getElementById('calc-fruit');
-  const calcQty = document.getElementById('calc-qty');
-  const qtyValDisplay = document.getElementById('qty-val');
-  const calSavedDisplay = document.getElementById('cal-saved');
-  const fruitEquivDisplay = document.getElementById('fruit-equiv');
-  const barJunk = document.getElementById('bar-junk');
-  const barHuertalia = document.getElementById('bar-huertalia');
-  const valJunk = document.getElementById('val-junk');
-  const valHuertalia = document.getElementById('val-huertalia');
-
-  function updateCalculator() {
-    if (!calcSelect || !calcQty) return;
-    const rawList = productsData[currentLang] || productsData.es;
-    const selectedProd = rawList.find(p => p.id === calcSelect.value) || rawList[0];
-    const qty = parseInt(calcQty.value, 10) || 1;
-
-    if (qtyValDisplay) {
-      if (currentLang === 'en') {
-        qtyValDisplay.textContent = `${qty} serving${qty > 1 ? 's' : ''}/week`;
-      } else {
-        qtyValDisplay.textContent = `${qty} porción${qty > 1 ? 'es' : ''}/semana`;
-      }
-    }
-    
-    const junkCal = 280 * qty;
-    const huertaliaCal = selectedProd.calories * qty;
-    const calSaved = junkCal - huertaliaCal;
-
-    if (calSavedDisplay) calSavedDisplay.textContent = `-${calSaved} kcal`;
-    if (fruitEquivDisplay) fruitEquivDisplay.textContent = `${qty}x ${selectedProd.name}`;
-
-    if (barJunk && barHuertalia) {
-      const huertaliaPct = Math.round((huertaliaCal / junkCal) * 100);
-      barJunk.style.width = '100%';
-      barHuertalia.style.width = `${huertaliaPct}%`;
-
-      if (valJunk) valJunk.textContent = `${junkCal} kcal`;
-      if (valHuertalia) valHuertalia.textContent = `${huertaliaCal} kcal (${huertaliaPct}%)`;
-    }
-  }
-
-  if (calcSelect && calcQty) {
-    calcSelect.addEventListener('change', updateCalculator);
-    calcQty.addEventListener('input', updateCalculator);
   }
 
   // Lead Form Submission Listener
