@@ -1996,27 +1996,81 @@ a.btn,
   }
 
   .map-editorial-block {
-    margin-top: 2.0rem;
+    margin-top: 2.0rem !important;
     border-radius: var(--radius-sm);
     box-shadow: none;
     border: none;
   }
 
   .map-img-container {
-    min-height: 180px;
-    max-height: 260px;
+    min-height: 180px !important;
+    max-height: 260px !important;
   }
 
   .map-overlay-content {
-    padding: 1.2rem 1.0rem;
-    flex-direction: column;
-    gap: 0.8rem;
+    padding: 1.4rem 1.1rem !important;
+    flex-direction: column !important;
+    gap: 0.6rem !important;
   }
 
+  .map-overlay-content .title-section {
+    font-size: 1.3rem !important;
+    line-height: 1.2 !important;
+    margin-top: 0.3rem !important;
+  }
+
+  /* FULL-WIDTH MANIFESTO BANNER MOBILE FIX (PREVENT CUT-OFF / TOP OVERFLOW) */
   .campaign-banner-fullwidth {
-    height: 30vh;
-    min-height: 220px;
-    max-height: 270px;
+    height: auto !important;
+    min-height: 360px !important;
+    max-height: none !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+  }
+
+  .campaign-banner-fullwidth img {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+
+  .campaign-banner-overlay {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 2.8rem 1.2rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    background: linear-gradient(180deg, rgba(14, 22, 17, 0.78) 0%, rgba(14, 22, 17, 0.90) 100%) !important;
+  }
+
+  .campaign-banner-overlay .title-display {
+    font-size: clamp(1.4rem, 5vw, 1.85rem) !important;
+    line-height: 1.2 !important;
+    margin: 0.4rem 0 0.8rem !important;
+  }
+
+  .manifesto-text {
+    font-size: 0.88rem !important;
+    line-height: 1.55 !important;
+    color: rgba(250, 246, 240, 0.95) !important;
+  }
+
+  .manifesto-text strong {
+    font-size: 1.05rem !important;
+    margin-top: 0.5rem !important;
   }
 
   .crunch-editorial-moment {
@@ -2130,4 +2184,7 @@ a.btn,
 
 @media (max-width: 480px) {
   .claims-flex {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
 
