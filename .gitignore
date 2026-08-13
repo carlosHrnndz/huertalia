@@ -1,2 +1,5 @@
 .DS_Store
 *.log
+from_bela/
+from_gemini/
+scratch/

@@ -313,12 +313,34 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.5rem;
   font-weight: 800;
   letter-spacing: 0.08em;
-  color: var(--color-ivory);
+  color: var(--color-primary);
   text-decoration: none;
   text-transform: uppercase;
   flex-shrink: 0;
   margin-right: 1rem;
   transition: var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(250, 246, 240, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 0.45rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.logo-brand:hover {
+  transform: translateY(-1px);
+  background: #FAF6F0;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+.logo-brand img {
+  height: 38px !important;
+  width: auto;
+  display: block;
 }
 
 .nav-links {
