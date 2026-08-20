@@ -162,6 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
       footer_col_title: 'COLECCIÓN',
       footer_offices_title: 'OFICINAS MATRIZ',
       footer_contact_link: 'Contacto',
+      footer_item_frutos_rojos: 'Frutos Rojos Liofilizados',
       footer_item_fresas: 'Fresas Liofilizadas',
       footer_item_manzana: 'Manzana Liofilizada',
       footer_item_platano: 'Plátano Liofilizado',
@@ -327,6 +328,7 @@ document.addEventListener('DOMContentLoaded', () => {
       footer_col_title: 'COLLECTION',
       footer_offices_title: 'HEADQUARTERS',
       footer_contact_link: 'Contact',
+      footer_item_frutos_rojos: 'Freeze-Dried Red Fruits',
       footer_item_fresas: 'Freeze-Dried Strawberries',
       footer_item_manzana: 'Freeze-Dried Apple',
       footer_item_platano: 'Freeze-Dried Banana',
@@ -341,6 +343,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // Products Data Store (ES & EN)
   const productsData = {
     es: [
+      {
+        id: 'frutos-rojos',
+        name: 'Frutos Rojos Liofilizados',
+        category: 'natural',
+        badge: 'pure',
+        sub: 'Silvestre. Intenso. Crujiente.',
+        calories: 52,
+        weight: '20 g',
+        equivalence: 'Mix de Fresa, Zarzamora, Mora Azul y Frambuesa (1 Taza)',
+        desc: 'Una selección de fresa, zarzamora, mora azul y frambuesa, liofilizadas para crear un mix ligero y crujiente, ideal para disfrutar como snack o incorporar en desayunos, smoothies, bowls o dar un toque especial a tus recetas y postres.',
+        benefits: ['Mix 100% frutos rojos seleccionados', 'Alto poder antioxidante natural', 'Sin azúcares añadidos ni conservadores', 'Ideal para bowls, smoothies y postres'],
+        image: 'assets/images/products/packshot_frutos_rojos.jpg'
+      },
       {
         id: 'fresas-natural',
         name: 'Fresas Liofilizadas',
@@ -434,6 +449,19 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     ],
     en: [
+      {
+        id: 'frutos-rojos',
+        name: 'Freeze-Dried Red Fruits',
+        category: 'natural',
+        badge: 'pure',
+        sub: 'Wild. Intense. Crunchy.',
+        calories: 52,
+        weight: '20 g',
+        equivalence: 'Mix of Strawberry, Blackberry, Blueberry & Raspberry (1 Cup)',
+        desc: 'A selection of strawberry, blackberry, blueberry, and raspberry, freeze-dried to create a light and crunchy mix, ideal to enjoy as a snack or add to breakfasts, smoothies, bowls, or give a special touch to your recipes and desserts.',
+        benefits: ['100% selected red berries mix', 'High natural antioxidant power', 'No added sugars or preservatives', 'Ideal for bowls, smoothies and desserts'],
+        image: 'assets/images/products/packshot_frutos_rojos.jpg'
+      },
       {
         id: 'fresas-natural',
         name: 'Freeze-Dried Strawberries',
