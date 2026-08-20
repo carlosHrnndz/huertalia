@@ -38,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
       claim_1: '100% FRUTA REAL',
       claim_2: 'SIN AZÚCAR AÑADIDA',
       claim_3: 'SIN CONSERVADORES',
-      claim_4: 'LIOFILIZACIÓN EN FRÍO',
 
       // History & Accordion
       history_badge: 'ORIGEN & AUTENTICIDAD',
@@ -68,14 +67,14 @@ document.addEventListener('DOMContentLoaded', () => {
       // Process & Accordion (03.png)
       process_badge: 'CIENCIA Y TECNOLOGÍA',
       process_title: 'EL PROCESO',
-      process_subhead: 'Sublimación en frío al vacío para conservar el máximo de nutrientes — la misma tecnología de vanguardia elegida por la NASA para nutrir a los astronautas en las misiones espaciales.',
+      process_subhead: 'Sublimación en frío al vacío para conservar el sabor, textura y características naturales de la fruta — una tecnología utilizada también para desarrollar alimentos destinados a astronautas en misiones espaciales.',
       process_intro_tag: 'LA MATERIA PRIMA',
       process_intro_title: 'DE LA FRUTA FRESCA AL CRUNCH PERFECTO.',
       process_intro_desc: 'Seleccionamos únicamente fruta de la más alta calidad en su punto idóneo de madurez antes de iniciar la sublimación en frío.',
       step1_title: 'FRUTA FRESCA',
       step1_desc: 'Cosecha en punto óptimo',
       step2_title: 'CONGELACIÓN',
-      step2_desc: 'Congelación rápida a -40°C',
+      step2_desc: 'Ultra congelación rápida a baja temperatura',
       step3_title: 'VACÍO',
       step3_desc: 'Presión atmosférica baja',
       step4_title: 'SUBLIMACIÓN',
@@ -87,8 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
       collection_badge: 'LA COLECCIÓN',
       collection_title: 'ELIGE TU <span class="text-italic-accent">CRUNCH.</span>',
       filter_all: 'TODOS',
-      filter_pure: 'FRUTA PURA',
-      filter_chamoy: 'LÍNEA CHAMOY',
+      filter_pure: 'FRUTA NATURAL',
+      filter_chamoy: 'EDICIONES CON CHAMOY',
       btn_details: 'VER DETALLES',
       crunch_moment_tag: 'EXPERIENCIA HUERTALIA',
       crunch_moment_title: 'EL CRUNCH DE LA <span class="text-italic-accent">FRUTA REAL.</span>',
@@ -105,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Lifestyle Campaign (05.png & 06.png)
       lifestyle_badge: 'ESTILO DE VIDA CONSCIENTE',
       lifestyle_title: 'LLEVA HUERTALIA <span class="text-italic-accent">CONTIGO.</span>',
-      lifestyle_subhead: 'Nutrición pura diseñada para integrarse naturalmente en cada momento de tu día.',
+      lifestyle_subhead: 'Snacks de fruta diseñados para integrarse naturalmente en cada momento de tu día.',
       lifestyle_work_tag: '11:45 · TRABAJO',
       lifestyle_work_title: 'UNA PAUSA CRUJIENTE <span class="text-italic-accent">PARA TU DÍA.</span>',
       lifestyle_work_desc: 'Nutrición pura para mantener tu enfoque diario sin caídas de energía ni pesadez.',
@@ -140,10 +139,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Contact Page
       b2b_badge: 'CONTACTO & DISTRIBUCIÓN',
-      b2b_subhead: 'Suministramos a cadenas retail premium, supermercados gourmet y clubes de salud.',
+      b2b_subhead: '',
       contact_hero_title: 'HABLA CON<br><span class="text-italic-accent" style="color: var(--color-sand);">HUERTALIA.</span>',
       contact_direct_title: 'Canales Directos',
-      contact_direct_sub: 'Suministramos a cadenas retail premium, supermercados gourmet y clubes de salud. Nuestro centro operativo y logístico se ubica en León, Guanajuato, México.',
+      contact_direct_sub: 'Estamos en León, Guanajuato, México',
       contact_lbl_address: 'Dirección Matriz:',
       contact_address_val: 'Calle Valle de Señora 601 B.<br>Col. Valles del Campestre.<br>C.P. 37150, León, Guanajuato.',
       contact_lbl_email: 'Correo Electrónico:',
@@ -216,7 +215,6 @@ document.addEventListener('DOMContentLoaded', () => {
       claim_1: '100% REAL FRUIT',
       claim_2: 'NO ADDED SUGAR',
       claim_3: 'NO PRESERVATIVES',
-      claim_4: 'COLD FREEZE-DRIED',
 
       // History & Accordion
       history_badge: 'ORIGIN & AUTHENTICITY',
@@ -246,14 +244,14 @@ document.addEventListener('DOMContentLoaded', () => {
       // Process & Accordion (03.png)
       process_badge: 'SCIENCE & TECHNOLOGY',
       process_title: 'THE PROCESS',
-      process_subhead: 'Cold vacuum sublimation to preserve maximum nutrients — the very same cutting-edge technology chosen by NASA to nourish astronauts on space missions.',
+      process_subhead: 'Cold vacuum sublimation to preserve flavor, texture and natural characteristics of the fruit — a technology also used to develop food for astronauts on space missions.',
       process_intro_tag: 'RAW INGREDIENTS',
       process_intro_title: 'FROM FRESH FRUIT TO THE PERFECT CRUNCH.',
       process_intro_desc: 'We select only top-tier fruit at peak ripeness before entering cold vacuum sublimation.',
       step1_title: 'FRESH FRUIT',
       step1_desc: 'Harvested at peak ripeness',
       step2_title: 'FREEZING',
-      step2_desc: 'Flash frozen at -40°C',
+      step2_desc: 'Ultra flash-freezing at low temperatures',
       step3_title: 'VACUUM',
       step3_desc: 'Ultra-low atmospheric pressure',
       step4_title: 'SUBLIMATION',
@@ -265,8 +263,8 @@ document.addEventListener('DOMContentLoaded', () => {
       collection_badge: 'THE COLLECTION',
       collection_title: 'CHOOSE YOUR <span class="text-italic-accent">CRUNCH.</span>',
       filter_all: 'ALL',
-      filter_pure: 'PURE FRUIT',
-      filter_chamoy: 'CHAMOY LINE',
+      filter_pure: 'NATURAL FRUIT',
+      filter_chamoy: 'CHAMOY EDITIONS',
       btn_details: 'VIEW DETAILS',
       crunch_moment_tag: 'HUERTALIA EXPERIENCE',
       crunch_moment_title: 'THE CRUNCH OF <span class="text-italic-accent">REAL FRUIT.</span>',
@@ -283,7 +281,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Lifestyle Campaign (05.png & 06.png)
       lifestyle_badge: 'CONSCIOUS LIFESTYLE',
       lifestyle_title: 'TAKE HUERTALIA <span class="text-italic-accent">WITH YOU.</span>',
-      lifestyle_subhead: 'Pure nutrition designed to fit naturally into every moment of your day.',
+      lifestyle_subhead: 'Fruit snacks designed to fit naturally into every moment of your day.',
       lifestyle_work_tag: '11:45 · WORK',
       lifestyle_work_title: 'A CRISPY BREAK <span class="text-italic-accent">FOR YOUR DAY.</span>',
       lifestyle_work_desc: 'Pure nutrition to maintain your daily focus without energy crashes or sluggishness.',
@@ -318,10 +316,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Contact Page
       b2b_badge: 'CONTACT & DISTRIBUTION',
-      b2b_subhead: 'We supply premium retail chains, gourmet supermarkets, and health clubs.',
+      b2b_subhead: '',
       contact_hero_title: 'TALK TO<br><span class="text-italic-accent" style="color: var(--color-sand);">HUERTALIA.</span>',
       contact_direct_title: 'Direct Channels',
-      contact_direct_sub: 'We supply premium retail chains, gourmet supermarkets, and health clubs. Our central operational hub is located in León, Guanajuato, Mexico.',
+      contact_direct_sub: 'We are located in León, Guanajuato, Mexico',
       contact_lbl_address: 'Headquarters:',
       contact_address_val: 'Calle Valle de Señora 601 B.<br>Col. Valles del Campestre.<br>ZIP 37150, León, Guanajuato, Mexico.',
       contact_lbl_email: 'Contact Email:',
@@ -371,6 +369,7 @@ document.addEventListener('DOMContentLoaded', () => {
         id: 'fresas-natural',
         name: 'Fresas Liofilizadas',
         category: 'natural',
+        badge: 'pure',
         sub: 'Dulce. Intensa. Crujiente.',
         calories: 46,
         weight: '15 g',
@@ -383,11 +382,12 @@ document.addEventListener('DOMContentLoaded', () => {
         id: 'manzana-natural',
         name: 'Manzana Liofilizada',
         category: 'natural',
+        badge: null,
         sub: 'Crujiente. Limpia. Pura.',
         calories: 67,
         weight: '20 g',
         equivalence: '1 Manzana Entera',
-        desc: 'Láminas crujientes de manzana natural, sin cáscara ni ceras añadidas. Liofilizadas para conservar el sabor y las características naturales de la fruta. Utilizamos antioxidantes de origen natural para preservar su color y textura crujiente.',
+        desc: 'Láminas crujientes de manzana natural con cáscara, sin ceras añadidas. Liofilizadas para conservar el sabor y las características naturales de la fruta. Utilizamos antioxidantes de origen natural para preservar su color y textura crujiente.',
         benefits: ['100% Manzana seleccionada', 'Súper ligera y crujiente', 'Rica en fibra soluble', 'Excelente snack diario'],
         image: 'assets/images/products/packshot_manzana.jpg'
       },
@@ -395,11 +395,12 @@ document.addEventListener('DOMContentLoaded', () => {
         id: 'platano-natural',
         name: 'Plátano Liofilizado',
         category: 'natural',
+        badge: null,
         sub: 'Rico. Dorado. Natural.',
         calories: 98,
         weight: '28 g',
         equivalence: '1 Plátano Entero',
-        desc: 'Rodajas de plátano dulce, sin aceites ni azúcares añadidos. Utilizamos antioxidantes de origen natural para preservar su color y textura crujiente. Aporta electrolitos naturales como potasio y magnesio, que apoyan tu energía y rendimiento.',
+        desc: 'Rodajas de plátano dulce, sin aceites ni azúcares añadidos. Utilizamos antioxidantes de origen natural para preservar su color y textura crujiente. Aporta electrolitos naturales como potasio y magnesio.',
         benefits: ['Sin aceites ni fritos', 'Energía limpia y portátil', 'Rico en potasio y magnesio', '98 kcal de nutrición pura'],
         image: 'assets/images/products/packshot_platano.jpg'
       },
@@ -407,6 +408,7 @@ document.addEventListener('DOMContentLoaded', () => {
         id: 'mango-natural',
         name: 'Mango Liofilizado',
         category: 'natural',
+        badge: 'pure',
         sub: 'Tropical. Vibrante. Exótico.',
         calories: 80,
         weight: '24 g',
@@ -419,11 +421,12 @@ document.addEventListener('DOMContentLoaded', () => {
         id: 'mango-chamoy',
         name: 'Mango Chamoy',
         category: 'chamoy',
+        badge: 'chamoy',
         sub: 'Audaz. Picosito. Salvaje.',
         calories: 76,
         weight: '24 g',
         equivalence: '1 Mango entero con Toque Picosito',
-        desc: 'La combinación perfecta entre la dulzura tropical del mango liofilizado y nuestro chamoy artesanal, elaborado con ingredientes cuidadosamente seleccionados y flor de sal Gourmet, sin conservadores ni saborizantes artificiales. Un picor suave y equilibrado que complementa el sabor del mango.',
+        desc: 'La combinación perfecta entre la dulzura tropical del mango liofilizado y nuestro chamoy artesanal, elaborado con ingredientes cuidadosamente seleccionados y flor de sal Gourmet, sin azúcar añadida, sin conservadores ni saborizantes artificiales. Un picor suave y equilibrado que complementa el sabor del mango.',
         benefits: ['Chamoy con Flor de Sal Gourmet', 'Sabor mexicano auténtico', 'Solo 76 kcal por paquete', '100% Vegano y libre de gluten'],
         image: 'assets/images/products/packshot_mango_chamoy.jpg'
       },
@@ -431,11 +434,12 @@ document.addEventListener('DOMContentLoaded', () => {
         id: 'manzana-chamoy',
         name: 'Manzana Chamoy',
         category: 'chamoy',
+        badge: 'chamoy',
         sub: 'Agridulce. Crujiente. Adictiva.',
         calories: 60,
         weight: '20 g',
         equivalence: '1 Manzana crujiente picosita',
-        desc: 'Crujientes trozos de manzana natural, cubiertos con nuestro chamoy artesanal y una ligera sazón de chile en polvo. Elaborado con ingredientes cuidadosamente seleccionados y flor de sal gourmet, sin conservadores ni saborizantes artificiales. Un picor suave y equilibrado que realza el sabor de la manzana.',
+        desc: 'Crujientes trozos de manzana natural, cubiertos con nuestro chamoy artesanal y una ligera sazón de chile en polvo. Elaborado con ingredientes cuidadosamente seleccionados y flor de sal gourmet, sin azúcar añadida, sin conservadores ni saborizantes artificiales. Un picor suave y equilibrado que realza el sabor de la manzana.',
         benefits: ['Bajo en calorías (solo 60 kcal)', 'Crujido intenso agridulce', 'Sin conservadores químicos', 'Perfecto snack portátil'],
         image: 'assets/images/products/packshot_manzana_chamoy.jpg'
       },
@@ -443,11 +447,12 @@ document.addEventListener('DOMContentLoaded', () => {
         id: 'pina-chamoy',
         name: 'Piña Chamoy',
         category: 'chamoy',
+        badge: 'chamoy',
         sub: 'Refrescante. Tropical. Intenso.',
         calories: 93,
         weight: '22 g',
         equivalence: '1 Taza de Piña Tropical Picosita',
-        desc: 'Bocados de piña tropical, dulces y ligeramente ácidos, cubiertos con nuestro chamoy artesanal para crear un contraste irresistible entre lo dulce, lo ácido y lo picosito. Elaborado con ingredientes cuidadosamente seleccionados, flor de sal Gourmet, sin conservadores ni saborizantes artificiales.',
+        desc: 'Bocados de piña tropical, dulces y ligeramente ácidos, cubiertos con nuestro chamoy artesanal para crear un contraste irresistible entre lo dulce, lo ácido y lo picosito. Elaborado con ingredientes cuidadosamente seleccionados, flor de sal Gourmet, sin azúcar añadida, sin conservadores ni saborizantes artificiales.',
         benefits: ['Piña natural seleccionada', 'Sabor agridulce explosivo', 'Libre de glutamato monosódico', 'Equivale a 1 taza completa de fruta'],
         image: 'assets/images/products/packshot_pina_chamoy.jpg'
       }
@@ -457,6 +462,7 @@ document.addEventListener('DOMContentLoaded', () => {
         id: 'fresas-natural',
         name: 'Freeze-Dried Strawberries',
         category: 'natural',
+        badge: 'pure',
         sub: 'Sweet. Intense. Crunchy.',
         calories: 46,
         weight: '15 g',
@@ -469,11 +475,12 @@ document.addEventListener('DOMContentLoaded', () => {
         id: 'manzana-natural',
         name: 'Freeze-Dried Apple',
         category: 'natural',
+        badge: null,
         sub: 'Crispy. Clean. Pure.',
         calories: 67,
         weight: '20 g',
         equivalence: '1 Whole Apple',
-        desc: 'Crispy slices of natural apple, unpeeled with no added waxes. Freeze-dried to preserve natural flavor and fruit characteristics. We use natural-origin antioxidants to preserve color and crispy texture.',
+        desc: 'Crispy slices of natural apple with peel, with no added waxes. Freeze-dried to preserve natural flavor and fruit characteristics. We use natural-origin antioxidants to preserve color and crispy texture.',
         benefits: ['100% Selected apple', 'Super light and crispy', 'Rich in soluble fiber', 'Great daily snack'],
         image: 'assets/images/products/packshot_manzana.jpg'
       },
@@ -481,11 +488,12 @@ document.addEventListener('DOMContentLoaded', () => {
         id: 'platano-natural',
         name: 'Freeze-Dried Banana',
         category: 'natural',
+        badge: null,
         sub: 'Rich. Golden. Natural.',
         calories: 98,
         weight: '28 g',
         equivalence: '1 Whole Banana',
-        desc: 'Sweet banana slices, with no added oils or sugars. We use natural-origin antioxidants to preserve color and crispy texture. Provides natural electrolytes like potassium and magnesium to support energy and performance.',
+        desc: 'Sweet banana slices, with no added oils or sugars. We use natural-origin antioxidants to preserve color and crispy texture. Provides natural electrolytes like potassium and magnesium.',
         benefits: ['No oils or frying', 'Clean portable energy', 'Rich in potassium & magnesium', '98 kcal of pure nutrition'],
         image: 'assets/images/products/packshot_platano.jpg'
       },
@@ -493,6 +501,7 @@ document.addEventListener('DOMContentLoaded', () => {
         id: 'mango-natural',
         name: 'Freeze-Dried Mango',
         category: 'natural',
+        badge: 'pure',
         sub: 'Tropical. Vibrant. Exotic.',
         calories: 80,
         weight: '24 g',
@@ -505,11 +514,12 @@ document.addEventListener('DOMContentLoaded', () => {
         id: 'mango-chamoy',
         name: 'Mango Chamoy',
         category: 'chamoy',
+        badge: 'chamoy',
         sub: 'Bold. Tangy. Wild.',
         calories: 76,
         weight: '24 g',
         equivalence: '1 Whole Mango with Tangy Twist',
-        desc: 'The perfect match between freeze-dried tropical mango sweetness and our artisanal chamoy, crafted with carefully selected ingredients and Gourmet fleur de sel, free of artificial preservatives or flavorings. A smooth, balanced tang that complements the mango flavor.',
+        desc: 'The perfect match between freeze-dried tropical mango sweetness and our artisanal chamoy, crafted with carefully selected ingredients and Gourmet fleur de sel, with no added sugar, free of artificial preservatives or flavorings. A smooth, balanced tang that complements the mango flavor.',
         benefits: ['Chamoy with Gourmet Fleur de Sel', 'Authentic Mexican flavor', 'Only 76 kcal per pouch', '100% Vegan & Gluten-free'],
         image: 'assets/images/products/packshot_mango_chamoy.jpg'
       },
@@ -517,11 +527,12 @@ document.addEventListener('DOMContentLoaded', () => {
         id: 'manzana-chamoy',
         name: 'Apple Chamoy',
         category: 'chamoy',
+        badge: 'chamoy',
         sub: 'Sweet & Sour. Crunchy. Addictive.',
         calories: 60,
         weight: '20 g',
         equivalence: '1 Tangy Crispy Apple',
-        desc: 'Crispy natural apple bites coated with our artisanal chamoy and a light chili powder seasoning. Crafted with carefully selected ingredients and gourmet fleur de sel, free of artificial preservatives or flavorings. A smooth, balanced tang that enhances the apple flavor.',
+        desc: 'Crispy pieces of natural apple, coated in our artisanal chamoy with a light touch of chili seasoning. Crafted with carefully selected ingredients and gourmet fleur de sel, with no added sugar, free of artificial preservatives or flavorings. A smooth, balanced tang that enhances the apple flavor.',
         benefits: ['Low calorie (only 60 kcal)', 'Intense sweet & sour crunch', 'No chemical preservatives', 'Perfect portable snack'],
         image: 'assets/images/products/packshot_manzana_chamoy.jpg'
       },
@@ -529,11 +540,12 @@ document.addEventListener('DOMContentLoaded', () => {
         id: 'pina-chamoy',
         name: 'Pineapple Chamoy',
         category: 'chamoy',
+        badge: 'chamoy',
         sub: 'Refreshing. Tropical. Bold.',
         calories: 93,
         weight: '22 g',
         equivalence: '1 Cup of Tangy Tropical Pineapple',
-        desc: 'Sweet and lightly tangy tropical pineapple bites coated with our artisanal chamoy to create an irresistible contrast of sweet, sour, and spicy. Crafted with carefully selected ingredients and Gourmet fleur de sel, free of artificial preservatives or flavorings.',
+        desc: 'Bites of tropical pineapple, sweet and slightly tangy, coated with our artisanal chamoy to create an irresistible contrast between sweet, sour, and spicy. Crafted with carefully selected ingredients, Gourmet fleur de sel, with no added sugar, free of artificial preservatives or flavorings.',
         benefits: ['Selected natural pineapple', 'Explosive sweet-and-sour punch', 'MSG free', 'Equals 1 full cup of fruit'],
         image: 'assets/images/products/packshot_pina_chamoy.jpg'
       }
@@ -876,15 +888,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const product = rawList.find(p => p.id === id);
     if (!product || !modalOverlay || !modalContainer) return;
 
+    let badgeHtml = '';
+    if (product.badge === 'chamoy' || product.category === 'chamoy') {
+      badgeHtml = `<span class="wild-badge" style="margin-bottom: 0.8rem; width: fit-content;">${translations[currentLang].modal_chamoy_badge}</span>`;
+    } else if (product.badge === 'pure') {
+      badgeHtml = `<span class="wild-badge" style="margin-bottom: 0.8rem; width: fit-content;">${translations[currentLang].modal_pure_badge}</span>`;
+    }
+
     modalContainer.innerHTML = `
       <div class="modal-content-grid">
         <div class="modal-img-area">
           <img src="${product.image}" alt="${product.name}" width="350" height="350">
         </div>
         <div class="modal-details-area">
-          <span class="wild-badge" style="margin-bottom: 0.8rem; width: fit-content;">
-            ${product.category === 'chamoy' ? translations[currentLang].modal_chamoy_badge : translations[currentLang].modal_pure_badge}
-          </span>
+          ${badgeHtml}
           <h2 style="font-family: var(--font-serif); font-size: 2.2rem; margin-bottom: 0.4rem; color: var(--color-primary);">${product.name}</h2>
           <p style="color: var(--color-primary-muted); font-weight: 700; margin-bottom: 1.2rem;">${translations[currentLang].modal_equals}${product.equivalence}</p>
           <p style="color: var(--color-text-muted); font-size: 0.98rem; margin-bottom: 1.8rem; line-height: 1.6;">${product.desc}</p>
