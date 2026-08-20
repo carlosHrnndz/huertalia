@@ -611,15 +611,15 @@ h1, h2, h3, h4, h5, h6 {
 .gto-seal-stamp {
   position: absolute;
   top: 2rem;
-  left: 2rem;
+  right: 2rem;
   z-index: 10;
-  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.35));
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   pointer-events: none;
 }
 
 .gto-seal-stamp img {
-  height: 280px;
+  height: 70px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -1898,12 +1898,13 @@ a.btn,
 
   .gto-seal-stamp {
     top: 0.8rem !important;
+    right: 0.8rem !important;
     bottom: auto !important;
-    left: 0.8rem !important;
+    left: auto !important;
   }
 
   .gto-seal-stamp img {
-    height: 140px !important;
+    height: 44px !important;
   }
 
   /* PRODUCTS GRID MOBILE */
