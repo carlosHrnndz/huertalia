@@ -29,10 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
       nav_quote: 'COTIZAR',
 
       // Hero
-      hero_tag: 'LEÓN · GUANAJUATO · DESDE 2023',
-      hero_title_level1: 'DEL CORAZÓN DEL BAJÍO.',
-      hero_title_level2: 'FRUTA REAL, LIOFILIZADA PARA DISFRUTARLA DIFERENTE.',
-      hero_subhead: '100% fruta real liofilizada para conservar su sabor natural, color y textura crujiente — sin azúcares añadidos ni conservadores.',
+      hero_tag: '— LEÓN · GUANAJUATO · DESDE 2023',
+      hero_title_level1: 'DEL CORAZÓN<br>DEL BAJÍO.',
+      hero_title_level2: 'FRUTA REAL, LIOFILIZADA<br>PARA DISFRUTARLA DIFERENTE.',
+      hero_subhead: '100% fruta real liofilizada para conservar su sabor natural,<br>color y textura crujiente — sin azúcares añadidos<br>ni conservadores.',
       hero_cta_discover: 'DESCUBRE HUERTALIA',
       hero_cta_history: 'NUESTRA HISTORIA',
       claim_1: '100% FRUTA REAL',
@@ -194,10 +194,10 @@ document.addEventListener('DOMContentLoaded', () => {
       nav_quote: 'GET A QUOTE',
 
       // Hero
-      hero_tag: 'LEÓN · GUANAJUATO · SINCE 2023',
-      hero_title_level1: 'FROM THE HEART OF EL BAJÍO.',
-      hero_title_level2: 'REAL FRUIT, FREEZE-DRIED TO ENJOY IT DIFFERENTLY.',
-      hero_subhead: '100% real freeze-dried fruit to preserve its natural flavor, color and crispy texture — with no added sugars or preservatives.',
+      hero_tag: '— LEÓN · GUANAJUATO · SINCE 2023',
+      hero_title_level1: 'FROM THE HEART<br>OF EL BAJÍO.',
+      hero_title_level2: 'REAL FRUIT, FREEZE-DRIED<br>TO ENJOY IT DIFFERENTLY.',
+      hero_subhead: '100% real freeze-dried fruit to preserve its natural flavor,<br>color and crunchy texture — with no added sugars<br>or preservatives.',
       hero_cta_discover: 'DISCOVER HUERTALIA',
       hero_cta_history: 'OUR STORY',
       claim_1: '100% REAL FRUIT',

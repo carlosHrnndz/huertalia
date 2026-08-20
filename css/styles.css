@@ -561,23 +561,42 @@ h1, h2, h3, h4, h5, h6 {
 /* CLAIMS BAR BELOW HERO */
 .hero-claims-bar {
   position: absolute;
-  bottom: 40px;
+  bottom: 0;
   left: 0;
   width: 100%;
   z-index: 10;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
-  padding-top: 1.5rem;
+  padding: 1.4rem 0;
+  background: rgba(11, 13, 12, 0.4);
+  backdrop-filter: blur(6px);
 }
 
 .claims-flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.8rem;
+}
+
+.claim-item-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.82rem;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(250, 246, 240, 0.6);
+  color: var(--color-ivory);
+}
+
+.claim-icon {
+  font-size: 1.3rem;
+  color: #E5A93C;
+}
+
+.claim-divider {
+  width: 1px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.15);
 }
 
 /* 02 — NUESTRA HISTORIA & MANIFIESTO */
@@ -1866,11 +1885,24 @@ a.btn,
   }
 
   .claims-flex {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 0.5rem 0.6rem !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 0.6rem 1.2rem !important;
     text-align: center;
-    font-size: 0.68rem !important;
+  }
+
+  .claims-flex .claim-divider {
+    display: none !important;
+  }
+
+  .claim-item-bar {
+    font-size: 0.72rem !important;
+    gap: 0.4rem !important;
+  }
+
+  .claim-icon {
+    font-size: 1.05rem !important;
   }
 
   /* NUESTRA HISTORIA MOBILE */
